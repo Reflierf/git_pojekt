@@ -1,0 +1,172 @@
+body{ font-family:Arial, Helvetica, sans-serif;  
+	  margin-left:50px;
+	  margin-top:0px;
+	  background-color:#fff;
+	  padding: 0px; 
+	  font-size:15px;
+	  width:810px;}
+
+#kep{ margin-top: 0px;}
+#kep img {margin-left:180px;}
+
+#tartalom{
+    float: right;
+	width:610px;
+	padding: 0 10px 0 0;
+	border:1px solid #ccc;
+	margin-top: 5px;
+	margin-bottom: 5px;}
+
+#tartalom iframe {margin-left:0px; margin-bottom:0px; width:600px;}
+
+h1, h2, h3{ font-family: Arial, Helvetica, sans-serif; margin: 0px;}
+
+#focim{margin-top:0px; margin-left:0px;}
+h1{ font-size: 120%;
+    color: #666;} 
+
+h2{ font-size: 105%;
+    color: #345;
+    text-align:center;}
+
+h3{ font-size: 95%;
+    color: #345;
+    text-align: left;}
+
+ul{ 
+list-style-type: disc;}
+ul ul{
+list-style-type:square;}				
+
+
+a:link, a:visited {
+	 color: #369;
+	 text-decoration: none;}
+
+a:hover{ text-decoration: underline;}
+
+#kisnavi{ 
+    font-size: 80%;
+	padding: 10px 0px 5px 10px;}
+
+.story{
+	padding: 10px 0px 0px 10px;
+	font-size: 97%;
+	color: #000;
+	margin-bottom:10px;
+    line-height: 1.25;
+    text-align:justify;}
+
+#webinfo{
+	clear: both;
+	border: 1px solid #ccc;
+	font-size: 75%;
+	padding: 5px 10px 10px 5px;
+        }
+
+#Navi{
+    margin-right:626px;
+	background-color: #eee;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	font-size: 90%;
+	margin-bottom:5px;}
+
+
+#linkek ul a:link, #linkek ul a:visited {display: block; }
+#linkek ul {list-style-type:none; margin: 0px; padding: 0px;}
+#linkek li {border-bottom: 1px solid #eee;} 
+
+
+#linkek{
+	position: relative; 
+	margin-top: 5px;
+	padding: 0px;
+	border-bottom: 1px solid #ccc;}
+#linkek a:link{
+	padding: 2px 0px 2px 10px;
+	border-top: 1px solid #ccc;}
+#linkek a:visited{
+	border-top: 1px solid #ccc;
+	padding: 2px 0px 2px 10px;
+	background-color:#eee;} 
+#linkek a:hover{
+	background-color: #ddd;
+	padding: 2px 0px 2px 10px;
+	text-decoration:none;}
+
+#Navi p{
+margin-left:10px; margin-top:20px;}
+#Navi p img{
+margin:5px 0px 0px 30px;}
+#Navi p a:hover{text-decoration:none; color:#f90;}
+
+.vezerles{
+text-align:center;
+margin-top:30px;
+margin-bottom:20px;}
+
+.kerdes{ 
+clear:both;
+text-align:center;}
+
+.linkszin {color:#f90;}
+
+.naviform {margin-left:6px; margin-top:2px;}
+
+.igazit {
+	text-align: center;
+	font-weight: bold;}
+
+.serif {
+	font-family: serif;
+}
+.sansserif {
+	font-family: sans-serif;
+}
+.cursive {
+	font-family: cursive;
+}
+.fantasy {
+	font-family: fantasy;
+}
+.monospace {
+	font-family: monospace;
+}
+.oblique {
+	font-style: oblique;
+}
+.sc {
+	font-variant: small-caps;
+}
+
+
+.pretag {
+	font-family: "Courier New", Courier, mono;
+	font-size: 100%;
+	background-color:#eee;
+	text-align:left;}
+.pre {
+	font-family: "Courier New", Courier, mono;
+	font-size: 100%;
+	background-color: #eee;
+	width:580px;
+	margin-left:10px;}
+
+.jobb{ float:right; width:275px; margin-top:5px; }
+.bal{ float:left; width:300px; margin-top:5px; margin-left:2px; }
+#tartjegyzek { font-size:78%; }
+#tartjegyzek ol li{ color:#000; margin-top:3px;}
+#tartjegyzek li a { text-decoration:none; color:#000; padding-left:7px;}
+#tartjegyzek li a:hover { text-decoration:underline; color:#369;}
+#tartjegyzek ol { counter-reset: item;}
+#tartjegyzek li { display: block }
+#tartjegyzek li:before { content: counters(item, "."); counter-increment: item}
+
+#hely{ float:left;}
+
+#kerdoiv form{
+margin-bottom:10px;
+padding:0px;}
+

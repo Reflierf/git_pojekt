@@ -1,0 +1,213 @@
+
+ul {
+    list-style: none;
+}
+
+.post_error, .post_success {
+    width: 100%;
+}
+
+.post_error pre, .post_success pre {
+    color: white;
+    /*font-size: 1.5rem;*/
+    margin-bottom: 5px;
+    padding: 5px 0;
+}
+
+.post_error pre li, .post_success pre li {
+    font-size: 1.1rem;
+}
+
+.post_error pre {
+    background-color: #DF0000;
+    border: 5px solid #bd0000;
+}
+
+.post_success pre {
+    background-color: #34BD09;
+    border: 5px solid #007000;
+}
+
+.post_error ul, .post_success ul {
+	padding: 10px 0 10px;
+	margin: 0;
+}
+
+.post_error li, .post_success li {
+    margin: 7px auto;
+    display: block;
+    width: 100%;
+}
+
+/*input[type="text"], input[type="password"] {
+    border: 1px solid #aaa;
+    font-size: 13pt;
+    line-height: 1.7rem;
+    text-indent: 4px;
+    box-shadow: 3px 3px 4px #aaa;
+    /*-moz-box-shadow:    4px 4px 11px 2px rgba(50, 50, 50, 0.37);
+    box-shadow:         4px 4px 11px 2px rgba(50, 50, 50, 0.37);
+    margin-bottom: 9px;
+}*/
+
+
+.bevitel .sett {
+    display: inline-block;
+    width: 68% !important;
+}
+
+input[type="text"], input[type="password"], select, textarea {
+    border: 1px solid #222;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    color: #000;
+    display: inline;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.42857;
+    margin: 0 auto 7px;
+    padding: 2px;
+    text-align: left;
+    text-indent: 4px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    width: 100%;
+}
+
+input[type="text"]:hover, input[type="password"]:hover, select:hover, textarea:hover {
+	border-color: #62bbf4;
+	transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, select:focus, textarea:focus {
+	border-color: #008fea;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
+	transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+
+textarea {
+    height: 300px;
+}
+
+.button {
+    background: rgba(0, 0, 0, 0) linear-gradient(0deg, rgb(204, 204, 204) 40%, rgb(240, 240, 240) 60%) repeat scroll 0 0;
+    border: 1px solid #777;
+    border-radius: 2px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+    height: 30px;
+    margin: 0px 0 5px;
+    display: block;
+}
+
+.button:hover {
+	background: rgb(175, 225, 249);
+	background: -moz-linear-gradient(90deg, rgb(175, 225, 249) 40%, rgb(225, 243, 249) 60%);
+	background: -webkit-linear-gradient(90deg, rgb(175, 225, 249) 40%, rgb(225, 243, 249) 60%);
+	background: -o-linear-gradient(90deg, rgb(175, 225, 249) 40%, rgb(225, 243, 249) 60%);
+	background: -ms-linear-gradient(90deg, rgb(175, 225, 249) 40%, rgb(225, 243, 249) 60%);
+	background: linear-gradient(0deg, rgb(175, 225, 249) 40%, rgb(225, 243, 249) 60%);
+	-webkit-box-shadow: 1px 1px 2px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    1px 1px 2px rgba(50, 50, 50, 0.75);
+	box-shadow:         1px 1px 2px rgba(50, 50, 50, 0.75);
+}
+
+.button:active {
+	border: 1px solid #12567a;
+	background: rgb(120, 189, 226);
+	background: -moz-linear-gradient(90deg, rgb(120, 189, 226) 40%, rgb(221, 240, 250) 60%);
+	background: -webkit-linear-gradient(90deg, rgb(120, 189, 226) 40%, rgb(221, 240, 250) 60%);
+	background: -o-linear-gradient(90deg, rgb(120, 189, 226) 40%, rgb(221, 240, 250) 60%);
+	background: -ms-linear-gradient(90deg, rgb(120, 189, 226) 40%, rgb(221, 240, 250) 60%);
+	background: linear-gradient(0deg, rgb(120, 189, 226) 40%, rgb(221, 240, 250) 60%);
+	-webkit-box-shadow: inset 0px 0px 0px 1px rgba(44, 98, 139, 0.75);
+	-moz-box-shadow:    inset 0px 0px 0px 1px rgba(44, 98, 139, 0.75);
+	box-shadow:         inset 0px 0px 0px 1px rgba(44, 98, 139, 0.75);
+}
+
+.buttonLong {
+    width: 180px;
+}
+
+.buttonFlex {
+    padding: 0 5px;
+}
+
+.buttonBox {
+	width: 25px;
+}
+
+.buttonMinia {
+	width: 70px;
+}
+
+.bevitel .cimke {
+    display: inline-block !important;
+    width: 30%;
+}
+
+
+.avatar {
+	display: inline-block;
+	margin: 0;
+    padding: 2px;
+	width: 90%;
+	border: 3px outset #999;
+	-webkit-box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow:    5px 5px 7px rgba(0, 0, 0, 0.3);
+    box-shadow:         5px 5px 7px rgba(0, 0, 0, 0.3);
+}
+
+.avatarinput {
+	display: inline-block;
+	margin: 10px 0 0;
+    padding: 4px;
+	width: 23%;
+	border: 1px solid #777;
+	background-color: #fff;
+	-webkit-box-shadow: 5px 5px 11px 2px rgba(50, 50, 50, 0.37);
+    -moz-box-shadow:    5px 5px 11px 2px rgba(50, 50, 50, 0.37);
+    box-shadow:         5px 5px 11px 2px rgba(50, 50, 50, 0.37);
+}
+
+
+/*--- Setting profilkép bevitel ---*/
+.edit_pic {
+    border: 1px solid lightblue;
+    border-radius: 3px;
+    margin: 10px 0;
+    padding: 5px;
+    width: 98.9%;
+}
+
+.edit_pic .minpic_div {
+    float: left;
+    width: 23%;
+}
+
+.edit_pic .minpic_div .profile_image {
+    width: 98%;
+    border: 3px outset #555;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.edit_pic .input_div {
+    float: left;
+    margin-left: 13px;
+    width: 74%;
+}
+
+
+
+
+
+
+@media (max-width: 1200px) {
+    
+}
+
+@media (max-width: 768px) {
+    
+}
+
+@media (max-width: 504px) {
+    .button {margin: 0 auto;}
+}

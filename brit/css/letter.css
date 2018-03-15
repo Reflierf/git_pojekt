@@ -1,0 +1,56 @@
+
+.letter_box {
+    background: #e5e5e5 none repeat scroll 0 0;
+    border: 2px outset #fff;
+    border-radius: 5px;
+    box-shadow: 4px 5px 3px rgba(50, 50, 50, 0.4);
+    margin: 2px 0 20px;
+    padding: 5px 10px 10px;
+}
+
+.letter_box:hover {
+    border: 2px solid lightblue;
+    background: #fffcef;
+}
+
+/*.letter_box:active {
+    background: #fff4c9;
+}
+
+a .letter_box , a:link .letter_box , a:visited .letter_box {
+    color: #000;
+}*/
+
+.letter_box  .btncontroll {
+    display: inline-block;
+}
+
+.letter_box .date {
+    float: right;
+}
+
+.letter_box .sender {
+    float: left;
+}
+
+.letter_box hr {
+    background: #555;
+    height: 1px;
+    margin: 1px 0 3px;
+}
+
+.letter_box .letter_subject {
+    color: darkred;
+    font-size: 20pt;
+    font-weight: bold;
+    margin: 5px 0 15px 0;
+}
+
+.letter_box .letter_message {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #999;
+    border-radius: 3px;
+    margin: 5px 0;
+    padding: 10px;
+    text-align: justify;
+}

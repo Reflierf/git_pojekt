@@ -1,0 +1,1 @@
+_BTarget.setSanomaId('oprin12chren2jjkdro47ac5c5');

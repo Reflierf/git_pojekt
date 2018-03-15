@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+	<meta name="author" content="Freiler Béla" />
+    <meta charset="utf-8"/>
+
+	<title>Címtelen 1</title>
+    
+    <style>
+        body {
+            background: black;
+        }
+    
+        body > ul {
+            background: #f99;
+            border: 1px solid black;
+        }
+        
+        body > ul > li {
+            background: #9f9;
+            margin: 4px;
+        }
+        
+        ul ul{
+            background: #fcc;
+            margin: 4px;
+            border: 1px solid black;
+            display: none;
+        }
+        
+        li li {
+            background: #cfc;
+            margin: 4px;
+        }
+        
+        body > ul > li:hover {
+            padding-left: 5px;
+        }
+        
+        body > ul > li:hover ul {
+            display: block;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2
+            <ul>
+                <li>Item 5-1</li>
+                <li>Item 5-2</li>
+                <li>Item 5-3</li>
+            </ul>
+        </li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5
+            <ul>
+                <li>Item 5-1</li>
+                <li>Item 5-2</li>
+                <li>Item 5-3</li>
+            </ul>
+        </li>
+    </ul>
+
+
+</body>
+</html>

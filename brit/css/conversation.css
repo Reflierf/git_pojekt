@@ -1,0 +1,92 @@
+
+.bckconv {
+    background: #cfcfcf none repeat scroll 0 0 !important;
+}
+
+.conv_row {
+    float: left;
+    width: 50%;
+}
+
+.conv_users {
+    float: left;
+    width: 50%;
+    margin-top: 5px;
+}
+
+.conversation_users {
+    background: #fff none repeat scroll 0 0;
+    border: 1px outset #aaa;
+    padding: 3px;
+    width: 12%;
+    box-shadow: 2px 2px 4px 0 rgba(50, 50, 50, 0.6);
+    margin: 0 2px 0 0;
+}
+
+.conversation {
+    box-shadow: 2px 2px 4px 0 rgba(50, 50, 50, 0.4);
+    margin: 10px 0;
+    padding: 10px 5px;
+    background: #e5e5e5 none repeat scroll 0 0;
+    border: 1px solid #aaa;
+}
+
+.conversation .btn_del {
+    color: #555;
+    display: inline-block;
+    margin: 0 10px 10px 5px;
+    padding: 2px 10px;
+}
+
+.conv_row .conv_title {
+    font-size: 20pt;
+}
+
+.btnnewconv {
+    /*background: #ddd none repeat scroll 0 0;
+    border: 1px solid #777;*/
+    display: inline-block;
+    margin-bottom: 30px;
+    padding: 5px;
+}
+
+.more_things {
+    /*width: 95%;*/
+    margin: 2px;
+}
+
+.more_things .send_message {
+    margin-bottom: 10px;
+}
+
+.send_message .animate_td {
+    background: #fcf8db none repeat scroll 0 0;
+    border: 2px solid #aaa;
+    border-radius: 3px;
+    padding: 10px 5px 3px;
+    text-align: left;
+    /*width: 98%;*/
+}
+
+.send_message .hide_form {
+    display: none;
+}
+
+.partners_galeria {
+    margin: 5px 0px;
+    padding: 3px;
+    box-shadow: 1px 1px 3px rgba(50, 50, 50, 0.5);
+    border: 1px solid rgb(153, 153, 153);
+    background: rgb(253, 253, 253) none repeat scroll 0% 0%;
+}
+
+.partners_galeria .left_indent {
+    margin-left: 10px;
+}
+
+.inbox .unread, .view_message div.unread {
+    font-weight: bold;
+}
+#view_conversation .conversation .unread, .view_message .unread {
+    font-weight: bold;
+}

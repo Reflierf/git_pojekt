@@ -1,0 +1,51 @@
+<?php
+
+/**
+ * @author Freiler Béla
+ * @copyright 2017
+ */
+
+
+
+?>
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="css/desctop.css"/>
+        <link rel="stylesheet" type="text/css" href="css/stdinput.css"/>
+        <link rel="shortcut icon" type="image/ico" href="img/favicon.ico"/>
+        <script type="text/javascript" src="js/script.js"></script>
+        <title>Brittannys Bod V4.0</title>
+    </head>
+    <body>
+        <div id="container">
+            <header id="header">
+                <img class="logo" src="img/header_origin.png"/>
+            </header>
+            <aside id="leftaside">
+                <article id="login" class="module">
+                    <div class="module-head">Belépés</div>
+                    <div class="module-body">
+                        <form action="login.php" method="post">
+                            <ul>
+                                <li><input type="text" name="loginname" id="loginname" value="" placeholder="login név..."/></li>
+                                <li><input type="password" name="password" id="password" value="" placeholder="jelszó..."/></li></li>
+                                <li><input type="submit" name="login" id="login" value="Belépés"/></li></li>
+                            </ul>
+                        </form>
+                    </div>
+                </article>
+            </aside>
+            <section id="main">
+                <p>Che che. Primo si essilio discerniamo il e le divina. Mortali noi intendo si come noia. Che cospetto. Fallo avvien impermutabile. Gli esperienza coloro l'acume forse. Nostro né le che. Mortale dovendo d'angoscia potendo lodato i quale. O vita impetrata coloro pietosa noi. Per le suo niuna e cose dico potra noi che divenuti. Del e. Che coloro ora e degli forza. Come niuno cose suo degli fermi sua come. Niuna nostro senza senza porgiamo nondimeno modo e nel o novella. 'l con che viviamo speranza. Beati che che siamo niuno. Non discenda. In facciamo impetrata di facciamo cominciamento noi medesimi cose propria. Noi udita cosa prieghi al piú siamo alla dalla novella. Sí che 'l il. Nostra furono. L'uomo piene niuna temporali primo cominciamento. 
+</p>
+            </section>
+            <div class="clear"></div>
+            <footer id="footer">
+            
+            </footer>
+        </div>
+    </body>
+</html>

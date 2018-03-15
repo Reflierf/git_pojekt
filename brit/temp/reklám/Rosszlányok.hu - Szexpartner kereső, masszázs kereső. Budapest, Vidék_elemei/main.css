@@ -1,0 +1,430 @@
+body {
+	color: #ffffff;
+	background-color: #410000;
+	scrollbar-face-color: #410000;
+	scrollbar-highlight-color: #ffffff;
+	scrollbar-shadow-color: #410000;
+	scrollbar-3dlight-color: #000000;
+	scrollbar-arrow-color: #ffffff;
+	scrollbar-track-color: #937a7a;
+	scrollbar-darkshadow-color: #ffffff;
+}
+table {
+	color: #ffffff;
+}
+/*
+A:link   {color: #bd0000;
+          text-decoration: none}
+A:visit  {color: #bd0000;
+          text-decoration: none}
+A:hover  {color: #000099;}
+A:activ  {color: #000099;
+          text-decoration: underline}
+*/
+		#uppertable #felsoBalLogo {
+			width: 502px;
+			background-image: url( ../grafika/indexkeretcropped/felso_bal_logos.jpg );
+		}
+
+#maintablemiddle {
+	width: 100%;
+}
+	#maintablemiddle #mainmiddleLeftTd {
+		width: 151px;
+		height: auto;
+		background-image: url( ../grafika/indexkeretcropped/left_menu_also_bg.gif );
+		background-repeat: repeat-y;
+		vertical-align: top;
+	}
+		#maintablemiddle #mainmiddleLeftTd #mainMiddleLeftSecondTRTD {
+			width: 151px;
+			background-image: url( ../grafika/indexkeretcropped/left_menu_vekony_kifuto.gif );
+			background-position: top-left;
+			background-repeat: repeat-y;
+		}
+
+	#maintablemiddle #lefttable {
+		width: 151px;
+	}
+		#lefttable #leftFirstTR {
+			height: 31px;
+		}
+			#overMenuMenu {
+				height: 31px;
+				background-image: url( ../grafika/indexkeretcropped/left_felso_atmenet.gif );
+				background-repeat: no-repeat;
+				background-position: top-left;
+				text-align: left;
+				vertical-align: bottom;
+				cursor: pointer;
+				margin-bottom: 2px;
+			}
+
+		#lefttable #leftThirdTR {
+			height: 8px;
+		}
+			#leftThirdTR td {
+				width: 151px;
+				height: 8px;
+				background-image: url( ../grafika/indexkeretcropped/left_login_menu_header.gif );
+				background-position: top left;
+				background-repeat: repeat-y;
+			}
+
+		#lefttable #leftFourthTR #leftFourthTRTD {
+			width: 151px;
+			height: auto;
+			background-image: url( ../grafika/indexkeretcropped/left_login_menu_kifuto.gif );
+			background-position: top-left;
+			background-repeat: repeat-y;
+		}
+
+		#lefttable #leftFifthTR {
+			height: 8px;
+		}
+			#lefttable #leftFifthTR #leftFifthTRTD {
+				width: 151px;
+				height: 8px;
+				background-image: url( ../grafika/indexkeretcropped/left_login_menu_footer.gif );
+				background-position: top-left;
+				background-repeat: repeat-y;
+			}
+
+			#lefttable #leftSixthTR #leftSixthTRTD {
+				width: 151px;
+				background-repeat: repeat-y;
+				background-position: top left;
+				background-image: url( ../grafika/indexkeretcropped/left_menu_vekony_kifuto.gif );
+			}
+
+		#lefttable #leftSeventhTR {
+
+		}
+		#lefttable #leftEightthTR {
+			height: 17px;
+		}
+
+			#leftSeventhTRTD, #leftEightthTRTD {
+				width: 151px;
+				height: 3px;
+				background-color: #410000;
+			}
+			#lefttable #leftEightthTRTD {
+				height: 26px;
+				background-repeat: no-repeat;
+				background-position: top left;
+				background-image: url( ../grafika/indexkeretcropped/left_menu_also_teteje.gif );
+				font-size: 13px;
+				font-weight: normal;
+				color: #CF9C9B;
+			}
+
+		#lefttable #leftNinethTR {
+			height: auto;
+		}
+			#leftNinethTRTD {
+				width: 151px;
+				background-repeat: repeat-y;
+				background-position: top-left;
+				background-image: url( ../grafika/indexkeretcropped/left_menu_also_bg.gif );
+				vertical-align: top;
+			}
+
+#maintablefooter {
+	width: 100%;
+}
+	#maintablefooter #mainFooterFirstTR {
+		height: 42px;
+	}
+		#maintablefooter #mainFooterFirstTR td {
+			background-image: url( ../grafika/indexkeretcropped/also_szeles_atmenet.gif );
+			background-repeat: no-repeat;
+			background-position: top left;
+		}
+
+		#maintablefooter #mainFooterSecondTR td {
+			text-align: right;
+		}
+
+#bottomDiv {
+	text-align: right;
+	background-color: #6A4F4F;
+	padding: 10px;
+}
+
+#mainarea td.outerglow {
+	font-weight:bold;
+	color:white;
+	font-size: 17px;
+	font-family:sans-serif;
+	filter:progid:dximagetransform.microsoft.glow(strength=1,color=red)
+}
+
+#mainarea span.outerglow {
+	text-decoration: none;
+	cursor:Hand;
+	height:0px;
+	font-weight:bold;
+	color:white;
+	font-family:sans-serif;
+	font-size:8pt;
+	filter:progid:dximagetransform.microsoft.glow(strength=1,color=red)
+}
+
+.button300 { background-image: url( ../grafika/home/menubutton_300.gif ); }
+.button300:hover { background-image: url( ../grafika/home/menubutton_300_roll.gif ); }
+.button280 { background-image: url( ../grafika/home/menubutton_280.gif ); }
+.button280:hover { background-image: url( ../grafika/home/menubutton_280_roll.gif ); }
+.button200 { background-image: url( ../grafika/home/menubutton_200.gif ); }
+.button200:hover { background-image: url( ../grafika/home/menubutton_200_roll.gif ); }
+.button180 { background-image: url( ../grafika/home/menubutton_180.gif ); }
+.button180:hover { background-image: url( ../grafika/home/menubutton_180_roll.gif ); }
+.button162 { background-image: url( ../grafika/home/menubutton_162.gif ); }
+.button162:hover { background-image: url( ../grafika/home/menubutton_162_roll.gif ); }
+.button155 { background-image: url( ../grafika/home/menubutton.gif ); }
+.button155:hover { background-image: url( ../grafika/home/menubutton_roll.gif ); }
+.button115 { background-image: url( ../grafika/home/menubutton_34.gif ); }
+.button115:hover { background-image: url( ../grafika/home/menubutton_34_roll.gif ); }
+.button70 { background-image: url( ../grafika/home/menubutton_medium.gif ); }
+.button70:hover { background-image: url( ../grafika/home/menubutton_medium_roll.gif ); }
+.button48 { background-image: url( ../grafika/home/menubutton_small.gif ); }
+.button48:hover { background-image: url( ../grafika/home/menubutton_small_roll.gif ); }
+.button155_ma { background-image: url( ../grafika/home_ma/menubutton.gif ); }
+.button155_ma:hover { background-image: url( ../grafika/home_ma/menubutton_roll.gif ); }
+
+.searchButton162ma { background-image: url( ../grafika/home/pink_btn.gif ); }
+.searchButton162ma:hover { background-image: url( ../grafika/home/pink_btn_roll.gif ); }
+
+	#beszamoloMainDiv .pictureTextDivMiniList {
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		font-size: 9px;
+		text-align: center;
+	}
+	#beszamoloMainDiv .pictureTextDivMiniList {
+		left: 0px;
+		width: 108px;
+	}
+
+#onlineRegWhy li {
+	list-style-image: url( ../grafika/pipa-icon.png );
+}
+
+.brownouterh1 {
+	color: #FFFFFF;
+	font-family: sans-serif;
+	font-size: 17px;
+	font-weight: bold;
+	margin-top: 2px;
+	margin-left: 24px;
+}
+#list_filter_container, #list_filter_container_varoskerulet {
+	clear: both;
+	float: right;
+	width: 823px;
+	border: 1px solid #ffffff;
+	background-color: #6F4144;
+	margin-bottom: 2px;
+	min-height: 30px;
+	_height: 30px;
+	margin-right:5px;
+}
+#list_filter_container_varoskerulet {
+	width: auto;
+}
+#list_filter_container a, #list_filter_container_varoskerulet a {
+	color: #CF9C9B;
+	font-family: Verdana;
+	font-size: 12px;
+	font-weight: bold;
+}
+	#list_filter_container_varoskerulet a {
+		font-size: 10px;
+	}
+.girlRightAccentuated {
+	margin-bottom: 8px;
+	font-family: Verdana;
+	font-size: 17px;
+	font-style: normal;
+	color: #9F8183;
+}
+#assessOutside .ratingStars {
+	float: right;
+	width: 69px;
+	margin: 0 0 5px;
+}
+#assessOutside .ratingLabel {
+	clear: both;
+	float: left;
+	width: 80px;
+	margin-bottom: 5px;
+	font-weight: bold;
+	padding-left: 3px;
+}
+#list_filter_container input[type='checkbox'], #list_filter_container .middle,
+#list_filter_container_varoskerulet input[type='checkbox'], #list_filter_container_varoskerulet .middle
+{
+	vertical-align: middle;
+}
+
+#myadmin_lengthen .error {
+	color: red;
+	font-weight: bold;
+}
+
+.poll_inside_box {
+	font-family: Verdana;
+	font-size: 10px;
+	color: #CF9C9B;
+	width: 322px;
+}
+.poll_box_header {
+	background-image: url('../grafika/home/frissites_header.gif');
+	background-repeat: no-repeat;
+	height: 26px;
+	margin: 0px;
+	padding: 0px;
+	font-size: 13px;
+	color: #CF9C9B;
+}
+.poll_inside_container {
+	background-color: #410000;
+	border: solid 1px grey;
+}
+a.pollBtnLnks {
+	font-weight: bold;
+	color: white;
+}
+#postListHeader, #homeRecomListHeader {
+	background-image: url('../grafika/home/frissites_header.gif');
+	color: #CF9C9B;
+}
+a.pollUserQ {
+	color: white;
+	font-weight: bold;
+}
+#hPLBorder {
+	clear: both;
+	margin: 0 5px 10px;
+	border: solid 1px #A0706E;
+	font-size: 10px;
+}
+	table.homePostTableEven {
+		width: 100%;
+		background-color: #420001;
+		table-layout: fixed;
+	}
+	table.homePostTableOdd {
+		width: 100%;
+		background-color: #520A0B;
+		table-layout: fixed;
+	}
+	#maintablemiddle .homePostTableOdd .homePostTd, #maintablemiddle .homePostTableEven .homePostTd {
+		padding-left: 10px;
+		font-family: Verdana;
+		font-size: 10px;
+		color: #D09D9C;
+		vertical-align: top;
+	}
+		.homePostTd a {
+			font-weight: bold;
+			color: white;
+			font-family: sans-serif;
+			font-size: 11px;
+		}
+		.homePostTd .statusTxt {
+			color: white;
+		}
+		.homePostTd .catSPPost {
+			color: #D20001;
+		}
+		.homePostTd .catMAPost {
+			color: #D71470;
+		}
+		.homePostTd .catDOPost {
+			color: #FFFFFF;
+		}
+
+#bestAssessHeader {
+	font-family: Verdana;
+	background-image: url('../grafika/home/frissites_header.gif');
+	background-repeat: no-repeat;
+	height: 26px;
+	margin: 0px;
+	padding: 0px;
+	font-size: 13px;
+	color: #CF9C9B;
+}
+
+#bestAssContainer {
+	background-color: #410000;
+	border: solid 1px grey;
+	border-top-width: 0px;
+	margin: 0px;
+	padding: 10px 0 5px;
+}
+
+	div.bestAssessNev {
+		width: 115px;
+		float: left;
+		margin: 0 0 5px 0;
+		text-align: left;
+		font-weight: bold;
+	}
+		.bestAssessNev a {
+			color: white;
+		}
+
+	hr.bAssHr {
+		margin-bottom: 5px;
+		color: grey;
+		background-color: grey;
+		font-size: 1px;
+		border-width: 0px;
+		height: 1px;
+	}
+
+	#reviewsLastWeek {
+		margin: 5px 84px;
+		background-image: url(../grafika/home/menubutton_180.gif);
+	}
+
+.keresoMapLayer {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 240px;
+	height: 222px;
+}
+div.tileBtn {
+	line-height: 21px;
+	font-family: Arial;
+	font-size: 12px;
+	color: white;
+	background-position: 0% 0%;
+	background-repeat: no-repeat;
+	width: 119px;
+	height: 21px;
+	text-align: center;
+	cursor: pointer;
+}
+
+#listThumbsDiv .likesTagName, #homeGirlList .likesTagName,
+.similarDiv .likesTagName, #bestAssContainer .likesTagName a,
+#homePostList .homePostTd .likesTagName, #rightFriends .likesTagName {
+	color: #5AEA28;
+}
+	#externalList {
+		margin-top: 12px;
+	}
+		#externalList .homeListGirlNormal {
+			margin: 0;
+		}
+
+		#externalList #listThumbsDiv .colspanTdDiv1 .listTagImage {
+			margin-top: 2px;
+		}
+		#externalList .listThumbOuterTable td {
+			padding: 0;
+		}

@@ -1,0 +1,18 @@
+m: Ne haragudj, hogy zavarlak, de tesztelni kellene néhány fejlesztést a weboldalon. Ezért hoztam létre ezt a társalgást. De ha zavar, jelezd kérlek, és azonnal törlöm.
+
+p: Persze, semmi gond. Csak nyugodtan írjál ide, én meg válaszolok, de ne lepődj meg, ha a válaszaimnak semmi értelme sem lesz.
+
+
+SELECT `brit_email`.`send_email_id`, `brit_email`.`send_email_hash`, `brit_email`.`send_email_to`, `brit_email`.`send_email_date`, `brit_email`.`send_email_subject`, `brit_email`.`send_email_message`, `brit_user`.`user_id`, `brit_user`.`user_name`  
+FROM `brit_email`, `brit_user` 
+WHERE `brit_email`.`send_email_hash` = 89483 
+AND `brit_email`.`send_email_to` = 17 
+AND `brit_user`.`user_id` = `brit_email`.`send_email_to`
+
+
+SELECT `send_email_id`, `send_email_from`, `send_email_to`, 
+`send_email_date` AS `email_last_replay`, 
+MAX(`send_email_date`) > `send_email_lastview` AS `email_unread` 
+FROM `brit_email` 
+WHERE `send_email_to` = 17 
+ORDER BY `email_last_replay`

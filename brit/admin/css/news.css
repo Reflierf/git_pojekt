@@ -1,0 +1,169 @@
+
+.nhead {
+    background: brown;
+    color: yellow;
+    margin: 3px;
+    padding: 3px;
+    font-weight: bold;
+}
+
+.nhead .nimg, .nhead .ntitle, .nhead .ndate, .nhead .nauthor, .nhead .nncont{
+    margin-top: 0px;
+} 
+
+.nhead span {
+    font-size: 17pt!important;
+}
+
+.nrow {
+    background: #fafafa none repeat scroll 0 0;
+    border: 1px solid #aaa;
+    margin: 3px;
+    padding: 3px;
+    max-height: 80px;
+}
+
+.nrow span, .nhead span {
+    display: block;
+    /*text-align: center;
+    vertical-align: central;*/
+    float: left;
+    font-size: 15pt;
+}
+
+.ntitle, .ndate, .nauthor, .nncont {
+    margin-top: 28px;
+}
+
+.ntitle {
+    width: 25%;
+    /*margin-top: 30px;*/
+    text-align: center;
+}
+
+.ndate {
+    width: 10%;
+    /*margin-top: 30px;*/
+    text-align: center;
+}
+
+.nauthor {
+    width: 20%;
+    /*margin-top: 30px;*/
+    text-align: center;
+}
+
+.ncont {
+    width: 25%;
+    /*margin-top: 30px;*/
+    text-align: center;
+}
+/**/
+.nimg {
+    width: 15%;
+}
+
+.nimg img {
+    display: block;
+    height: 79px;
+    margin: 0 auto;
+    
+}
+
+.edit_news {
+    background: #bbb none repeat scroll 0 0;
+    border: 1px solid #000;
+    float: left;
+    height: 62px;
+    margin: 5px 0 0 35px;
+    padding: 3px;
+    /*width: 15%;*/
+}
+
+.edit_news a, .edit_news a:link, .edit_news a:visited {
+    color: #000;
+    text-decoration: none;
+}
+
+.btn_container {
+    margin: 15px 48px;
+}
+
+/*
+.nvis {
+    width: 5%;
+}*/
+
+#edit_news .editpic {
+    border: 1px solid lightblue;
+    border-radius: 3px;
+    margin: 10px 0;
+    padding: 10px 2px;
+    width: 88.5%;
+}
+
+
+#edit_news .minpic_div, #edit_news .input_div {
+    float: left;
+}
+
+#edit_news .minpic_div {
+    width: 17%;
+}
+
+.minpic {
+    border: 3px outset #555;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.3);
+    width: 96%;
+}
+
+#edit_news .input_div {
+    margin-left: 40px;
+    width: 76.5%;
+}
+
+
+#edit_news .editor .cimke2  {
+    display: inline-block;
+    width: 30%;
+}
+
+#edit_news .input_div #news_pic {
+    width: 98%;
+    display: block;
+    margin-left: 0;
+}
+
+#add_news .editpic {
+    border: 1px solid lightblue;
+    border-radius: 3px;
+    margin: 10px 0;
+    padding: 10px 10px;
+    width: 98.9%;
+}
+
+
+#add_news .minpic_div, #add_news .input_div {
+    float: left;
+}
+
+#add_news .minpic_div {
+    width: 13%;
+}
+
+#add_news .input_div {
+    margin-left: 40px;
+    width: 80%;
+}
+
+
+#add_news .bevitel .cimke2  {
+    display: inline-block;
+    width: 30%;
+}
+
+#add_news .input_div #news_pic {
+    width: 98%;
+    display: block;
+    margin-left: 0;
+}

@@ -1,0 +1,898 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0037)http://weblabor.hu/cikkek/jsadatcsere -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="hu" lang="hu" class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>Újratöltés nélküli adatcsere böngészőben · Weblabor</title>
+  <meta name="viewport" content="maximum-scale=1.0,width=device-width,initial-scale=1.0">
+  
+<link rel="alternate" type="application/rss+xml" title="Comments for &quot;Újratöltés nélküli adatcsere böngészőben&quot;" href="http://weblabor.hu/rss/hozzaszolas/cikkek/jsadatcsere">
+<link rel="shortcut icon" href="http://weblabor.hu/misc/favicon.ico" type="image/x-icon">
+
+ <meta name="author" content="Weblabor">
+ <meta http-equiv="Content-Language" content="hu">
+ <meta name="robots" content="index, follow">
+ <meta name="revisit-after" content="7 days">
+ <meta name="verify-v1" content="xVGI+oagDma6DwB0tjQrwPASRzHtb4h+9V61Y/TaeUA=">
+ <link rel="start" title="Weblabor - A fejlesztői forrás" href="http://weblabor.hu/">
+ <link rel="search" title="Weblabor keresés" href="http://weblabor.hu/kereses">
+ <link rel="search" type="application/opensearchdescription+xml" title="Weblabor keresés" href="http://weblabor.hu/misc/search/opensearch.xml">
+ <link rel="license" title="Weblabor licenc" href="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+ <!--
+ <rdf:RDF xmlns="http://web.resource.org/cc/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <Work rdf:about="">
+   <dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+   <license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.0/" />
+  </Work>
+  <License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+   <permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+   <permits rdf:resource="http://web.resource.org/cc/Distribution" />
+   <requires rdf:resource="http://web.resource.org/cc/Notice" />
+   <requires rdf:resource="http://web.resource.org/cc/Attribution" />
+   <prohibits rdf:resource="http://web.resource.org/cc/CommercialUse" />
+   <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+   <requires rdf:resource="http://web.resource.org/cc/ShareAlike" />
+  </License>
+ </rdf:RDF>
+ -->
+
+<meta name="keywords" content="Újratöltés, nélküli, adatcsere, böngészőben, programozás, informatika, web, fejlesztés">  <link type="text/css" rel="stylesheet" media="all" href="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/node.css">
+<link type="text/css" rel="stylesheet" media="all" href="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/poll.css">
+<link type="text/css" rel="stylesheet" media="all" href="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/defaults.css">
+<link type="text/css" rel="stylesheet" media="all" href="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/system.css">
+<link type="text/css" rel="stylesheet" media="all" href="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/system-menus.css">
+<link type="text/css" rel="stylesheet" media="all" href="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/user.css">
+<link type="text/css" rel="stylesheet" media="all" href="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/tagadelic.css">
+<link type="text/css" rel="stylesheet" media="all" href="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/forum.css">
+<link type="text/css" rel="stylesheet" media="all" href="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/comment.css">
+<link type="text/css" rel="stylesheet" media="all" href="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/style.css">
+
+<link rel="stylesheet" type="text/css" href="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/mobile.css">
+ <link rel="stylesheet" type="text/css" href="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/SyntaxHighlighter.css">  <script async="" src="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/analytics.js.letöltés"></script><script type="text/javascript" src="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/jquery.js.letöltés"></script>
+<script type="text/javascript" src="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/drupal.js.letöltés"></script>
+<script type="text/javascript" src="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/hu_7a607d089bc9826ba71fe1fde184afb8.js.letöltés"></script>
+<script type="text/javascript" src="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/tableheader.js.letöltés"></script>
+<script type="text/javascript" src="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/wl.js.letöltés"></script>
+<script type="text/javascript" src="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/bbeditor.js.letöltés"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+
+ <script type="text/javascript" src="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/shCore.js.letöltés"></script>
+ <script type="text/javascript" src="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/shBrushCss.js.letöltés"></script>
+ <script type="text/javascript" src="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/shBrushJScript.js.letöltés"></script>
+ <script type="text/javascript" src="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/shBrushPhp.js.letöltés"></script>
+ <script type="text/javascript" src="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/shBrushSql.js.letöltés"></script>
+ <script type="text/javascript" src="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/shBrushXml.js.letöltés"></script>
+ <script type="text/javascript" src="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/shBrushApache.js.letöltés"></script>  <script type="text/javascript"> </script>
+<style type="text/css">.dp-xml .cdata { color: #ff1493; }.dp-xml .tag, .dp-xml .tag-name { color: #069; font-weight: bold; }.dp-xml .attribute { color: red; }.dp-xml .attribute-value { color: blue; }</style><style type="text/css">.dp-xml .cdata { color: #ff1493; }.dp-xml .tag, .dp-xml .tag-name { color: #069; font-weight: bold; }.dp-xml .attribute { color: red; }.dp-xml .attribute-value { color: blue; }</style><style type="text/css">.dp-xml .cdata { color: #ff1493; }.dp-xml .tag, .dp-xml .tag-name { color: #069; font-weight: bold; }.dp-xml .attribute { color: red; }.dp-xml .attribute-value { color: blue; }</style><style type="text/css">.dp-xml .cdata { color: #ff1493; }.dp-xml .tag, .dp-xml .tag-name { color: #069; font-weight: bold; }.dp-xml .attribute { color: red; }.dp-xml .attribute-value { color: blue; }</style><style type="text/css">.dp-xml .cdata { color: #ff1493; }.dp-xml .tag, .dp-xml .tag-name { color: #069; font-weight: bold; }.dp-xml .attribute { color: red; }.dp-xml .attribute-value { color: blue; }</style><style type="text/css">.dp-xml .cdata { color: #ff1493; }.dp-xml .tag, .dp-xml .tag-name { color: #069; font-weight: bold; }.dp-xml .attribute { color: red; }.dp-xml .attribute-value { color: blue; }</style></head>
+<body id="weblabor.hu" class="not-front not-logged-in page-node node-type-article two-sidebars page-wide tableHeader-processed">
+
+  <div><a href="http://weblabor.hu/cikkek/jsadatcsere#content" style="display:none">ugrás a tartalomhoz</a></div>
+  <div id="page">
+
+    <div id="header">
+      <h1 id="site-name">
+        <a href="http://weblabor.hu/" title="Címlap" rel="home"><span>Weblabor</span></a>
+      </h1>
+      <div id="userpanel">
+        <a href="http://weblabor.hu/tagok/belepes?destination=node%2F2773">Belépés</a> vagy <a href="http://weblabor.hu/tagok/regisztracio">regisztráció</a>      </div>
+      <div id="pagenav">
+        <ul><li><a href="http://weblabor.hu/blog" title="Rövidebb írásaink">Blog</a></li><li><a href="http://weblabor.hu/blogmarkok" title="Más weboldalakat ajánlunk">Blogmarkok</a></li><li><a href="http://weblabor.hu/cikkek" title="Hosszabb lélegzetvételű írásaink" class="active">Cikkek</a></li><li><a href="http://weblabor.hu/forumok" title="A közösség kibontakozása">Fórumok</a></li><li><a href="http://weblabor.hu/levlistak" title="Levezőlista archívumok, feliratkozás">Levlisták</a></li><li><a href="http://weblabor.hu/munka" title="Webes állás és munkahirdetések">Munka és állás</a></li><li><a href="http://weblabor.hu/konyvek" title="Általunk olvasott könyvek">Könyvek</a></li><li><a href="http://weblabor.hu/koveto" title="Minden friss tartalom">Friss</a></li></ul>      </div>
+      <div id="header-region">
+        <div id="block-pages-search" class="block block-pages">
+  <h2>Keresés</h2>
+
+  <div class="content">
+    
+  <div id="searchbox">
+   <form method="get" action="http://www.google.com/search"><div class="clear-block">
+    <input type="hidden" name="ie" value="UTF-8">
+    <input type="hidden" name="oe" value="UTF-8">
+    <input type="hidden" name="domains" value="weblabor.hu">
+    <input type="hidden" name="sitesearch" value="weblabor.hu">
+    <input type="text" class="form-text" name="q" size="20" maxlength="255" value="">
+    <a href="http://weblabor.hu/kereses">Részletes</a>
+    <input type="submit" class="form-submit" name="btnG" value="Keresés"></div>
+   </form>
+  </div>  </div>
+</div><!--/block-pages-search-->
+      </div>
+    </div> <!-- /header -->
+
+    <div id="banner">
+     <a href="http://news.weblabor.hu/" target="_blank" class="link-external">
+       <img src="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/banner.png" width="945" height="96" alt="Weblabor hírlevél">
+     </a>
+    </div>
+
+    <div id="container" class="clear-block">
+
+      <div id="main" class="column"><div id="main-squeeze">
+
+        <div id="content">
+          <div id="breadcrumb"><div class="breadcrumb"><a href="http://weblabor.hu/">Címlap</a> » <a href="http://weblabor.hu/cikkek">Cikkek</a></div></div>          <h2 class="title" id="page-title">Újratöltés nélküli adatcsere böngészőben</h2>                                        <div id="content-content" class="clear-block">
+            <div class="node clear-block article">
+<div class="meta"><a href="http://weblabor.hu/tagok/203" title="Felhasználói profil megtekintése." class="wlavatar" style="background-image: url(/misc/avatar/15.gif)">Hodicska Gergely</a> · <span title="A megjelenés ideje: 2004. Júl. 14. (Sze), 04.24">2004. Júl. 14. (Sze), 04.24</span></div>
+ <div class="content">
+<img src="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/jsadatcsere.png" class="attach-icon" alt="Újratöltés nélküli adatcsere böngészőben"><div class="whateffect">Eddigi cikkeimben általában biztonsággal kapcsolatos témákról volt szó. Most szakítok ezzel a hagyománnyal és ez alkalommal olyan módszerekről lesz szó, melyek használatával elérhetjük, hogy webes alkalmazásunk az oldal újratöltődése nélkül tudjon kommunikálni a szerverrel. Hűha, és miért is jó ez nekünk? Na többek közt erről is olvashatsz, ha a tovább feliratra kattintasz ;).<br>
+<ul class="bb-list"><li>Adódhatnak olyan helyzetek, amikor az állandó újratöltődés élvezhetetlenné" tenné az oldalt. Ilyen lehet például egy csevegő program, ahol lényegesen ergonómikusabb, ha a kommunikáció a háttérben zajlik.<br>
+</li><li>Sok esetben egy ilyen megoldás kényelmesebb a felhasználó számára. Gyakori eset, hogy egy beviteli elem tartalma egy másik elem tartalmától függ, pl. ország/megye kiválasztása. Ilyenkor használhatunk több lépcsős űrlapot, de mennyivel kényelmesebb, ha az ország kiválasztása után az oldal lekéri a hozzá tartozó megyéket, és a válasz alapján feltölti a megyék listáját.<br>
+</li><li>Egy komolyabb menüszerkezet esetén is hasznos lehet, ha az almenük tartalmát csak igény szerint tölti le az oldal.<br>
+</li><li>Szintén hasznos lehet olyan űrlap ellenőrzések megvalósítására, melyekhez szükség van szerver oldalon tárolt adatokra. Gondoljunk csak az "Ez a felhasználó név már foglalt" típusú üzenetekre.<br>
+</li><li>Látványos lehet adminisztrációs oldalakon történő használatuk, ami által webes programunk sokkal inkább egy asztali alkalmazás benyomását keltheti, mely a felhasználó számára is tetszetős, és ha ő örül, mi is örülünk.<br>
+</li><li>Ezenkívül volt egy olyan esetem is, amikor a szerver és a kliensek között elég kis sávszélességű kapcsolat volt, ezért fontos volt, hogy minél kevesebbszer kelljen az oldalt teljesen újratölteni. Sok funkciót ezért ily módon valósítottam meg. Például egy űrlap ellenőrzése így zajlott: adatok elküldése, ellenőrzés szerver oldalon, ha hiba volt, akkor a hibák visszaküldése, melyet a kliens megjelenített, ha nem, akkor ment a parancs, hogy a kliens továbbléphet a következő oldalra.<br>
+</li></ul><br>
+Két lehetséges megoldást fogunk megtekinteni. Ezek közül az első egy rejtett <code class="bb-code">&lt;iframe&gt;</code> elemet használ a kommunikáció megvalósítására, míg a másik az újabb böngészőkben elérhető, <code class="bb-code">XmlHttpRequest</code> nevű objektumot. A neve ne tévesszen meg senkit, nem lesz szükségünk XML ismeretekre, arra fogjuk használni, hogy HTTP POST metódussal küldünk vele adatokat a szervernek, valamint fogadjuk a választ.<br>
+<br>
+Az első megoldás során valójában van újratöltődés, de ez a rejtett <code class="bb-code">&lt;iframe&gt;</code> elemen belül zajlik. Előnye, hogy szinte bármilyen (<code class="bb-code">&lt;iframe&gt;</code> elemet) támogató böngésző esetén használható, hátránya, hogy a kommunikáció aszinkron, illetve látni fogjuk, hogy az alap megvalósítás nem minden szempontból tökéletes, ezért kicsit trükközni kell, hogy tényleg jól használható legyen.<br>
+<br>
+A második megoldás előnye, hogy akár szinkron kommunikációt is megvalósíthatunk vele. Egyetlen hátránya, hogy jelenleg nem mindegyik böngésző támogatja: az 5.0 és nagyobb verziójú Internet Explorer illetve a Mozilla család. Ez elég jól lefedi az internetet használók böngészőinek nagy százalékát, és végképp kitűnő választás lehet intranetes alkalmazások során, ahol többnyire elő lehet írni, hogy a felhasználók milyen böngészőt használjanak.<br>
+<br>
+Mielőtt belevágunk, két dologra szeretném felhívni a figyelmet. Egyrészt mindkét módszer esetén fontos látnunk, hogy JavaScript nélkül nem működnek. Ezért ha nem írható elő, hogy a JavaScript be legyen kapcsolva, akkor igyekezzünk olyan megoldásokat alkalmazni, amelyek kikapcsolt JavaScript mellett is működnek. Erre általános recept nem adható az alkalmazási terület sokrétűségéből fakadóan, de a legtöbb esetben megoldható. Másodsorban fontos látni, hogy ezek "vastagabb" klienst kívánnak, hiszen meg kell írnunk azokat a kódrészleteket, amelyek a szerver válaszának megfelelően elvégzik az oldalon a szükséges módosításokat: kiírják az új üzenetet, feltöltik a legördülő listát, kiteszik az almenüpontokat, stb. Ezért fontos megtalálni azt arányt, amely mellett ezek a megoldások kényelmesen használhatóak, de nem bonyolódik el túlságosan a kliens, ami hosszú távon lassíthatja a fejlesztés menetét.<br>
+<br>
+Ennyi bevezető után lássuk a medvét!<h3>Kommunikáció <code class="bb-code">&lt;iframe&gt;</code> használatával</h3>A megoldás lényege, hogy a kliens oldal az <code class="bb-code">&lt;iframe&gt;</code> elemen keresztül intéz kérést a szerverhez, ami a kérésnek megfelelő akciók végrehajtása után egy olyan oldalt (JavaScript kódot) generál az <code class="bb-code">&lt;iframe&gt;</code> elembe, mely végrehatja a kérés kiszolgálásnak eredményétől függően a kliens oldalon esetlegesen szükséges változtatásokat.<br>
+<br>
+Minden további magyarázat előtt lássuk, hogy hogyan is zajlik ez <a href="http://felho.hu/JsRemoteScripting/IframeBasic/client.html" class="bb-url link-external">működés közben</a>. A szerveroldali részek PHP nyelven készültek.<br>
+<br>
+<span style="font-style:italic"><span style="font-weight:bold">client.html</span></span><div class="sourcecode sourcecode-html"><div class="dp-highlighter"><div class="bar"></div><ol start="1" class="dp-xml"><li class="alt"><span><span class="tag">&lt;</span><span class="tag-name">html</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">head</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">title</span><span class="tag">&gt;</span><span>Egyszerű&nbsp;példa&nbsp;iframe&nbsp;elemen&nbsp;keresztül&nbsp;történő&nbsp;kommunikációra</span><span class="tag">&lt;/</span><span class="tag-name">title</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">script</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"text/javascript"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function&nbsp;responseHandler(msg)&nbsp;{&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(msg)&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">script</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">head</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">body</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">iframe</span><span>&nbsp;</span><span class="attribute">id</span><span>=</span><span class="attribute-value">"serverAction"</span><span>&nbsp;</span><span class="attribute">name</span><span>=</span><span class="attribute-value">"serverAction"</span><span>&nbsp;</span><span class="attribute">src</span><span>=</span><span class="attribute-value">"about:blank"</span><span>&nbsp;</span><span class="attribute">style</span><span>=</span><span class="attribute-value">"width:0px;&nbsp;height:0px;&nbsp;border:&nbsp;0px"</span><span class="tag">&gt;</span><span class="tag">&lt;/</span><span class="tag-name">iframe</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">form</span><span>&nbsp;</span><span class="attribute">action</span><span>=</span><span class="attribute-value">"serverVariable.php"</span><span>&nbsp;</span><span class="attribute">method</span><span>=</span><span class="attribute-value">"post"</span><span>&nbsp;</span><span class="attribute">target</span><span>=</span><span class="attribute-value">"serverAction"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Szerver&nbsp;változó&nbsp;neve:&nbsp;<span class="tag">&lt;</span><span class="tag-name">input</span><span>&nbsp;</span><span class="attribute">name</span><span>=</span><span class="attribute-value">"varName"</span><span>&nbsp;</span><span class="attribute">value</span><span>=</span><span class="attribute-value">"HTTP_REFERER"</span><span>&nbsp;</span><span class="tag">/&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">br</span><span>&nbsp;</span><span class="tag">/&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">input</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"submit"</span><span>&nbsp;</span><span class="attribute">value</span><span>=</span><span class="attribute-value">"Lekérdez"</span><span>&nbsp;</span><span class="tag">/&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">form</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">br</span><span>&nbsp;</span><span class="tag">/&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">a</span><span>&nbsp;</span><span class="attribute">href</span><span>=</span><span class="attribute-value">"/serverTime.php"</span><span>&nbsp;</span><span class="attribute">target</span><span>=</span><span class="attribute-value">"serverAction"</span><span class="tag">&gt;</span><span>Szerver&nbsp;idő&nbsp;lekérdezése</span><span class="tag">&lt;/</span><span class="tag-name">a</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">body</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="tag">&lt;/</span><span class="tag-name">html</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li></ol></div><pre class="html:code" style="display: none;"><code class="language-html">
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Egyszerű példa iframe elemen keresztül történő kommunikációra&lt;/title&gt;
+        &lt;script type="text/javascript"&gt;
+            function responseHandler(msg) {
+                alert(msg)
+            }
+        &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;iframe id="serverAction" name="serverAction" src="about:blank" style="width:0px; height:0px; border: 0px"&gt;&lt;/iframe&gt;
+        &lt;form action="serverVariable.php" method="post" target="serverAction"&gt;
+            Szerver változó neve: &lt;input name="varName" value="HTTP_REFERER" /&gt;
+            &lt;br /&gt;
+            &lt;input type="submit" value="Lekérdez" /&gt;
+        &lt;/form&gt;
+        &lt;br /&gt;
+        &lt;a href="/serverTime.php" target="serverAction"&gt;Szerver idő lekérdezése&lt;/a&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div><span style="font-style:italic"><span style="font-weight:bold">serverVariable.php</span></span><div class="sourcecode sourcecode-php"><div class="dp-highlighter"><div class="bar"></div><ol start="1" class="dp-c"><li class="alt"><span><span>&lt;?php&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span><span>&nbsp;(isset(</span><span class="vars">$_POST</span><span>[</span><span class="string">'varName'</span><span>]))&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span><span>&nbsp;(isset(</span><span class="vars">$_SERVER</span><span>[</span><span class="vars">$_POST</span><span>[</span><span class="string">'varName'</span><span>]]))&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vars">$msg</span><span>&nbsp;=&nbsp;</span><span class="vars">$_SERVER</span><span>[</span><span class="vars">$_POST</span><span>[</span><span class="string">'varName'</span><span>]];&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<span class="keyword">else</span><span>&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vars">$msg</span><span>&nbsp;=&nbsp;</span><span class="string">'Hiba:&nbsp;nincs&nbsp;ilyen&nbsp;név?&nbsp;szerver&nbsp;változó!'</span><span>;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<span class="keyword">else</span><span>&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vars">$msg</span><span>&nbsp;=&nbsp;</span><span class="string">'Hiba:&nbsp;a&nbsp;szerver&nbsp;változó&nbsp;nevét&nbsp;meg&nbsp;kell&nbsp;adni!'</span><span>;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;header(<span class="string">"Content-Type:&nbsp;text/html;&nbsp;charset=iso-8859-2"</span><span>);&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="func">echo</span><span>&nbsp;</span><span class="string">'&lt;script&gt;window.parent.responseHandler("'</span><span>.htmlspecialchars(</span><span class="vars">$msg</span><span>).</span><span class="string">'")&lt;/script&gt;'</span><span>;&nbsp;&nbsp;</span></span></li><li class=""><span>?&gt;&nbsp;&nbsp;</span></li></ol></div><pre class="php:code" style="display: none;"><code class="language-php">
+&lt;?php
+    if (isset($_POST['varName'])) {
+        if (isset($_SERVER[$_POST['varName']])) {
+            $msg = $_SERVER[$_POST['varName']];
+        } else {
+            $msg = 'Hiba: nincs ilyen név? szerver változó!';
+        }
+    } else {
+        $msg = 'Hiba: a szerver változó nevét meg kell adni!';
+    }
+
+    header("Content-Type: text/html; charset=iso-8859-2");
+    echo '&lt;script&gt;window.parent.responseHandler("'.htmlspecialchars($msg).'")&lt;/script&gt;';
+?&gt;
+</code></pre></div><span style="font-style:italic"><span style="font-weight:bold">serverTime.php</span></span><div class="sourcecode sourcecode-php"><div class="dp-highlighter"><div class="bar"></div><ol start="1" class="dp-c"><li class="alt"><span><span>&lt;?php&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="vars">$msg</span><span>&nbsp;=&nbsp;</span><span class="func">date</span><span>(</span><span class="string">'H:i'</span><span>);&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;header(<span class="string">"Content-Type:&nbsp;text/html;&nbsp;charset=iso-8859-2"</span><span>);&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="func">echo</span><span>&nbsp;</span><span class="string">'&lt;script&gt;window.parent.responseHandler("'</span><span>.htmlspecialchars(</span><span class="vars">$msg</span><span>).</span><span class="string">'")&lt;/script&gt;'</span><span>;&nbsp;&nbsp;</span></span></li><li class=""><span>?&gt;&nbsp;&nbsp;</span></li></ol></div><pre class="php:code" style="display: none;"><code class="language-php">
+&lt;?php
+    $msg = date('H:i');
+
+    header("Content-Type: text/html; charset=iso-8859-2");
+    echo '&lt;script&gt;window.parent.responseHandler("'.htmlspecialchars($msg).'")&lt;/script&gt;';
+?&gt;
+</code></pre></div>Mint láthatjuk a példában a módszer használható mind GET, mind POST metódus esetén. Mindkét esetben a kérés célja (target attribútum) az <code class="bb-code">&lt;iframe&gt;</code>, melynek méreteit nullára állítjuk, hogy ne látszódjon. Használhatnánk a <code class="bb-code">display:none;</code> CSS tulajdonságot is, de a Netscape 6-os verziója például figyelmen kívül hagyja az ilyen beágyazott kereteket, ezért célszerűbb a fenti megoldást választani.<br>
+<br>
+Ha megnézzük a <code class="bb-code">client.html</code> állományt, akkor a beágyazott keret mellett a másik érdekessége a <code class="bb-code">responseHandler()</code> függvény. Ez egy úgynevezett <span style="font-style:italic">callback</span> függvény, melyekre általában igaz, hogy olyan függvények, melyek alkalmazásunkhoz tartoznak, de meghívásuk kívülről történik, és használatukkal általában lehetővé tesszük, hogy programunk egy külső eseményre tudjon reagálni. Jelen esetben ezen függvény meghívásával tudjuk jelezni, hogy a kérés kiszolgálása a szerveren megtörtént, és utasítjuk a kliens alkalmazást, hogy erre megfelelően reagáljon, ami jelen esetben egy a szerver által visszaadott üzenet megjelenítése. A függvény meghívását úgy érjük el, hogy a beágyazott keretbe a következő tartalmú választ küldjük:<div class="sourcecode sourcecode-html"><div class="dp-highlighter"><div class="bar"></div><ol start="1" class="dp-xml"><li class="alt"><span><span class="tag">&lt;</span><span class="tag-name">script</span><span class="tag">&gt;</span><span>window.parent.responseHandler("Ezt&nbsp;írjad&nbsp;ki&nbsp;jóóól")</span><span class="tag">&lt;/</span><span class="tag-name">script</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li></ol></div><pre class="html:code" style="display: none;"><code class="language-html">&lt;script&gt;window.parent.responseHandler("Ezt írjad ki jóóól")&lt;/script&gt;</code></pre></div>Figyeljük meg, hogy a válasz szövegét nem közvetlenül írjuk ki, hanem alkalmazzuk rá a htmlspecialchars() függvényt, ugyanis ellenkező esetben ha az üzenetünk tartalmazna például egy <code class="bb-code">"</code> jelet, akkor a kiírt JavaScript kód hibás lenne. Még egy apróság, ha PHP oldalon a szövegeket idézőjelben adjuk meg, akkor figyeljünk arra, hogy kiíráskor a speciális karaktereket már a PHP is fedolgozza, ezért ha például egy <code class="bb-code">"\n"</code> karaktert (sortörést) szeretnénk elhelyezni a válaszban, akkor PHP oldalon a <code class="bb-code">"\\\n"</code> kell szerepeljen.<br>
+<br>
+Ha a kérést mi állítjuk össze, akkor az beviteli elemek értékét ne közvetlenül adjuk hozzá a kéréshez, hanem használjuk a JavaScript <code class="bb-code">escape()</code> függvényét, így biztosítjuk, hogy URL-ünk ne tartalmazzon nem megengedett karaktereket. Ezesetben akkor sem lesz probléma, ha esetleg valamelyik beviteli elem olyan karaktert tartalmazna (<code class="bb-code">&amp;</code>, <code class="bb-code">=</code>) melynek egy URL-ben speciális jelentése van.<br>
+<br>
+A fent bemutatott megoldás egyik hátránya, hogy minden egyes kérés megjelenik a böngésző history-jában, amiből gondunk adódhat a vissza gombra kattintva, illetve az oldal frissítésekor. Űrlap használatakor POST metódust alkalmazva megjelenik az a kis gyűlölt kérdés, hogy "Szeretnénk-e az űrlap adatok újbóli elküldését?". Ezen problémák kiküszöbölésére lássuk a következő <a href="http://felho.hu/JsRemoteScripting/IframeAdvanced1/client.html" class="bb-url link-external">továbbfejlesztett verziót</a>. A szerveroldali részek változatlanok, csak a kliens módosult.<br>
+<br>
+<span style="font-style:italic"><span style="font-weight:bold">client.html</span></span><div class="sourcecode sourcecode-html"><div class="dp-highlighter"><div class="bar"></div><ol start="1" class="dp-xml"><li class="alt"><span><span class="tag">&lt;</span><span class="tag-name">html</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">head</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">title</span><span class="tag">&gt;</span><span>Továbbfejlesztett&nbsp;példa&nbsp;iframe&nbsp;elemen&nbsp;keresztül&nbsp;történő&nbsp;kommunikációra</span><span class="tag">&lt;/</span><span class="tag-name">title</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">script</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"text/javascript"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function&nbsp;responseHandler(msg)&nbsp;{&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(msg)&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function&nbsp;getServerTime()&nbsp;{&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;frames["serverAction"].location.replace("serverTime.php");&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;false;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function&nbsp;getServerVariable(form)&nbsp;{&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;frames["serverAction"].location.replace("serverVariable.php?<span class="attribute">varName</span><span class="attribute-value">varName</span><span>="+escape(form.elements["varName"].value));&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;false;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">script</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">head</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">body</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">iframe</span><span>&nbsp;</span><span class="attribute">id</span><span>=</span><span class="attribute-value">"serverAction"</span><span>&nbsp;</span><span class="attribute">name</span><span>=</span><span class="attribute-value">"serverAction"</span><span>&nbsp;</span><span class="attribute">src</span><span>=</span><span class="attribute-value">"about:blank"</span><span>&nbsp;</span><span class="attribute">style</span><span>=</span><span class="attribute-value">"width:0px;&nbsp;height:0px;&nbsp;border:&nbsp;0px"</span><span class="tag">&gt;</span><span class="tag">&lt;/</span><span class="tag-name">iframe</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">form</span><span>&nbsp;</span><span class="attribute">action</span><span>=</span><span class="attribute-value">"serverVariable.php"</span><span>&nbsp;</span><span class="attribute">method</span><span>=</span><span class="attribute-value">"post"</span><span>&nbsp;</span><span class="attribute">target</span><span>=</span><span class="attribute-value">"serverAction"</span><span>&nbsp;</span><span class="attribute">onsubmit</span><span>=</span><span class="attribute-value">"return&nbsp;getServerVariable(this);"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Szerver&nbsp;változó&nbsp;neve:&nbsp;<span class="tag">&lt;</span><span class="tag-name">input</span><span>&nbsp;</span><span class="attribute">name</span><span>=</span><span class="attribute-value">"varName"</span><span>&nbsp;</span><span class="attribute">value</span><span>=</span><span class="attribute-value">"HTTP_REFERER"</span><span>&nbsp;</span><span class="tag">/&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">br</span><span>&nbsp;</span><span class="tag">/&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">input</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"submit"</span><span>&nbsp;</span><span class="attribute">value</span><span>=</span><span class="attribute-value">"Lekérdez"</span><span>&nbsp;</span><span class="tag">/&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">form</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">br</span><span>&nbsp;</span><span class="tag">/&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">a</span><span>&nbsp;</span><span class="attribute">onclick</span><span>=</span><span class="attribute-value">"return&nbsp;getServerTime()"</span><span>&nbsp;</span><span class="attribute">href</span><span>=</span><span class="attribute-value">"/about:blank"</span><span>&nbsp;</span><span class="attribute">target</span><span>=</span><span class="attribute-value">"serverAction"</span><span class="tag">&gt;</span><span>Szerver&nbsp;idő&nbsp;lekérdezése</span><span class="tag">&lt;/</span><span class="tag-name">a</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">body</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="tag">&lt;/</span><span class="tag-name">html</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li></ol></div><pre class="html:code" style="display: none;"><code class="language-html">
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Továbbfejlesztett példa iframe elemen keresztül történő kommunikációra&lt;/title&gt;
+        &lt;script type="text/javascript"&gt;
+            function responseHandler(msg) {
+                alert(msg)
+            }
+
+            function getServerTime() {
+                frames["serverAction"].location.replace("serverTime.php");
+                return false;
+            }
+
+            function getServerVariable(form) {
+                frames["serverAction"].location.replace("serverVariable.php?varName="+escape(form.elements["varName"].value));
+                return false;
+            }
+        &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;iframe id="serverAction" name="serverAction" src="about:blank" style="width:0px; height:0px; border: 0px"&gt;&lt;/iframe&gt;
+        &lt;form action="serverVariable.php" method="post" target="serverAction" onsubmit="return getServerVariable(this);"&gt;
+            Szerver változó neve: &lt;input name="varName" value="HTTP_REFERER" /&gt;
+            &lt;br /&gt;
+            &lt;input type="submit" value="Lekérdez" /&gt;
+        &lt;/form&gt;
+        &lt;br /&gt;
+        &lt;a onclick="return getServerTime()" href="/about:blank" target="serverAction"&gt;Szerver idő lekérdezése&lt;/a&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>Először lássuk, hogy mi a megoldás a linkre kattintás által kezdeményezett kommunikáció esetén. A link <code class="bb-code">onclick</code> eseményére egy függvényt akasztunk. Ez indítja el ténylegesen a kérést és ezután <code class="bb-code">false</code> értékkel tér vissza, ezáltal megakadályozva a linkhez tartozó alapértelmezett működést, ami a célpontra váltás lenne. A másik kulcs momentum az, hogy a <div class="sourcecode sourcecode-javascript"><div class="dp-highlighter"><div class="bar"></div><ol start="1" class="dp-c"><li class="alt"><span><span>frames[</span><span class="string">"serverAction"</span><span>].location&nbsp;=&nbsp;</span><span class="string">"uj&nbsp;cim"</span><span>&nbsp;&nbsp;</span></span></li></ol></div><pre class="javascript:code" style="display: none;"><code class="language-javascript">frames["serverAction"].location = "uj cim"</code></pre></div> helyett a <div class="sourcecode sourcecode-javascript"><div class="dp-highlighter"><div class="bar"></div><ol start="1" class="dp-c"><li class="alt"><span><span>frames[</span><span class="string">"serverAction"</span><span>].location.replace(</span><span class="string">"uj&nbsp;cim"</span><span>)&nbsp;&nbsp;</span></span></li></ol></div><pre class="javascript:code" style="display: none;"><code class="language-javascript">frames["serverAction"].location.replace("uj cim")</code></pre></div> formát használjuk, így elérjük, hogy a kérés ne kerüljön be a history-ba.<br>
+<br>
+Az űrlap küldés esetén is hasonló trükköt használunk. Itt az <code class="bb-code">onsubmit</code> eseményre akasztunk egy saját függvényt, amiből hasonlóan az előzőhöz szintén <code class="bb-code">false</code> értékkel térünk vissza, amivel meggátoljuk az űrlap elküldését. A függvényünk előveszi az űrlapmező értékét, és ezt használva a fenti módszerrel küld egy kérést a szervernek.<br>
+<br>
+Ezzel kapcsolatban két észrevételem lenne. Egyrészt vegyük észre, hogy ezzel a módszerrel egy POST metódusú űrlapküldést is GET metódusúra transzformálunk. Ez két szempontból is érdekes lehet: előfordulhat, hogy több adatot szeretnénk küldeni, mint amire GET metódus esetén lehetőségünk van (és ez kevesebb mint amire POST metódus esetén lehetőségünk lenne), valamint az is fontos, hogy a szerver oldalon ne a <code class="bb-code">$_POST</code> tömbön keresztül próbáljuk meg elérni a küldött adatokat. A másik észrevételem, hogy az űrlap elemek alapján történő kérés összeállítása automatizálható. Írhatunk egy függvényt, mellyel végigmegyünk az űrlap elemein, és a nevüknek, típusuknak illetve értéküknek megfelelően összeállítjuk a kérést.<br>
+<br>
+Ha a GET metódus által küldhető adatmennyiség számunkra nem elegendő, és kénytelenek vagyunk post metódust használni, akkor a következőket tartsuk szem előtt:<ul class="bb-list"><li>Érdemes írni egy olyan függvényt, mely paraméterül megkapja a meghívandó szerveroldali szkript nevét, egy név-érték párosokból álló tömböt, és a szerver válaszát követően meghívandó callback függvényt. Ezek alapján dinamikusan létrehoz az <code class="bb-code">&lt;iframe&gt;</code> elemben egy űrlapot és elküldi azt, majd a válaszban érkező adatokkal (pl. egy JavaScript tömb) meghívja a callback függvényt. Szerettem volna erre is példát mutatni, de egyelőre a dinamikusan felépített űrlap elküldésével Opera és Mozilla alatt gond van (Internet Explorer és Konqueror esetén működik). Ha sikerül megvalósítani, akkor frissítem a cikket és ezt egy hozzászólással jelezni fogom.<br>
+</li><li>Ebben az esetben a kérés history-ban való megjelenését nem tudjuk megakadályozni, viszont az oldal frissítésének problémáját meg tudjuk oldani. A szerveroldali szkript ne közvetlenül adja ki a választ, hanem a <code class="bb-code">Location</code> HTTP fejléc segítségével irányítsa át magát egy olyan oldalra, ami generálja a kimenetet.<br>
+</li></ul><br>
+Igazából a fenti két megjegyzés bármely módszert választva jelentőséggel bír:<ul class="bb-list"><li>Bármelyiket választjuk is, ha gyakrabban van rá szükségünk, akkor érdemes egy kis keretrendszert létrehoznunk, mely egy interfészt nyújt a kommunikáció megvalósítására mind kliens, mind szerver oldalon. Így a konkrét esetekben lényegesen rövidebb idő alatt írhatjuk meg a szükséges kódokat, és az szebb, átláthatóbb is lesz. Egy lehetséges kialakításra láthatunk példát a következő módszer ismertetésekor.<br>
+</li><li>Ha kérésünk az alkalmazás állapotának megváltoztatásával jár (pl. adatbázisban való rögzítés), akkor GET metódusú kérés esetén is célszerű használni a <code class="bb-code">Location</code> fejléccel való átirányítást a kimenet generálás előtt.<br>
+</li></ul><h3>Kommunikáció XmlHttpRequest objektum használatával</h3>A frissebb böngészők (IE 5.0 és újabb, Mozilla) esetén használhatjuk a fenti objektumot, mellyel lehetőségünk van a böngészőből közvetlenül kommunikálni. Gyakran láthattuk, hogy egyes amúgy szabványban rögzített dolgok megvalósítása mennyire eltérő lehet. Jelen esetben még ennyi szerencsénk sincs, jelenleg az XmlHttpRequest objektum semmilyen W3C szabványnak nem része. Ennek megfelelően az Internet Explorer alatt egy ActiveX objektumként van jelen, míg Mozilla alatt egy JavaScript konstruktor meghívásával hozhatunk létre egy ilyen objektumot. A helyzetet némileg az is bonyolítja, hogy Internet Explorer esetén az ActiveX objektum neve függ a windows alá telepített MSXML parser verziójától. No nem kell félni, szerencsére a fenti problémát már megoldották helyettünk. Használni fogjuk Erik Arvidsson <a href="http://webfx.eae.net/dhtml/xmlextras/xmlextras.html" class="bb-url link-external">XmlExtras</a> csomagját, mely elfedi az objektum létrehozásának gondjait, használatával a létrehozáshoz csak ennyit kell tennünk:<div class="sourcecode sourcecode-javascript"><div class="dp-highlighter"><div class="bar"></div><ol start="1" class="dp-c"><li class="alt"><span><span class="keyword">var</span><span>&nbsp;xmlHttp&nbsp;=&nbsp;XmlHttp.create();&nbsp;&nbsp;</span></span></li></ol></div><pre class="javascript:code" style="display: none;"><code class="language-javascript">
+var xmlHttp = XmlHttp.create();
+</code></pre></div>Nem szeretném most részletezni, hogy mi mindent lehet ezzel az objektummal kezdeni, mi csak arra fogjuk használni, hogy adatokat küldjünk a szervernek post metódussal, majd a válasz megérkeztével meghívjuk a kezelő függvényt. Íme az ezt megvalósító kód:<div class="sourcecode sourcecode-javascript"><div class="dp-highlighter"><div class="bar"></div><ol start="1" class="dp-c"><li class="alt"><span><span class="comment">/*1*/</span><span>&nbsp;</span><span class="keyword">var</span><span>&nbsp;xmlHttp&nbsp;=&nbsp;XmlHttp.create();&nbsp;&nbsp;</span></span></li><li class=""><span><span class="comment">/*2*/</span><span>&nbsp;xmlHttp.open(</span><span class="string">'POST'</span><span>,&nbsp;</span><span class="string">'aMeghivandoScript.php'</span><span>,&nbsp;</span><span class="keyword">false</span><span>);&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="comment">/*3*/</span><span>&nbsp;xmlHttp.setRequestHeader(</span><span class="string">'Content-Type'</span><span>,&nbsp;</span><span class="string">'application/x-www-form-urlencoded;&nbsp;charset=utf-8'</span><span>);&nbsp;&nbsp;</span></span></li><li class=""><span><span class="comment">/*4*/</span><span>&nbsp;xmlHttp.send(</span><span class="string">"param1=value1&amp;param2=value2"</span><span>);&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="comment">/*5*/</span><span>&nbsp;responseHandler(xmlHttp.responseText);&nbsp;&nbsp;</span></span></li></ol></div><pre class="javascript:code" style="display: none;"><code class="language-javascript">
+/*1*/ var xmlHttp = XmlHttp.create();
+/*2*/ xmlHttp.open('POST', 'aMeghivandoScript.php', false);
+/*3*/ xmlHttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=utf-8');
+/*4*/ xmlHttp.send("param1=value1&amp;param2=value2");
+/*5*/ responseHandler(xmlHttp.responseText);
+</code></pre></div>Menjünk végig lépésről lépésre, hogy pontosan lássuk, hogy mi történik itt.<br>
+<ol class="bb-list" style="list-style-type:decimal;"><li>Objektum létrehozása.<br>
+</li><li>Kapcsolat létrehozása. Itt megadjuk a kérés típusát, a kérés célját, a <code class="bb-code">false</code> megadásával pedig azt jelezzük, hogy szinkron kommunikációt szeretnénk.<br>
+</li><li>Itt a kérés fejlécét állítjuk be, melyben jelezzük, hogy milyen adatokról is van szó, és megadjuk a karakter kódolás típusát is. Fontos tudni, hogy szöveg küldése esetén ez az objektum mindenféleképpen UTF-8 kódolást használ.<br>
+</li><li>Elküldjük a tényleges adatokat. A szinkron kommunikáció használata miatt a <code class="bb-code">send()</code> függvény csak akkor tér vissza, ha megérkezett a válasz. Majd látni fogjuk, hogy hogyan kell kezelni azt az esetet, ha aszinkron kommunikációt szeretnénk használni.<br>
+</li><li>Meghívjuk a kezelő függvényt a válasszal, ami tetszőleges szöveg, nekünk kell gondoskodni az értelmezéséről.<br>
+</li></ol><br>
+Mint korábban említettem, érdemes kialakítani egy olyan rendszert, mely megkönnyíti a kiválasztott módszer használatát. A következőkben ennek egy lehetséges megvalósítását mutatom be. Először is próbáljuk ki működés közben. A kliens oldalon a lényeg a <code class="bb-code">serverAction</code> objektum. Ez egy általunk gyártott JavaScript objektum, melyen keresztül meg tudunk hívni egy szerver oldali funkciót, ehhez meg kell adnunk a funkció nevét, az átadandó adatokat, és a callback függvény nevét, mely a válasz kezelését végzi. Ezután a szerveroldali rész meghívja a megfelelő funkciót, melynek egy <code class="bb-code">$result</code> nevű tömbbe kell pakolnia azokat az adatokat, melyeket szeretne a kliensnek visszaküldeni. Ezt követően a szerveroldali rész ezt a tömböt átalakítja egy olyan szöveggé, amellyel ha meghívjuk az <code class="bb-code">eval()</code> JavaScript függvényt, akkor a PHP tömbnek megfelelő JavaScript tömb jön létre. A <code class="bb-code">responseText</code> ezt a szöveget fogja tartalmazni, melyre alkalmazzuk az <code class="bb-code">eval()</code> függvényt, és a keletkezett <code class="bb-code">result</code> tömbbel hívjuk meg a kéréskor megadott kezelő függvényt.<br>
+Lássuk <a href="http://felho.hu/JsRemoteScripting/XmlHttpRequest/client.html" class="bb-url link-external">példánk</a> esetén ez hogy néz ki:<div class="sourcecode sourcecode-javascript"><div class="dp-highlighter"><div class="bar"></div><ol start="1" class="dp-c"><li class="alt"><span><span class="keyword">function</span><span>&nbsp;addItem()&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;itemName&nbsp;=&nbsp;document.getElementById(<span class="string">"itemName"</span><span>);&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">var</span><span>&nbsp;data&nbsp;=&nbsp;</span><span class="keyword">new</span><span>&nbsp;Array();&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;data[data.length]&nbsp;=&nbsp;serverAction.createNVArray(<span class="string">"itemName"</span><span>,&nbsp;itemName.value.trim());&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;serverAction.call(<span class="string">"addItem"</span><span>,&nbsp;data,&nbsp;addItemHandler);&nbsp;&nbsp;</span></span></li><li class=""><span>}&nbsp;&nbsp;</span></li></ol></div><pre class="javascript:code" style="display: none;"><code class="language-javascript">
+function addItem() {
+    itemName = document.getElementById("itemName");
+    var data = new Array();
+    data[data.length] = serverAction.createNVArray("itemName", itemName.value.trim());
+    serverAction.call("addItem", data, addItemHandler);
+}
+</code></pre></div>Az elküldendő adatok a <code class="bb-code">data</code> tömbbe kerülnek, melynek elemei olyan tömbök melynek <code class="bb-code">name</code> kulcsa tartalmazza a paraméter nevét, <code class="bb-code">value</code> kulcsa pedig a paraméter értéket. A <code class="bb-code">createNVArray()</code> segédfüggvény csak annyit csinál, hogy egy név-érték párosból csinál egy ilyen tömböt. A lényeg a <code class="bb-code">call()</code> függvény, ahol megadjuk, hogy a szerveren az <code class="bb-code">addItem</code> funkciót szeretnénk meghívni, megadjuk az elküldendő adatokat és hogy a választ kezelő függvény az <code class="bb-code">addItemHandler</code> legyen. Lássuk a call függvényt:<div class="sourcecode sourcecode-javascript"><div class="dp-highlighter"><div class="bar"></div><ol start="1" class="dp-c"><li class="alt"><span><span>serverAction.call&nbsp;=&nbsp;</span><span class="keyword">function</span><span>(action,&nbsp;data,&nbsp;requestHandler)&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span><span class="comment">/*1*/</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">var</span><span>&nbsp;params;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;params&nbsp;=&nbsp;<span class="string">'__action__='</span><span>&nbsp;+&nbsp;action;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">for</span><span>(</span><span class="keyword">var</span><span>&nbsp;i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;data.length;&nbsp;i++)&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;params&nbsp;+=&nbsp;<span class="string">'&amp;'</span><span>&nbsp;+&nbsp;data[i].name&nbsp;+&nbsp;</span><span class="string">'='</span><span>&nbsp;+&nbsp;encodeURIComponent(data[i].value);&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">var</span><span>&nbsp;xmlHttp&nbsp;=&nbsp;XmlHttp.create();&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;xmlHttp.open(<span class="string">'POST'</span><span>,&nbsp;</span><span class="string">'serverActionHandler.php'</span><span>,&nbsp;</span><span class="keyword">true</span><span>);&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="comment">/*2*/</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;xmlHttp.onreadystatechange&nbsp;=&nbsp;<span class="keyword">function</span><span>&nbsp;()&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span><span>&nbsp;(xmlHttp.readyState&nbsp;==&nbsp;4)&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">var</span><span>&nbsp;result&nbsp;=&nbsp;</span><span class="keyword">new</span><span>&nbsp;Array();&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eval(xmlHttp.responseText);&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;serverAction.callHandler(result);&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;xmlHttp.setRequestHeader(<span class="string">'Content-Type'</span><span>,&nbsp;</span><span class="string">'application/x-www-form-urlencoded;&nbsp;charset=utf-8'</span><span>);&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;xmlHttp.send(params);&nbsp;&nbsp;</span></li><li class="alt"><span><span class="comment">/*3*/</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">this</span><span>.requestHandler&nbsp;=&nbsp;requestHandler;&nbsp;&nbsp;</span></span></li><li class="alt"><span>}&nbsp;&nbsp;</span></li></ol></div><pre class="javascript:code" style="display: none;"><code class="language-javascript">
+serverAction.call = function(action, data, requestHandler) {
+/*1*/
+    var params;
+    params = '__action__=' + action;
+    for(var i = 0; i &lt; data.length; i++) {
+        params += '&amp;' + data[i].name + '=' + encodeURIComponent(data[i].value);
+    }
+    
+    var xmlHttp = XmlHttp.create();
+    xmlHttp.open('POST', 'serverActionHandler.php', true);
+/*2*/
+    xmlHttp.onreadystatechange = function () {
+        if (xmlHttp.readyState == 4) {
+            var result = new Array();
+            eval(xmlHttp.responseText);
+            serverAction.callHandler(result);
+        }
+    }
+    xmlHttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=utf-8');
+    xmlHttp.send(params);
+/*3*/
+    this.requestHandler = requestHandler;
+}
+</code></pre></div><ol class="bb-list" style="list-style-type:decimal;"><li>Összeállítjuk a paramétereket tartalmazó szöveget. Először is lesz egy <code class="bb-code">__action__</code> nevű paraméter, mely a meghívandó szerver oldali funkció nevét fogja tartalmazni. A másik lényeges dolog, hogy mivel UTF-8 kódolásról van szó, nem használhatjuk az <code class="bb-code">escape()</code> függvényt, hanem helyette az <code class="bb-code">encodeURIComponent()</code>-re van szükség. Persze ez például IE 5.0 esetén még nem volt, pedig ez a böngésző most benne van a célközönségünkben, de <a href="http://www.worldtimzone.com/res/encode/" class="bb-url link-external">itt</a> találhatunk erre is megoldást.<br>
+</li><li>A nagyobb rugalmasság kedvéért (lassú válasz esetén sincs gond) aszinkron módú kommunikációt fogunk használni. Ennek megvalósításának módja, hogy egy eseménykezelőt akasztunk a <code class="bb-code">onreadystate</code> attribútumra, ami ennek változásakor mindig meghívódik. Ha ennek értéke 4 (válasz megjött), akkor az <code class="bb-code">eval()</code> segítségével létrehozza a már fent említett <code class="bb-code">result</code> tömböt, majd meghívja a <code class="bb-code">serverAction</code> objektum <code class="bb-code">callHandler()</code> függvényét, mely tulajdonképpen annyit csinál, hogy meghívja a szükséges kezelőfüggvényt ezzel a tömbbel. Azért nem közvetlenül azt hívjuk meg, mert így lekezelhetőek általánosan olyan szituációk, mind például rossz, nem létező funkciót szerettünk volna meghívni.<br>
+</li><li>Az objektum <code class="bb-code">requestHandler</code> változójába elmentjük a kezelőfüggvényt. A megfogalmazás furcsának tűnhet, de a JavaScript nyelvben van függvény típusú változó. Ezt fogja majd használni a <code class="bb-code">callHandler()</code> függvény a válasz kezelésekor.<br>
+</li></ol><br>
+Most lássuk a szerveroldali részt. Minden kérést az <code class="bb-code">serverActionHandler.php</code> nevű script fogad:<div class="sourcecode sourcecode-php"><div class="dp-highlighter"><div class="bar"></div><ol start="1" class="dp-c"><li class="alt"><span><span>&lt;?php&nbsp;&nbsp;</span></span></li><li class=""><span><span class="comment">/*1*/</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">include_once</span><span>(</span><span class="string">'include/arrayToJsArray.php'</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;define(<span class="string">'NL'</span><span>,&nbsp;</span><span class="string">"\n"</span><span>);&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="comment">/*2*/</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">foreach</span><span>(&nbsp;</span><span class="vars">$_POST</span><span>&nbsp;</span><span class="keyword">as</span><span>&nbsp;</span><span class="vars">$name</span><span>&nbsp;=&gt;&nbsp;</span><span class="vars">$value</span><span>&nbsp;)&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vars">$_POST</span><span>[</span><span class="vars">$name</span><span>]&nbsp;=&nbsp;iconv(</span><span class="string">'UTF-8'</span><span>,&nbsp;</span><span class="string">'ISO-8859-2'</span><span>&nbsp;,&nbsp;</span><span class="vars">$value</span><span>);&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class="alt"><span><span class="comment">/*3*/</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="vars">$result</span><span>&nbsp;=&nbsp;</span><span class="keyword">array</span><span>();&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="vars">$result</span><span>[&nbsp;</span><span class="string">'errorCode'</span><span>&nbsp;]&nbsp;=&nbsp;0;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="vars">$result</span><span>[&nbsp;</span><span class="string">'errorMsg'</span><span>&nbsp;]&nbsp;=&nbsp;</span><span class="string">''</span><span>;&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="comment">/*4*/</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span><span>&nbsp;(isset(</span><span class="vars">$_POST</span><span>[</span><span class="string">'__action__'</span><span>]))&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span><span>&nbsp;(</span><span class="func">file_exists</span><span>(</span><span class="string">'action/'</span><span>.</span><span class="vars">$_POST</span><span>[</span><span class="string">'__action__'</span><span>].</span><span class="string">'.php'</span><span>))&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ob_start();&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">include</span><span>(</span><span class="string">'action/'</span><span>.</span><span class="vars">$_POST</span><span>[</span><span class="string">'__action__'</span><span>].</span><span class="string">'.php'</span><span>);&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vars">$error</span><span>&nbsp;=&nbsp;ob_get_contents();&nbsp;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ob_end_clean();&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span><span>&nbsp;(</span><span class="vars">$error</span><span>&nbsp;!=&nbsp;</span><span class="string">''</span><span>)&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;Ide&nbsp;jöhet&nbsp;egyéb&nbsp;hibakezelés&nbsp;(pl.:&nbsp;loggolás)</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vars">$result</span><span>[</span><span class="string">'errorCode'</span><span>]&nbsp;=&nbsp;-2;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vars">$result</span><span>[</span><span class="string">'errorMsg'</span><span>]&nbsp;=&nbsp;</span><span class="string">'A&nbsp;(&nbsp;'</span><span>.</span><span class="vars">$_POST</span><span>[</span><span class="string">'__action__'</span><span>].</span><span class="string">')&nbsp;parancs&nbsp;végrehajtása&nbsp;közben&nbsp;hiba&nbsp;történt!'</span><span>;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<span class="keyword">else</span><span>&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vars">$result</span><span>[</span><span class="string">'errorCode'</span><span>]&nbsp;=&nbsp;-1;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vars">$result</span><span>[</span><span class="string">'errorMsg'</span><span>]&nbsp;=&nbsp;</span><span class="string">'Ilyen&nbsp;parancs&nbsp;(&nbsp;'</span><span>.</span><span class="vars">$_POST</span><span>[</span><span class="string">'__action__'</span><span>].</span><span class="string">')&nbsp;nem&nbsp;létezik!'</span><span>;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;<span class="comment">/*5*/</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;Szokásos&nbsp;cachelést&nbsp;megakadályozó&nbsp;fejlécek</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;header(<span class="string">'Expires:&nbsp;Mon,&nbsp;26&nbsp;Jul&nbsp;1997&nbsp;05:00:00&nbsp;GMT'</span><span>);&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;header(<span class="string">'Last-Modified:&nbsp;'</span><span>.</span><span class="func">gmdate</span><span>(</span><span class="string">'D,&nbsp;d&nbsp;M&nbsp;Y&nbsp;H:i:s'</span><span>&nbsp;).</span><span class="string">'&nbsp;GMT'</span><span>);&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;header(<span class="string">'Cache-Control:&nbsp;no-store,&nbsp;no-cache,&nbsp;must-revalidate'</span><span>);&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;header(<span class="string">'Cache-Control:&nbsp;post-check=0,&nbsp;pre-check=0'</span><span>,&nbsp;false);&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;header(<span class="string">'Pragma:&nbsp;no-cache'</span><span>);&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;Válasz&nbsp;típusának&nbsp;beállítása</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;header(<span class="string">'Content-type:&nbsp;text/plain;&nbsp;charset=utf-8'</span><span>);&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="func">echo</span><span>&nbsp;arrayToJsArray(</span><span class="vars">$result</span><span>,&nbsp;</span><span class="string">'result'</span><span>,&nbsp;NL,&nbsp;</span><span class="string">'utf-8'</span><span>);&nbsp;&nbsp;</span></span></li><li class=""><span>?&gt;&nbsp;&nbsp;</span></li></ol></div><pre class="php:code" style="display: none;"><code class="language-php">
+&lt;?php
+/*1*/
+    include_once('include/arrayToJsArray.php' );
+    define('NL', "\n");
+/*2*/
+    foreach( $_POST as $name =&gt; $value ) {
+        $_POST[$name] = iconv('UTF-8', 'ISO-8859-2' , $value);
+    }
+/*3*/
+    $result = array();
+    $result[ 'errorCode' ] = 0;
+    $result[ 'errorMsg' ] = '';
+/*4*/
+    if (isset($_POST['__action__'])) {
+        if (file_exists('action/'.$_POST['__action__'].'.php')) {
+            ob_start();
+            include('action/'.$_POST['__action__'].'.php');
+            $error = ob_get_contents(); 
+            ob_end_clean();
+            if ($error != '') {
+                // Ide jöhet egyéb hibakezelés (pl.: loggolás)
+                $result['errorCode'] = -2;
+                $result['errorMsg'] = 'A ( '.$_POST['__action__'].') parancs végrehajtása közben hiba történt!';
+            }
+        } else {
+            $result['errorCode'] = -1;
+            $result['errorMsg'] = 'Ilyen parancs ( '.$_POST['__action__'].') nem létezik!';
+        }
+    }
+ /*5*/
+    // Szokásos cachelést megakadályozó fejlécek
+    header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
+    header('Last-Modified: '.gmdate('D, d M Y H:i:s' ).' GMT');
+    header('Cache-Control: no-store, no-cache, must-revalidate');
+    header('Cache-Control: post-check=0, pre-check=0', false);
+    header('Pragma: no-cache');
+    // Válasz típusának beállítása
+    header('Content-type: text/plain; charset=utf-8');
+    echo arrayToJsArray($result, 'result', NL, 'utf-8');
+?&gt;
+</code></pre></div><ol class="bb-list" style="list-style-type:decimal;"><li>Betöltjük a tömbkonverziót végző függvényt, illetve definiáljuk a sorvége jel konstanst (Benjamin után szabadon ;)).<br>
+</li><li>Az adatokat UTF-8 kódolással kapjuk. Többnyire nekünk viszont ISO-8859-2 formátumban van rájuk szükségünk. Az átalakításra a PHP <a href="http://php.net/iconv" class="bb-url link-external">iconv</a> modulját használom, mert ez létezik mind Windows, mind Linux platformon. Itt jegyezném meg, hogy a JavaScript tömb generálásakor viszont UTF-8 kódolású szöveget kell generálnunk, a szükséges karakter konverziót a tömb konvertáló függvény elvégzi. Amennyiben UTF-8 kódolással van szükségünk, akkor ezt a részt ki is hagyhatjuk, és a konvertáló függvénynek sem kell az utolsó paramétert átadni.<br>
+</li><li>Definiáljuk a <code class="bb-code">$result</code> tömböt. Ennek van két kiemelt fontosságú eleme. Az <code class="bb-code">errorCode</code> nevű elemmel jelezhetjük a kliens oldali kezelő függvénynek, hogy a funkció végrehajtásakor valami gond volt. Én azt a konvenciót használom, hogy a negatív értékek jelentik a "külső" hibákat (nincs ilyen funkció, valami gond volt, igény szerint kiegészíthető jogosultság kezeléssel is), ezek kezelése történhet egységesen a <code class="bb-code">callHandler()</code> függvényben. Pozitív értékek jelentik a funkció végrehajtása során keletkezett hibákat. Az <code class="bb-code">errorMsg</code> nevű elemben helyezhetjük el az esetleges szöveges hibaüzenetet.<br>
+</li><li>Betöltjük némi ellenőrzéssel a funkciót megvalósító PHP kódot. Jelen esetben ez az <code class="bb-code">__action__</code> paraméter értékével megegyező nevű PHP állomány az <code class="bb-code">action</code> könyvtárban. Ez igazából a <code class="bb-code">$_POST</code> tömbön keresztül kapja meg a küldött adatokat, és a <code class="bb-code">$result</code> tömbbe téve küldhet adatot a kliensnek. Sok funkció esetén szükséges lehet ezek csoportosítása. Erre azt ajánlom, hogy a funkciót lehessen ilyen formában megadni: <code class="bb-code">"xxx.item.add"</code>, amelyhez az <code class="bb-code">action/xxx/item/add.php</code> állomány tartozik. Ezt nem nagy ördöngősség megoldani, és tapasztalatból mondhatom, hogy megéri a káosz elkerülése végett.<br>
+</li><li>Ezután már csak kiadjuk a szükséges HTTP fejléceket (ne gyorsítótárazódjon a válasz, válasz típusa), majd kiírjuk a JavaScript tömböt megvalósító szöveget.<br>
+</li></ol><br>
+<div class="attach-list attach-right"><p><a href="http://weblabor.hu/misc/fs/JsRemoteScripting.zip" class="link-external">A cikkhez kapcsolódó forráskódok</a> (10.02 KB)</p></div>Ennyit szererettem volna ma ismertetni. Remélem cikkem érthető volt, a részletekért ajánlom a forráskódok megtekintését. Nem szeretném tovább szaporítani a szót, a lényeges lépésekről szó esett.<br>
+<br>
+Még annyit azért megemlítenék, hogy használhatnánk olyan technológiákat is a kommunikációra, mint például a Java, ActiveX, Flash, hiszen ezek képesek kommunikálni a szerverrel, és többnyire képesek az oldal többi részét elérni. Sőt Java és ActiveX esetén foglalatokat (socketeket) is használhatunk, melyekkel lehetőségünk van olyan kommunikációra is amelyet a szerver kezdeményez. Viszont a Java kivételével ezek a megoldások nem teljesen platform függetlenek (Flash esetén nem vagyok igazából biztos ebben a kijelentésben), illetve például Mac IE5 nem támogatja a LiveConnect technológiát, amely lehetővé teszi ezen beágyazott objektumok kommunikációját az oldal többi részével JavaScripten keresztül. Ezért egy heterogén környezetben problémák adódhatnak alkalmazásukkal.<br>
+<br>
+Eddig minden alkalommal a következő cikk témájával búcsúztam, most sem lesz ez másképp: fogalmam sincs. Valójában ötletem már van, de ha lenne olyan téma, amiről szívesen olvasnátok, írjátok meg bátran!</div>
+&nbsp;<abbr title="Vége a bejegyzésnek." class="qed">■</abbr> </div>
+<div class="tags"><ul class="links inline"><li class="taxonomy_term_264 first"><a href="http://weblabor.hu/cimkek/264" rel="tag" title="">AJAX</a></li>
+<li class="taxonomy_term_248"><a href="http://weblabor.hu/cimkek/248" rel="tag" title="">haladó</a></li>
+<li class="taxonomy_term_262 last"><a href="http://weblabor.hu/cimkek/262" rel="tag" title="">JavaScript</a></li>
+</ul></div><div class="links"><ul class="links inline"><li class="retweet first last"><a href="http://twitter.com/home/?status=%C3%9Ajrat%C3%B6lt%C3%A9s+n%C3%A9lk%C3%BCli+adatcsere+b%C3%B6ng%C3%A9sz%C5%91ben+http%3A%2F%2Fweblabor.hu%2Fcikkek%2Fjsadatcsere%3Futm_source%3Dwlretweet%26utm_medium%3Dtwitter%26utm_campaign%3D2773+via+%40weblaborhu" title="Beküldöm a Twitterre." class="link-external">csirip</a></li>
+</ul></div>
+</div>
+<div id="comments">
+  <a id="comment-3619"></a>
+<div class="comment clear-block odd"><div class="commentnum">1</div><h3 class="subject"><a href="http://weblabor.hu/cikkek/jsadatcsere#comment-3619" class="active">ez tök jó</a> </h3>
+<div class="meta"><a href="http://weblabor.hu/tagok/1652" title="Felhasználói profil megtekintése." class="wlavatar" style="background-image: url(/misc/avatar/12.gif)">connor</a> · <span title="A megjelenés ideje: 2004. Júl. 14. (Sze), 12.05">2004. Júl. 14. (Sze), 12.05</span></div>
+<div class="content"><div class="whateffect">Tetszik a cikk, tök jó a téma :))<br>
+Annak ellenére, hogy ismerem a technikákat szívesen olvastam végig. Jól írsz :)<br>
+Én még annyit hozzátennék, hogy egyoldalú (cmsben egy sor törlése, látogató felbontásának db-be rögzítése stb...) komunikációnál pl lehet használni ezt a megoldást is:<div class="sourcecode sourcecode-html"><div class="dp-highlighter"><div class="bar"></div><ol start="1" class="dp-xml"><li class="alt"><span><span class="tag">&lt;</span><span class="tag-name">img</span><span>&nbsp;</span><span class="attribute">src</span><span>=</span><span class="attribute-value">"/x.php?adat=1&amp;adat2=2"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li></ol></div><pre class="html:code" style="display: none;"><code class="language-html">
+&lt;img src="/x.php?adat=1&amp;adat2=2"&gt;
+</code></pre></div>/me</div></div><div class="links"><ul class="links inline"><li class="retweet first"></li>
+<li class="comment_forbidden"><span>A hozzászóláshoz <a href="http://weblabor.hu/tagok/regisztracio?destination=comment%2Freply%2F2773%23comment-form">regisztráció</a> és <a href="http://weblabor.hu/tagok/belepes?destination=comment%2Freply%2F2773%23comment-form">belépés</a> szükséges</span></li>
+<li class="forum_topic last"><a href="http://weblabor.hu/forumok/bekuldes">új téma</a></li>
+</ul></div></div><a id="comment-3628"></a>
+<div class="comment clear-block even"><div class="commentnum">2</div><h3 class="subject"><a href="http://weblabor.hu/cikkek/jsadatcsere#comment-3628" class="active">Újratöltés nélküli adatcsere böngészőben</a> </h3>
+<div class="meta"><a href="http://weblabor.hu/tagok/1519" title="Felhasználói profil megtekintése." class="wlavatar" style="background-image: url(/misc/avatar/12.gif)">Poetro</a> · <span title="A megjelenés ideje: 2004. Júl. 14. (Sze), 17.51">2004. Júl. 14. (Sze), 17.51</span></div>
+<div class="content"><div class="whateffect">Na erre a cikkre vártam már 1K éve... <br>
+és végre itt van az újjaim alatt a technológia...<br>
+már csak használni kell :)<br>
+--------<br>
+ Poetro</div></div><div class="links"><ul class="links inline"><li class="retweet first"></li>
+<li class="comment_forbidden"><span>A hozzászóláshoz <a href="http://weblabor.hu/tagok/regisztracio?destination=comment%2Freply%2F2773%23comment-form">regisztráció</a> és <a href="http://weblabor.hu/tagok/belepes?destination=comment%2Freply%2F2773%23comment-form">belépés</a> szükséges</span></li>
+<li class="forum_topic last"><a href="http://weblabor.hu/forumok/bekuldes">új téma</a></li>
+</ul></div></div><a id="comment-3631"></a>
+<div class="comment clear-block odd"><div class="commentnum">3</div><h3 class="subject"><a href="http://weblabor.hu/cikkek/jsadatcsere#comment-3631" class="active">Hmm</a> </h3>
+<div class="meta"><a href="http://weblabor.hu/tagok/987" title="Felhasználói profil megtekintése." class="wlavatar" style="background-image: url(/misc/avatar/24.gif)">MaDog</a> · <span title="A megjelenés ideje: 2004. Júl. 14. (Sze), 23.58">2004. Júl. 14. (Sze), 23.58</span></div>
+<div class="content"><div class="whateffect">Megint csak gratula a cikkhez. Jól írsz.<br>
+<br>
+A módszerek jók, csak a szük átmérő itt az IE, és sajna az árnyékában nehéz igazán jól müködő webes felületet kiépíteni. Majd most a nagy IE lyukak folytán javul a helyzet és tényleg érdemes lesz ilyenekre beruházni.<br>
+<br>
+MaDog voltam!</div></div><div class="links"><ul class="links inline"><li class="retweet first"></li>
+<li class="comment_forbidden"><span>A hozzászóláshoz <a href="http://weblabor.hu/tagok/regisztracio?destination=comment%2Freply%2F2773%23comment-form">regisztráció</a> és <a href="http://weblabor.hu/tagok/belepes?destination=comment%2Freply%2F2773%23comment-form">belépés</a> szükséges</span></li>
+<li class="forum_topic last"><a href="http://weblabor.hu/forumok/bekuldes">új téma</a></li>
+</ul></div></div><a id="comment-3632"></a>
+<div class="comment clear-block even"><div class="commentnum">4</div><h3 class="subject"><a href="http://weblabor.hu/cikkek/jsadatcsere#comment-3632" class="active">még JS-t, még!!!</a> </h3>
+<div class="meta"><a href="http://weblabor.hu/tagok/981" title="Felhasználói profil megtekintése." class="wlavatar" style="background-image: url(/misc/avatar/14.gif)">T.G</a> · <span title="A megjelenés ideje: 2004. Júl. 15. (Cs), 00.25">2004. Júl. 15. (Cs), 00.25</span></div>
+<div class="content"><div class="whateffect">Csatlakozom előttem szólókhoz: gratula &amp; köszönet!!!!<br>
+<br>
+<span style="font-style:italic">&gt; Valójában ötletem már van, de ha lenne olyan téma,<br>
+&gt; amiről szívesen olvasnátok, írjátok meg bátran!</span><br>
+<br>
+JavaScript témában elég elhanyagolt volt eddig a weblabor, ezen javíthatnál! Konkrét kívánság nincs, csak legyen benne sok JS, mert az jó.</div></div><div class="links"><ul class="links inline"><li class="retweet first"></li>
+<li class="comment_forbidden"><span>A hozzászóláshoz <a href="http://weblabor.hu/tagok/regisztracio?destination=comment%2Freply%2F2773%23comment-form">regisztráció</a> és <a href="http://weblabor.hu/tagok/belepes?destination=comment%2Freply%2F2773%23comment-form">belépés</a> szükséges</span></li>
+<li class="forum_topic last"><a href="http://weblabor.hu/forumok/bekuldes">új téma</a></li>
+</ul></div></div><a id="comment-3633"></a>
+<div class="comment clear-block odd"><div class="commentnum">5</div><h3 class="subject"><a href="http://weblabor.hu/cikkek/jsadatcsere#comment-3633" class="active">xmlhttprequest - böngészőtámogatás</a> </h3>
+<div class="meta"><a href="http://weblabor.hu/tagok/1833" title="Felhasználói profil megtekintése." class="wlavatar" style="background-image: url(/misc/avatar/24.gif)">gongadze</a> · <span title="A megjelenés ideje: 2004. Júl. 15. (Cs), 04.35">2004. Júl. 15. (Cs), 04.35</span></div>
+<div class="content"><div class="whateffect">Mivel fordítani nem tudok csak másolok:<br>
+<br>
+Update 13 May 2004: Ned Baldessin writes in to say that Safari now handles the XMLHTTPRequest object just like Mozilla. Fantastic stuff - hopefully that feature is backported to Konqueror - that would leave Opera as the only browser not yet supporting this feature.<br>
+<br>
+Update 10 June 2004: Mendrik writes in with a possible solution for Opera. Using Java's liveConnect in Opera allows exchanging of XML documents. He has an example page up. Quick test in Opera 7.20 worked.<br>
+<br>
+Vagyis ha minden igaz Safarival és Operával is megvalósítható az xmlhttprequest. <br>
+Forrás: http://www.isolani.co.uk/blog/atom/JavascriptAtomApiClientUsingXmlHttpRequest</div></div><div class="links"><ul class="links inline"><li class="retweet first"></li>
+<li class="comment_forbidden"><span>A hozzászóláshoz <a href="http://weblabor.hu/tagok/regisztracio?destination=comment%2Freply%2F2773%23comment-form">regisztráció</a> és <a href="http://weblabor.hu/tagok/belepes?destination=comment%2Freply%2F2773%23comment-form">belépés</a> szükséges</span></li>
+<li class="forum_topic last"><a href="http://weblabor.hu/forumok/bekuldes">új téma</a></li>
+</ul></div></div><div class="indented"><a id="comment-3636"></a>
+<div class="comment clear-block even"><div class="commentnum">6</div><h3 class="subject"><a href="http://weblabor.hu/cikkek/jsadatcsere#comment-3636" class="active">Kicsit kuzdeni kell majd</a> </h3>
+<div class="meta"><a href="http://weblabor.hu/tagok/203" title="Felhasználói profil megtekintése." class="wlavatar" style="background-image: url(/misc/avatar/15.gif)">Hodicska Gergely</a> · <span title="A megjelenés ideje: 2004. Júl. 15. (Cs), 11.32">2004. Júl. 15. (Cs), 11.32</span></div>
+<div class="content"><div class="whateffect">Szia!<br>
+<br>
+Koszi a linket. <br>
+A safarit mar nezegettem egyszer, de az o tamogatasahoz kell nemi valtoztatast eszkozolni.<br>
+http://developer.apple.com/internet/webcontent/xmlhttpreq.html<br>
+<span style="font-style:italic">"Note: It is essential that the data returned from the server be sent with a Content-Type set to text/xml. Content that is sent as text/plain or text/html is not accepted by the instance of the request object."</span><br>
+<br>
+Az operas megoldast megnezem majd alaposabban, kar hogy nem tul szoszatyar a forras.<br>
+<br>
+Felho</div></div><div class="links"><ul class="links inline"><li class="retweet first"></li>
+<li class="comment_forbidden"><span>A hozzászóláshoz <a href="http://weblabor.hu/tagok/regisztracio?destination=comment%2Freply%2F2773%23comment-form">regisztráció</a> és <a href="http://weblabor.hu/tagok/belepes?destination=comment%2Freply%2F2773%23comment-form">belépés</a> szükséges</span></li>
+<li class="forum_topic last"><a href="http://weblabor.hu/forumok/bekuldes">új téma</a></li>
+</ul></div></div></div><a id="comment-4194"></a>
+<div class="comment clear-block odd"><div class="commentnum">7</div><h3 class="subject"><a href="http://weblabor.hu/cikkek/jsadatcsere#comment-4194" class="active">Inicializálás</a> </h3>
+<div class="meta"><a href="http://weblabor.hu/tagok/942" title="Felhasználói profil megtekintése." class="wlavatar" style="background-image: url(/misc/avatar/14.gif)">chx</a> · <span title="A megjelenés ideje: 2004. Aug. 25. (Sze), 07.41">2004. Aug. 25. (Sze), 07.41</span></div>
+<div class="content"><div class="whateffect"><a href="http://jibbering.com/2002/4/httprequest.html" class="bb-url link-external">Itt</a> is találhatunk egy inicializáló függvényt, és nekem úgy tűnik, hogy éppen az IE különböző dolgait jobban kezeli mint az XMLExtras-ban lévő, valószínűleg a kettő összegyúrását érdemes használni. Írok az XMLExtras emberkének mindenesetre.<br>
+<br>
+Opera 7.60 már ismeri ezt a kellemes függvényt. Konqueror is...</div></div><div class="links"><ul class="links inline"><li class="retweet first"></li>
+<li class="comment_forbidden"><span>A hozzászóláshoz <a href="http://weblabor.hu/tagok/regisztracio?destination=comment%2Freply%2F2773%23comment-form">regisztráció</a> és <a href="http://weblabor.hu/tagok/belepes?destination=comment%2Freply%2F2773%23comment-form">belépés</a> szükséges</span></li>
+<li class="forum_topic last"><a href="http://weblabor.hu/forumok/bekuldes">új téma</a></li>
+</ul></div></div><a id="comment-7878"></a>
+<div class="comment clear-block even"><div class="commentnum">8</div><h3 class="subject"><a href="http://weblabor.hu/cikkek/jsadatcsere#comment-7878" class="active">Sajnos XP SP2-es Windózon futó alap beépített explórerben h</a> </h3>
+<div class="meta">Anonymous · <span title="A megjelenés ideje: 2005. Feb. 9. (Sze), 10.24">2005. Feb. 9. (Sze), 10.24</span></div>
+<div class="content"><div class="whateffect">Sajnos XP SP2-es Windózon futó alap beépített explórerben hiba keletkezik ha a 'XmlHttpRequest' példát betöltöm és felvetetnék egy elemet, ugyanakkor FireFox-al simán futik. a hibaüzenet: "Az objektum nem támogatja ezt a tulajdonságot vagy metódust." Egyébkéntg minden ActiveX engedélyezett...<br>
+Nem tudo mi lehet a gond, az lenne a jó, ha alapbeállításokkal működne a dolog, mert így nem adhatok közzé dolgokat, mivel az esetek 90%-ában alapbeállítású böngészők futnak, legalábbis sztem...<br>
+<br>
+Köszi a választ!<br>
+üdv.: Pistván.</div></div><div class="links"><ul class="links inline"><li class="retweet first"></li>
+<li class="comment_forbidden"><span>A hozzászóláshoz <a href="http://weblabor.hu/tagok/regisztracio?destination=comment%2Freply%2F2773%23comment-form">regisztráció</a> és <a href="http://weblabor.hu/tagok/belepes?destination=comment%2Freply%2F2773%23comment-form">belépés</a> szükséges</span></li>
+<li class="forum_topic last"><a href="http://weblabor.hu/forumok/bekuldes">új téma</a></li>
+</ul></div></div><a id="comment-9180"></a>
+<div class="comment clear-block odd"><div class="commentnum">9</div><h3 class="subject"><a href="http://weblabor.hu/cikkek/jsadatcsere#comment-9180" class="active">Fájl feltöltése</a> </h3>
+<div class="meta">Anonymous · <span title="A megjelenés ideje: 2005. Már. 19. (Szo), 21.38">2005. Már. 19. (Szo), 21.38</span></div>
+<div class="content"><div class="whateffect">Van-e arra lehetőség, hogy ezzel a megoldással fájlt töltsek fel? A TinyMCE-hez szeretnék írni egy képkezelő dialógust. A szerver oldali képböngészés már kész van, azzal semmi probléma nincs, de kellene bele egy olyan rész, ahol képet tudok átadni a szervernek.<br>
+<br>
+Ha nem járható út, mit javasoltok helyette? Esetleg arra gondoltam, hogy egy iframe-be rakom a képfeltöltő formot és úgy postolom, hogy a szülő változatlan maradjon, de ez problémásnak tűnik számomra, és nem is elegáns.</div></div><div class="links"><ul class="links inline"><li class="retweet first"></li>
+<li class="comment_forbidden"><span>A hozzászóláshoz <a href="http://weblabor.hu/tagok/regisztracio?destination=comment%2Freply%2F2773%23comment-form">regisztráció</a> és <a href="http://weblabor.hu/tagok/belepes?destination=comment%2Freply%2F2773%23comment-form">belépés</a> szükséges</span></li>
+<li class="forum_topic last"><a href="http://weblabor.hu/forumok/bekuldes">új téma</a></li>
+</ul></div></div><div class="indented"><a id="comment-9182"></a>
+<div class="comment clear-block even"><div class="commentnum">10</div><h3 class="subject"><a href="http://weblabor.hu/cikkek/jsadatcsere#comment-9182" class="active">Nem</a> </h3>
+<div class="meta"><a href="http://weblabor.hu/tagok/821" title="Felhasználói profil megtekintése." class="wlavatar" style="background-image: url(/misc/avatar/13.gif)">Bártházi András</a> · <span title="A megjelenés ideje: 2005. Már. 19. (Szo), 22.42">2005. Már. 19. (Szo), 22.42</span></div>
+<div class="content"><div class="whateffect">Ezzel a módszerrel sincs lehetőség arra, hogy a kliens gépen turkáljon valaki. :) Szerencsére. Az <code class="bb-code">iframe</code>-es megoldás egész járható útnak tűnik: az iframe legyen teljes ablak méretű, majd mikor feltöltötted a fájlt, rejtsed el. Vagy egy iframe legyen már eleve a target-e a kitett formnak, akkor sem töltődik újra az oldal. Az biztos, hogy ez nem problémás. Az elegánsság egy másik kérdés, de szerintem azzal sincsen baj. Ennek ellenére szerintem ebben az esetben felesleges ezt a technológiát használni. Tippért esetleg elugorhatsz a GMail-hez, hogy ők hogyan oldották meg a fájlok csatolását.<br>
+<br>
+-boogie-</div></div><div class="links"><ul class="links inline"><li class="retweet first"></li>
+<li class="comment_forbidden"><span>A hozzászóláshoz <a href="http://weblabor.hu/tagok/regisztracio?destination=comment%2Freply%2F2773%23comment-form">regisztráció</a> és <a href="http://weblabor.hu/tagok/belepes?destination=comment%2Freply%2F2773%23comment-form">belépés</a> szükséges</span></li>
+<li class="forum_topic last"><a href="http://weblabor.hu/forumok/bekuldes">új téma</a></li>
+</ul></div></div><div class="indented"><a id="comment-9183"></a>
+<div class="comment clear-block odd"><div class="commentnum">11</div><h3 class="subject"><a href="http://weblabor.hu/cikkek/jsadatcsere#comment-9183" class="active">IFrame</a> </h3>
+<div class="meta">Anonymous · <span title="A megjelenés ideje: 2005. Már. 19. (Szo), 23.03">2005. Már. 19. (Szo), 23.03</span></div>
+<div class="content"><div class="whateffect">Akkor maradok az iframenél, bár úgy tudtam, hogy az pont ilyen esetek kivédésére read only, csak az user választhat ki vele tartalmat, nem lehet a háttérben feltölteni. <br>
+<br>
+A megoldás az lett, hogy a dialógus aljára tettem egy iframet, abban van a form, ami a szerveren a megfelelő php-nak átlöki a fájlt. Semmi target megadás nem kell, önmagába tér vissza.</div></div><div class="links"><ul class="links inline"><li class="retweet first"></li>
+<li class="comment_forbidden"><span>A hozzászóláshoz <a href="http://weblabor.hu/tagok/regisztracio?destination=comment%2Freply%2F2773%23comment-form">regisztráció</a> és <a href="http://weblabor.hu/tagok/belepes?destination=comment%2Freply%2F2773%23comment-form">belépés</a> szükséges</span></li>
+<li class="forum_topic last"><a href="http://weblabor.hu/forumok/bekuldes">új téma</a></li>
+</ul></div></div><div class="indented"><a id="comment-9184"></a>
+<div class="comment clear-block even"><div class="commentnum">12</div><h3 class="subject"><a href="http://weblabor.hu/cikkek/jsadatcsere#comment-9184" class="active">Target</a> </h3>
+<div class="meta"><a href="http://weblabor.hu/tagok/821" title="Felhasználói profil megtekintése." class="wlavatar" style="background-image: url(/misc/avatar/13.gif)">Bártházi András</a> · <span title="A megjelenés ideje: 2005. Már. 20. (V), 00.25">2005. Már. 20. (V), 00.25</span></div>
+<div class="content"><div class="whateffect">Persze, hogy nem kell, de ha feltöltő HTML mezőt nem az iframe-be teszed, hanem az oldalba, az ezt tartalmazó formot egy iframe-be irányítod, akkor egyáltalán nem fog látható újratöltődés végrehajtódni. De a lényeg, hogy megy. :)<br>
+<br>
+Ezt az iframe-es read only-t nem tudom, mi, de ilyen nincs, a weblap szerkesztője mondja meg akár így, akár úgy, hogy mi kerüljön bele. Sőt, a felhasználó nem is nagyon tudja ezt befolyásolni. (?) Szerintem a feltöltő mező viselkedésével kevered, de nem értem.<br>
+<br>
+-boogie-</div></div><div class="links"><ul class="links inline"><li class="retweet first"></li>
+<li class="comment_forbidden"><span>A hozzászóláshoz <a href="http://weblabor.hu/tagok/regisztracio?destination=comment%2Freply%2F2773%23comment-form">regisztráció</a> és <a href="http://weblabor.hu/tagok/belepes?destination=comment%2Freply%2F2773%23comment-form">belépés</a> szükséges</span></li>
+<li class="forum_topic last"><a href="http://weblabor.hu/forumok/bekuldes">új téma</a></li>
+</ul></div></div><div class="indented"><a id="comment-9190"></a>
+<div class="comment clear-block odd"><div class="commentnum">13</div><h3 class="subject"><a href="http://weblabor.hu/cikkek/jsadatcsere#comment-9190" class="active">Félreérthető volt</a> </h3>
+<div class="meta">Anonymous · <span title="A megjelenés ideje: 2005. Már. 20. (V), 10.13">2005. Már. 20. (V), 10.13</span></div>
+<div class="content"><div class="whateffect">Bocs, félreérthető voltam. A file input mezőről olvastam a JS Bible 4-ben, hogy read only, hogy ne lehessen egy hidden formon keresztül fálokat tölteni a gépről a user tudta nélkül. Csak a user adhat tartalmat a file mezőnek, vagy kézzel, vagy a selectorral. Ott azt írták, nem működik ez:<br>
+&lt;form id="kuld"&gt;<br>
+&lt;input type="file" id="up"&gt;<br>
+<br>
+document.getElementById("file") = "c:\winnt\php.ini";<br>
+document.getElementById("kuld").submit();<br>
+<br>
+Közben elővettem a könyvet, a 720. oldalon ír erről, de az írja, hogy csak a korai böngészőkben volt read-only, szóval most már működne ez.</div></div><div class="links"><ul class="links inline"><li class="retweet first"></li>
+<li class="comment_forbidden"><span>A hozzászóláshoz <a href="http://weblabor.hu/tagok/regisztracio?destination=comment%2Freply%2F2773%23comment-form">regisztráció</a> és <a href="http://weblabor.hu/tagok/belepes?destination=comment%2Freply%2F2773%23comment-form">belépés</a> szükséges</span></li>
+<li class="forum_topic last"><a href="http://weblabor.hu/forumok/bekuldes">új téma</a></li>
+</ul></div></div><a id="comment-9192"></a>
+<div class="comment clear-block even"><div class="commentnum">14</div><h3 class="subject"><a href="http://weblabor.hu/cikkek/jsadatcsere#comment-9192" class="active">Csak nem jó</a> </h3>
+<div class="meta">Anonymous · <span title="A megjelenés ideje: 2005. Már. 20. (V), 11.40">2005. Már. 20. (V), 11.40</span></div>
+<div class="content"><div class="whateffect">Megpróbáltam a rejtett formos feltöltést, az eredeti lapon egy file mezőben bekértem a fájlt, egy button onclickre rákötöttem, hogy másolja át a fájl paraméterét a rejtett formba és küldje el, de hosszas kínlódás után is arra jutottam, hogy nem engedi, az belőbb említett biztonsági okokból. Csak úgy enged fájlt feltölteni, ha a user maga választotta ki és személyesen bök a submitra.<br>
+<br>
+Esetleg valami áthidaló megoldás?</div></div><div class="links"><ul class="links inline"><li class="retweet first"></li>
+<li class="comment_forbidden"><span>A hozzászóláshoz <a href="http://weblabor.hu/tagok/regisztracio?destination=comment%2Freply%2F2773%23comment-form">regisztráció</a> és <a href="http://weblabor.hu/tagok/belepes?destination=comment%2Freply%2F2773%23comment-form">belépés</a> szükséges</span></li>
+<li class="forum_topic last"><a href="http://weblabor.hu/forumok/bekuldes">új téma</a></li>
+</ul></div></div><div class="indented"><a id="comment-9195"></a>
+<div class="comment clear-block odd"><div class="commentnum">15</div><h3 class="subject"><a href="http://weblabor.hu/cikkek/jsadatcsere#comment-9195" class="active">iframe a target</a> </h3>
+<div class="meta"><a href="http://weblabor.hu/tagok/1056" title="Felhasználói profil megtekintése." class="wlavatar" style="background-image: url(/misc/avatar/25.gif)">attlad</a> · <span title="A megjelenés ideje: 2005. Már. 20. (V), 12.12">2005. Már. 20. (V), 12.12</span></div>
+<div class="content"><div class="whateffect">Miért nem az iframe-et adod meg a form target-jének ahogy már javasolták? Resetelni meg tudod a file mezőt is.<br>
+<br>
+Attila</div></div><div class="links"><ul class="links inline"><li class="retweet first"></li>
+<li class="comment_forbidden"><span>A hozzászóláshoz <a href="http://weblabor.hu/tagok/regisztracio?destination=comment%2Freply%2F2773%23comment-form">regisztráció</a> és <a href="http://weblabor.hu/tagok/belepes?destination=comment%2Freply%2F2773%23comment-form">belépés</a> szükséges</span></li>
+<li class="forum_topic last"><a href="http://weblabor.hu/forumok/bekuldes">új téma</a></li>
+</ul></div></div><div class="indented"><a id="comment-9198"></a>
+<div class="comment clear-block even"><div class="commentnum">16</div><h3 class="subject"><a href="http://weblabor.hu/cikkek/jsadatcsere#comment-9198" class="active">Mert nem tudomhogyan</a> </h3>
+<div class="meta">Anonymous · <span title="A megjelenés ideje: 2005. Már. 20. (V), 13.37">2005. Már. 20. (V), 13.37</span></div>
+<div class="content"><div class="whateffect">Mert nem tudom hogyan kell, esetleg konkrét forrással bemutatnád?<br>
+<br>
+Ez az iform:<br>
+<div class="bb-code-block">&lt;iframe id="uploader" name="uploader" src="uploader.php" style="width:280px; height:70px; border:0px;"&gt;&lt;/iframe&gt;</div><br>
+Ez a tartalma:<br>
+<div class="bb-code-block">&lt;input type="file" name="upload" size="30" id="dummyfile"&gt;<br>&lt;input type="submit" value="upload"&gt;<br>&lt;input type="hidden" name="op" value="upload"&gt;</div><br>
+<br>
+Köszi</div></div><div class="links"><ul class="links inline"><li class="retweet first"></li>
+<li class="comment_forbidden"><span>A hozzászóláshoz <a href="http://weblabor.hu/tagok/regisztracio?destination=comment%2Freply%2F2773%23comment-form">regisztráció</a> és <a href="http://weblabor.hu/tagok/belepes?destination=comment%2Freply%2F2773%23comment-form">belépés</a> szükséges</span></li>
+<li class="forum_topic last"><a href="http://weblabor.hu/forumok/bekuldes">új téma</a></li>
+</ul></div></div><div class="indented"><a id="comment-9199"></a>
+<div class="comment clear-block odd"><div class="commentnum">17</div><h3 class="subject"><a href="http://weblabor.hu/cikkek/jsadatcsere#comment-9199" class="active">kód</a> </h3>
+<div class="meta"><a href="http://weblabor.hu/tagok/1056" title="Felhasználói profil megtekintése." class="wlavatar" style="background-image: url(/misc/avatar/25.gif)">attlad</a> · <span title="A megjelenés ideje: 2005. Már. 20. (V), 13.50">2005. Már. 20. (V), 13.50</span></div>
+<div class="content"><div class="whateffect">Kb. ez kerül egy fájlba:<div class="sourcecode sourcecode-html"><div class="dp-highlighter"><div class="bar"></div><ol start="1" class="dp-xml"><li class="alt"><span><span class="tag">&lt;</span><span class="tag-name">form</span><span>&nbsp;</span><span class="attribute">action</span><span>=</span><span class="attribute-value">"uploader.php"</span><span>&nbsp;</span><span class="attribute">target</span><span>=</span><span class="attribute-value">"uploader"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">input</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"file"</span><span>&nbsp;</span><span class="attribute">name</span><span>=</span><span class="attribute-value">"upload"</span><span>&nbsp;</span><span class="attribute">size</span><span>=</span><span class="attribute-value">"30"</span><span>&nbsp;</span><span class="attribute">id</span><span>=</span><span class="attribute-value">"dummyfile"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">input</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"submit"</span><span>&nbsp;</span><span class="attribute">value</span><span>=</span><span class="attribute-value">"upload"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">input</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"hidden"</span><span>&nbsp;</span><span class="attribute">name</span><span>=</span><span class="attribute-value">"op"</span><span>&nbsp;</span><span class="attribute">value</span><span>=</span><span class="attribute-value">"upload"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span><span class="tag">&lt;/</span><span class="tag-name">form</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span><span class="tag">&lt;</span><span class="tag-name">iframe</span><span>&nbsp;</span><span class="attribute">id</span><span>=</span><span class="attribute-value">"uploader"</span><span>&nbsp;</span><span class="attribute">name</span><span>=</span><span class="attribute-value">"uploader"</span><span>&nbsp;</span><span class="attribute">src</span><span>=</span><span class="attribute-value">"uploader.php"</span><span>&nbsp;</span><span class="attribute">style</span><span>=</span><span class="attribute-value">"width:280px;&nbsp;height:70px;&nbsp;border:0px;"</span><span class="tag">&gt;</span><span class="tag">&lt;/</span><span class="tag-name">iframe</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li></ol></div><pre class="html:code" style="display: none;"><code class="language-html">
+&lt;form action="uploader.php" target="uploader"&gt;
+  &lt;input type="file" name="upload" size="30" id="dummyfile"&gt;
+  &lt;input type="submit" value="upload"&gt;
+  &lt;input type="hidden" name="op" value="upload"&gt;
+&lt;/form&gt;
+
+&lt;iframe id="uploader" name="uploader" src="uploader.php" style="width:280px; height:70px; border:0px;"&gt;&lt;/iframe&gt;
+</code></pre></div>Az uploader.php meg egy másik fájl.<br>
+<br>
+Attila</div></div><div class="links"><ul class="links inline"><li class="retweet first"></li>
+<li class="comment_forbidden"><span>A hozzászóláshoz <a href="http://weblabor.hu/tagok/regisztracio?destination=comment%2Freply%2F2773%23comment-form">regisztráció</a> és <a href="http://weblabor.hu/tagok/belepes?destination=comment%2Freply%2F2773%23comment-form">belépés</a> szükséges</span></li>
+<li class="forum_topic last"><a href="http://weblabor.hu/forumok/bekuldes">új téma</a></li>
+</ul></div></div><div class="indented"><a id="comment-9203"></a>
+<div class="comment clear-block even"><div class="commentnum">18</div><h3 class="subject"><a href="http://weblabor.hu/cikkek/jsadatcsere#comment-9203" class="active">BEmásoltam</a> </h3>
+<div class="meta">Anonymous · <span title="A megjelenés ideje: 2005. Már. 20. (V), 19.12">2005. Már. 20. (V), 19.12</span></div>
+<div class="content"><div class="whateffect">Így egy-egyben bemásoltam, ez a válasz:<br>
+<br>
+Hiba: uncaught exception: [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIObserverService.removeObserver]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://global/content/bindings/browser.xml :: destroy :: line 569"  data: no]</div></div><div class="links"><ul class="links inline"><li class="retweet first"></li>
+<li class="comment_forbidden"><span>A hozzászóláshoz <a href="http://weblabor.hu/tagok/regisztracio?destination=comment%2Freply%2F2773%23comment-form">regisztráció</a> és <a href="http://weblabor.hu/tagok/belepes?destination=comment%2Freply%2F2773%23comment-form">belépés</a> szükséges</span></li>
+<li class="forum_topic last"><a href="http://weblabor.hu/forumok/bekuldes">új téma</a></li>
+</ul></div></div><div class="indented"><a id="comment-9205"></a>
+<div class="comment clear-block odd"><div class="commentnum">19</div><h3 class="subject"><a href="http://weblabor.hu/cikkek/jsadatcsere#comment-9205" class="active">böngésző</a> </h3>
+<div class="meta"><a href="http://weblabor.hu/tagok/1056" title="Felhasználói profil megtekintése." class="wlavatar" style="background-image: url(/misc/avatar/25.gif)">attlad</a> · <span title="A megjelenés ideje: 2005. Már. 20. (V), 21.00">2005. Már. 20. (V), 21.00</span></div>
+<div class="content"><div class="whateffect">Ne egy az egyben másold mert az nem kész kód volt, hiányzik belőle az enctype meg a metódus megadása is. Amúgy nálam nincs ilyen hiba, nem lehet, hogy vmi bővítmény okozza vagy hasonló? Más böngészővel se megy?<br>
+<br>
+Ilyesmi kódnak működnie kell elvileg:<br>
+upload.html:<div class="sourcecode sourcecode-html"><div class="dp-highlighter"><div class="bar"></div><ol start="1" class="dp-xml"><li class="alt"><span><span class="tag">&lt;</span><span class="tag-name">form</span><span>&nbsp;</span><span class="attribute">action</span><span>=</span><span class="attribute-value">"upload.php"</span><span>&nbsp;</span><span class="attribute">target</span><span>=</span><span class="attribute-value">"uploadFrame"</span><span>&nbsp;</span><span class="attribute">enctype</span><span>=</span><span class="attribute-value">"multipart/form-data"</span><span>&nbsp;</span><span class="attribute">method</span><span>=</span><span class="attribute-value">"post"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">input</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"file"</span><span>&nbsp;</span><span class="attribute">name</span><span>=</span><span class="attribute-value">"upload"</span><span>&nbsp;</span><span class="attribute">id</span><span>=</span><span class="attribute-value">"upload"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">input</span><span>&nbsp;</span><span class="attribute">type</span><span>=</span><span class="attribute-value">"submit"</span><span>&nbsp;</span><span class="attribute">value</span><span>=</span><span class="attribute-value">"Feltöltés"</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="tag">&lt;/</span><span class="tag-name">form</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span><span class="tag">&lt;</span><span class="tag-name">iframe</span><span>&nbsp;</span><span class="attribute">id</span><span>=</span><span class="attribute-value">"uploadFrame"</span><span>&nbsp;</span><span class="attribute">name</span><span>=</span><span class="attribute-value">"uploadFrame"</span><span>&nbsp;</span><span class="attribute">src</span><span>=</span><span class="attribute-value">"upload.php"</span><span>&nbsp;</span><span class="attribute">style</span><span>=</span><span class="attribute-value">"width:&nbsp;500px;&nbsp;height:&nbsp;300px;"</span><span class="tag">&gt;</span><span class="tag">&lt;/</span><span class="tag-name">iframe</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li></ol></div><pre class="html:code" style="display: none;"><code class="language-html">
+&lt;form action="upload.php" target="uploadFrame" enctype="multipart/form-data" method="post"&gt;
+  &lt;input type="file" name="upload" id="upload"&gt;
+  &lt;input type="submit" value="Feltöltés"&gt;
+&lt;/form&gt;
+
+&lt;iframe id="uploadFrame" name="uploadFrame" src="upload.php" style="width: 500px; height: 300px;"&gt;&lt;/iframe&gt;
+</code></pre></div>upload.php:<div class="sourcecode sourcecode-php"><div class="dp-highlighter"><div class="bar"></div><ol start="1" class="dp-c"><li class="alt"><span><span>&lt;pre&gt;&nbsp;&nbsp;</span></span></li><li class=""><span>&lt;?php&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span><span class="keyword">if</span><span>&nbsp;(</span><span class="vars">$_SERVER</span><span>[</span><span class="string">'REQUEST_METHOD'</span><span>]&nbsp;===&nbsp;</span><span class="string">'POST'</span><span>)&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;var_dump(<span class="vars">$_FILES</span><span>);&nbsp;&nbsp;</span></span></li><li class=""><span>}&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span>?&gt;&nbsp;&nbsp;</span></li><li class="alt"><span>&lt;/pre&gt;&nbsp;&nbsp;</span></li></ol></div><pre class="php:code" style="display: none;"><code class="language-php">
+&lt;pre&gt;
+&lt;?php
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  var_dump($_FILES);
+}
+
+?&gt;
+&lt;/pre&gt;
+</code></pre></div>Attila</div></div><div class="links"><ul class="links inline"><li class="retweet first"></li>
+<li class="comment_forbidden"><span>A hozzászóláshoz <a href="http://weblabor.hu/tagok/regisztracio?destination=comment%2Freply%2F2773%23comment-form">regisztráció</a> és <a href="http://weblabor.hu/tagok/belepes?destination=comment%2Freply%2F2773%23comment-form">belépés</a> szükséges</span></li>
+<li class="forum_topic last"><a href="http://weblabor.hu/forumok/bekuldes">új téma</a></li>
+</ul></div></div><div class="indented"><a id="comment-9209"></a>
+<div class="comment clear-block even"><div class="commentnum">20</div><h3 class="subject"><a href="http://weblabor.hu/cikkek/jsadatcsere#comment-9209" class="active">Így sem</a> </h3>
+<div class="meta">Anonymous · <span title="A megjelenés ideje: 2005. Már. 20. (V), 22.25">2005. Már. 20. (V), 22.25</span></div>
+<div class="content"><div class="whateffect">Természetesen azt betettem, csak arra mondom, hogy innen másoltam át, amit írtál, elgépelés esete nem áll fenn, de ugyan azt az üzenetet kapom mindig. Ezt adta akkor is, amikor kívülről próbáltam átrakni a file mező tartalmát. Arra gyanakszom, hogy biztonság okokból nem engedi manipulálni a másik formban a file mezőt. Ha a formot fizikailag is az iframe forrásában helyezem el, semmi baja.</div></div><div class="links"><ul class="links inline"><li class="retweet first"></li>
+<li class="comment_forbidden"><span>A hozzászóláshoz <a href="http://weblabor.hu/tagok/regisztracio?destination=comment%2Freply%2F2773%23comment-form">regisztráció</a> és <a href="http://weblabor.hu/tagok/belepes?destination=comment%2Freply%2F2773%23comment-form">belépés</a> szükséges</span></li>
+<li class="forum_topic last"><a href="http://weblabor.hu/forumok/bekuldes">új téma</a></li>
+</ul></div></div><div class="indented"><a id="comment-9214"></a>
+<div class="comment clear-block odd"><div class="commentnum">21</div><h3 class="subject"><a href="http://weblabor.hu/cikkek/jsadatcsere#comment-9214" class="active">két form?</a> </h3>
+<div class="meta"><a href="http://weblabor.hu/tagok/1056" title="Felhasználói profil megtekintése." class="wlavatar" style="background-image: url(/misc/avatar/25.gif)">attlad</a> · <span title="A megjelenés ideje: 2005. Már. 21. (H), 10.26">2005. Már. 21. (H), 10.26</span></div>
+<div class="content"><div class="whateffect">Most akkor nem egy form van? Nem egészen világos miért akarod a file mezőt "manipulálni"/változtatni. Szerintem nincs erre szükség. Mindenesetre a file mező értékét alapvetően nem tudod megváltoztatni csak resetelni lehet meg olvasni, (meg ff alatt pl. cloneNode függvénnyel másolni is, bár ez inkább bug). De ha iframebe rakva működik minden jól, akkor szerintem használd úgy, ha így sehogy se akar összejönni.<br>
+<br>
+"Ami nincs eltörve, ne ragaszd meg." :-)<br>
+<br>
+Attila</div></div><div class="links"><ul class="links inline"><li class="retweet first"></li>
+<li class="comment_forbidden"><span>A hozzászóláshoz <a href="http://weblabor.hu/tagok/regisztracio?destination=comment%2Freply%2F2773%23comment-form">regisztráció</a> és <a href="http://weblabor.hu/tagok/belepes?destination=comment%2Freply%2F2773%23comment-form">belépés</a> szükséges</span></li>
+<li class="forum_topic last"><a href="http://weblabor.hu/forumok/bekuldes">új téma</a></li>
+</ul></div></div></div><a id="comment-30070"></a>
+<div class="comment clear-block even"><div class="commentnum">24</div><h3 class="subject"><a href="http://weblabor.hu/cikkek/jsadatcsere#comment-30070" class="active">:S</a> </h3>
+<div class="meta"><a href="http://weblabor.hu/tagok/5232" title="Felhasználói profil megtekintése." class="wlavatar" style="background-image: url(/misc/avatar/14.gif)">highooo</a> · <span title="A megjelenés ideje: 2006. Júl. 2. (V), 19.31">2006. Júl. 2. (V), 19.31</span></div>
+<div class="content"><div class="whateffect">Hi!!! <br>
+<br>
+Az a nagy büdös helyzet, hogy hülye vagyok ehhez :(<br>
+Ha elmagyarázná valaki hogy a fájlt, hogy töltöm fel nagyon megköszönném<br>
+A feltöltő ürlap kész van, a php vel vagyok gondban<br>
+A feltöltendő fájl hol jelenik meg? :S vagy egyáltalán hova töltöm fel?<br>
+<br>
+kicsit zavaros az egész...<br>
+php kézikönyvet is olvastam már, de nem jutottam előbbre<br>
+<br>
+A segítséget előre is köszönöm</div></div><div class="links"><ul class="links inline"><li class="retweet first"></li>
+<li class="comment_forbidden"><span>A hozzászóláshoz <a href="http://weblabor.hu/tagok/regisztracio?destination=comment%2Freply%2F2773%23comment-form">regisztráció</a> és <a href="http://weblabor.hu/tagok/belepes?destination=comment%2Freply%2F2773%23comment-form">belépés</a> szükséges</span></li>
+<li class="forum_topic last"><a href="http://weblabor.hu/forumok/bekuldes">új téma</a></li>
+</ul></div></div></div></div></div></div></div></div></div></div></div></div><a id="comment-25136"></a>
+<div class="comment clear-block odd"><div class="commentnum">22</div><h3 class="subject"><a href="http://weblabor.hu/cikkek/jsadatcsere#comment-25136" class="active">sajax</a> </h3>
+<div class="meta">Anonymous · <span title="A megjelenés ideje: 2006. Már. 30. (Cs), 01.13">2006. Már. 30. (Cs), 01.13</span></div>
+<div class="content"><div class="whateffect">Sziasztok!<br>
+<br>
+Sajax nem játszik?</div></div><div class="links"><ul class="links inline"><li class="retweet first"></li>
+<li class="comment_forbidden"><span>A hozzászóláshoz <a href="http://weblabor.hu/tagok/regisztracio?destination=comment%2Freply%2F2773%23comment-form">regisztráció</a> és <a href="http://weblabor.hu/tagok/belepes?destination=comment%2Freply%2F2773%23comment-form">belépés</a> szükséges</span></li>
+<li class="forum_topic last"><a href="http://weblabor.hu/forumok/bekuldes">új téma</a></li>
+</ul></div></div><div class="indented"><a id="comment-25150"></a>
+<div class="comment clear-block even"><div class="commentnum">23</div><h3 class="subject"><a href="http://weblabor.hu/cikkek/jsadatcsere#comment-25150" class="active">dátum ;)</a> </h3>
+<div class="meta"><a href="http://weblabor.hu/tagok/203" title="Felhasználói profil megtekintése." class="wlavatar" style="background-image: url(/misc/avatar/15.gif)">Hodicska Gergely</a> · <span title="A megjelenés ideje: 2006. Már. 30. (Cs), 11.08">2006. Már. 30. (Cs), 11.08</span></div>
+<div class="content"><div class="whateffect">Szia!<br>
+<br>
+<br>
+Nézd meg a cikk dátumát. Amikor ez íródott, még AJAX sem létezett. :) Ráadásul a cucc amiről a végén szó van, az 2003 januárjában készült.<br>
+<br>
+<br>
+Felhő</div></div><div class="links"><ul class="links inline"><li class="retweet first"></li>
+<li class="comment_forbidden"><span>A hozzászóláshoz <a href="http://weblabor.hu/tagok/regisztracio?destination=comment%2Freply%2F2773%23comment-form">regisztráció</a> és <a href="http://weblabor.hu/tagok/belepes?destination=comment%2Freply%2F2773%23comment-form">belépés</a> szükséges</span></li>
+<li class="forum_topic last"><a href="http://weblabor.hu/forumok/bekuldes">új téma</a></li>
+</ul></div></div></div><a id="comment-75917"></a>
+<div class="comment clear-block odd"><div class="commentnum">25</div><h3 class="subject"><a href="http://weblabor.hu/cikkek/jsadatcsere#comment-75917" class="active">InternetExplorer probléma</a> </h3>
+<div class="meta"><a href="http://weblabor.hu/tagok/13779" title="Felhasználói profil megtekintése." class="wlavatar" style="background-image: url(/misc/avatar/14.gif)">haho</a> · <span title="A megjelenés ideje: 2011. Ápr. 18. (H), 23.32">2011. Ápr. 18. (H), 23.32</span></div>
+<div class="content"><div class="whateffect">Hello!<br>
+Valaki meg tudja mondani hogy a mai legújabb InternetExplorer böngészőben miért nem működik ez az XmlHttpRequest-es megoldás?<br>
+Ugyanakkor Safariban, Operában, Chromban és Mozillában is működik.<br>
+Nagy segítség lenne, köszönöm.</div></div><div class="links"><ul class="links inline"><li class="retweet first"></li>
+<li class="comment_forbidden"><span>A hozzászóláshoz <a href="http://weblabor.hu/tagok/regisztracio?destination=comment%2Freply%2F2773%23comment-form">regisztráció</a> és <a href="http://weblabor.hu/tagok/belepes?destination=comment%2Freply%2F2773%23comment-form">belépés</a> szükséges</span></li>
+<li class="forum_topic last"><a href="http://weblabor.hu/forumok/bekuldes">új téma</a></li>
+</ul></div></div><div class="indented"><a id="comment-75918"></a>
+<div class="comment clear-block even"><div class="commentnum">26</div><h3 class="subject"><a href="http://weblabor.hu/cikkek/jsadatcsere#comment-75918" class="active">Melyik</a> </h3>
+<div class="meta"><a href="http://weblabor.hu/tagok/1519" title="Felhasználói profil megtekintése." class="wlavatar" style="background-image: url(/misc/avatar/12.gif)">Poetro</a> · <span title="A megjelenés ideje: 2011. Ápr. 19. (K), 00.27">2011. Ápr. 19. (K), 00.27</span></div>
+<div class="content"><div class="whateffect">Melyik Internet Explorerben, melyik megoldás? Tudnál mutatni kódot?</div></div><div class="links"><ul class="links inline"><li class="retweet first"></li>
+<li class="comment_forbidden"><span>A hozzászóláshoz <a href="http://weblabor.hu/tagok/regisztracio?destination=comment%2Freply%2F2773%23comment-form">regisztráció</a> és <a href="http://weblabor.hu/tagok/belepes?destination=comment%2Freply%2F2773%23comment-form">belépés</a> szükséges</span></li>
+<li class="forum_topic last"><a href="http://weblabor.hu/forumok/bekuldes">új téma</a></li>
+</ul></div></div><div class="indented"><a id="comment-75920"></a>
+<div class="comment clear-block odd"><div class="commentnum">27</div><h3 class="subject"><a href="http://weblabor.hu/cikkek/jsadatcsere#comment-75920" class="active">Internet Explorer 9-ben</a> </h3>
+<div class="meta"><a href="http://weblabor.hu/tagok/13779" title="Felhasználói profil megtekintése." class="wlavatar" style="background-image: url(/misc/avatar/14.gif)">haho</a> · <span title="A megjelenés ideje: 2011. Ápr. 19. (K), 13.07">2011. Ápr. 19. (K), 13.07</span></div>
+<div class="content"><div class="whateffect">Tehát a legújabb Explorerben nem akar működni (pontos verzió: 9.0.8112.16421).<br>
+<br>
+Letöltöttem a "A cikkhez kapcsolódó forráskódok" csomagot és az XmlHttpRequest mappában található kódokat használtam fel.<br>
+<br>
+Eredetileg a példaprogram azt csinálja, hogy egy üres select mezőbe felveszi elemként az általunk egy input mezőbe megadott szavakat. Mikor még hozzá sem nyúltam a kódhoz már akkor sem működött Explorerben csak a másik 4 böngészőben amiket az eredeti kérdésemben megneveztem.<br>
+Ezt csak azért írom mert közben úgy alakítottam át a kódot, hogy ha az input mezőbe lenyomok egy gombot akkor a program azonnal kiírja hogy a jelenleg az inputban található szórészletre milyen találatok vannak az adatbázisban. De végig ellenőriztem: nem hibáztam amikor átírtam a progit és ebben biztos vagyok és mint előbb írtam már az eredeti program sem működött.<br>
+<br>
+Van egy ilyen részlet a cikkben: "nem használhatjuk az escape() függvényt, hanem helyette az encodeURIComponent()-re van szükség. Persze ez például IE 5.0 esetén még nem volt"<br>
+Gondolom azóta már ismeri ezt a függvényt az Explorer, de én kipróbáltam, hogy egyetlen egyszerű betűt elküldtem ezen függvény kihagyásával és ez szintén csak a másik 4 böngészőben működött.<br>
+<br>
+A program JavaScript kódjai 3 fájlba vannak elosztva + a html oldalban található JS és én nekem erős a gyanúm hogy talán ott van egy olyan megoldás amit az Explorer nem ért és nem a PHP kódban. De mivel csak most először csinálok olyat, hogy oldalfrissítés nélkül kérjek le adatokat így én nekem nem sikerült hibát találnom a kódokban.</div></div><div class="links"><ul class="links inline"><li class="retweet first"></li>
+<li class="comment_forbidden"><span>A hozzászóláshoz <a href="http://weblabor.hu/tagok/regisztracio?destination=comment%2Freply%2F2773%23comment-form">regisztráció</a> és <a href="http://weblabor.hu/tagok/belepes?destination=comment%2Freply%2F2773%23comment-form">belépés</a> szükséges</span></li>
+<li class="forum_topic last"><a href="http://weblabor.hu/forumok/bekuldes">új téma</a></li>
+</ul></div></div><div class="indented"><a id="comment-75921"></a>
+<div class="comment clear-block even"><div class="commentnum">28</div><h3 class="subject"><a href="http://weblabor.hu/cikkek/jsadatcsere#comment-75921" class="active">7 éves</a> </h3>
+<div class="meta"><a href="http://weblabor.hu/tagok/1519" title="Felhasználói profil megtekintése." class="wlavatar" style="background-image: url(/misc/avatar/12.gif)">Poetro</a> · <span title="A megjelenés ideje: 2011. Ápr. 19. (K), 15.29">2011. Ápr. 19. (K), 15.29</span></div>
+<div class="content"><div class="whateffect">Gondolom, az nem riaszt vissza, hogy a cikk 7 éves. És természetesen nem tudom, hogyan néz ki a kódod, ugyanis IE esetében egyetlen kisebb hiba is az egész alkalmazás működését hiúsíthatja meg. Érdemes lenne tudni, milyen hibákat jelent az Internet Explorer.<br>
+Álljon itt egy kicsit frissebb XHR objektum létrehozó kód a jQuery 1.5 alapján:<div class="sourcecode sourcecode-javascript"><div class="dp-highlighter"><div class="bar"></div><ol start="1" class="dp-c"><li class="alt"><span><span class="keyword">var</span><span>&nbsp;XmlHttp&nbsp;=&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;create:&nbsp;window.ActiveXObject&nbsp;?&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">/*&nbsp;Microsoft&nbsp;failed&nbsp;to&nbsp;properly</span>&nbsp;</span></li><li class=""><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;implement&nbsp;the&nbsp;XMLHttpRequest&nbsp;in&nbsp;IE7&nbsp;(can't&nbsp;request&nbsp;local&nbsp;files),</span>&nbsp;</span></li><li class="alt"><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;so&nbsp;we&nbsp;use&nbsp;the&nbsp;ActiveXObject&nbsp;when&nbsp;it&nbsp;is&nbsp;available</span>&nbsp;</span></li><li class=""><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Additionally&nbsp;XMLHttpRequest&nbsp;can&nbsp;be&nbsp;disabled&nbsp;in&nbsp;IE7/IE8&nbsp;so</span>&nbsp;</span></li><li class="alt"><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;we&nbsp;need&nbsp;a&nbsp;fallback.</span>&nbsp;</span></li><li class=""><span><span class="comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">function</span><span>()&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span><span>&nbsp;(&nbsp;window.location.protocol&nbsp;!==&nbsp;</span><span class="string">"file:"</span><span>&nbsp;)&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">try</span><span>&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;</span><span class="keyword">new</span><span>&nbsp;window.XMLHttpRequest();&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<span class="keyword">catch</span><span>(&nbsp;xhrError&nbsp;)&nbsp;{}&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">try</span><span>&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;</span><span class="keyword">new</span><span>&nbsp;window.ActiveXObject(</span><span class="string">"Microsoft.XMLHTTP"</span><span>);&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<span class="keyword">catch</span><span>(&nbsp;activeError&nbsp;)&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">throw</span><span>&nbsp;</span><span class="keyword">new</span><span>&nbsp;Error(</span><span class="string">"Your&nbsp;browser&nbsp;does&nbsp;not&nbsp;support&nbsp;XmlHttp&nbsp;objects"</span><span>);&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;:&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;For&nbsp;all&nbsp;other&nbsp;browsers,&nbsp;use&nbsp;the&nbsp;standard&nbsp;XMLHttpRequest&nbsp;object</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">function</span><span>()&nbsp;{&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;</span><span class="keyword">new</span><span>&nbsp;window.XMLHttpRequest();&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class=""><span>}&nbsp;&nbsp;</span></li></ol></div><pre class="javascript:code" style="display: none;"><code class="language-javascript">var XmlHttp = {
+  create: window.ActiveXObject ?
+    /* Microsoft failed to properly
+     * implement the XMLHttpRequest in IE7 (can't request local files),
+     * so we use the ActiveXObject when it is available
+     * Additionally XMLHttpRequest can be disabled in IE7/IE8 so
+     * we need a fallback.
+     */
+    function() {
+      if ( window.location.protocol !== "file:" ) {
+        try {
+          return new window.XMLHttpRequest();
+        } catch( xhrError ) {}
+      }
+  
+      try {
+        return new window.ActiveXObject("Microsoft.XMLHTTP");
+      } catch( activeError ) {
+      }
+      throw new Error("Your browser does not support XmlHttp objects");
+    } :
+    // For all other browsers, use the standard XMLHttpRequest object
+    function() {
+      return new window.XMLHttpRequest();
+    }
+}
+</code></pre></div></div></div><div class="links"><ul class="links inline"><li class="retweet first"></li>
+<li class="comment_forbidden"><span>A hozzászóláshoz <a href="http://weblabor.hu/tagok/regisztracio?destination=comment%2Freply%2F2773%23comment-form">regisztráció</a> és <a href="http://weblabor.hu/tagok/belepes?destination=comment%2Freply%2F2773%23comment-form">belépés</a> szükséges</span></li>
+<li class="forum_topic last"><a href="http://weblabor.hu/forumok/bekuldes">új téma</a></li>
+</ul></div></div><div class="indented"><a id="comment-75922"></a>
+<div class="comment clear-block odd"><div class="commentnum">29</div><h3 class="subject"><a href="http://weblabor.hu/cikkek/jsadatcsere#comment-75922" class="active">Internet Explorer 9 hibák</a> </h3>
+<div class="meta"><a href="http://weblabor.hu/tagok/13779" title="Felhasználói profil megtekintése." class="wlavatar" style="background-image: url(/misc/avatar/14.gif)">haho</a> · <span title="A megjelenés ideje: 2011. Ápr. 19. (K), 16.36">2011. Ápr. 19. (K), 16.36</span></div>
+<div class="content"><div class="whateffect">A 9-es Explorer már nem jelzi az állapotsoron a JavaScript hibákat. Hol tudom azokat megtekinteni vagy milyen kiegészítőt kéne letöltenem hozzá?<br>
+<br>
+Illetve köszönöm a segítségedet, ma este újra neki ülők a kérdésnek.<br>
+<br>
+Azzal pedig tisztában vagyok, hogy nagyon régi a cikk, de ez azóta is a legjobb leírás amit én megtaláltam. Ez egy olyan alap amin én hobbiprogramozó is eltudok indulni az új megoldások felé.</div></div><div class="links"><ul class="links inline"><li class="retweet first"></li>
+<li class="comment_forbidden"><span>A hozzászóláshoz <a href="http://weblabor.hu/tagok/regisztracio?destination=comment%2Freply%2F2773%23comment-form">regisztráció</a> és <a href="http://weblabor.hu/tagok/belepes?destination=comment%2Freply%2F2773%23comment-form">belépés</a> szükséges</span></li>
+<li class="forum_topic last"><a href="http://weblabor.hu/forumok/bekuldes">új téma</a></li>
+</ul></div></div><div class="indented"><a id="comment-75923"></a>
+<div class="comment clear-block even"><div class="commentnum">30</div><h3 class="subject"><a href="http://weblabor.hu/cikkek/jsadatcsere#comment-75923" class="active">IE 9: F12 =&gt;" firebug"</a> </h3>
+<div class="meta"><a href="http://weblabor.hu/tagok/7503" title="Felhasználói profil megtekintése." class="wlavatar" style="background-image: url(/misc/avatar/18.gif)">solkprog</a> · <span title="A megjelenés ideje: 2011. Ápr. 19. (K), 16.58">2011. Ápr. 19. (K), 16.58</span></div>
+<div class="content"><div class="whateffect">F12 és fel ugrik egy firebug szerű valami, ott valahol ott lesz.<br>
+<br>
+Személyes javaslat: használj keretrendszert. még hobbi projectként is. Én is anno amikor ismerkedtem a JavaScript-el megírtam a saját keretrendszerem, de rájöttem hogy a tanulási fázist leszámítva totál felesleges. jQuery és a hozzá egymillió plugin az alap problémák 99% -át orvosolja, minimális időráfordítással.</div></div><div class="links"><ul class="links inline"><li class="retweet first"></li>
+<li class="comment_forbidden"><span>A hozzászóláshoz <a href="http://weblabor.hu/tagok/regisztracio?destination=comment%2Freply%2F2773%23comment-form">regisztráció</a> és <a href="http://weblabor.hu/tagok/belepes?destination=comment%2Freply%2F2773%23comment-form">belépés</a> szükséges</span></li>
+<li class="forum_topic last"><a href="http://weblabor.hu/forumok/bekuldes">új téma</a></li>
+</ul></div></div><div class="indented"><a id="comment-75924"></a>
+<div class="comment clear-block odd"><div class="commentnum">31</div><h3 class="subject"><a href="http://weblabor.hu/cikkek/jsadatcsere#comment-75924" class="active">Köszönöm</a> </h3>
+<div class="meta"><a href="http://weblabor.hu/tagok/13779" title="Felhasználói profil megtekintése." class="wlavatar" style="background-image: url(/misc/avatar/14.gif)">haho</a> · <span title="A megjelenés ideje: 2011. Ápr. 19. (K), 17.06">2011. Ápr. 19. (K), 17.06</span></div>
+<div class="content"><div class="whateffect">Köszönöm a segítségedet.</div></div><div class="links"><ul class="links inline"><li class="retweet first"></li>
+<li class="comment_forbidden"><span>A hozzászóláshoz <a href="http://weblabor.hu/tagok/regisztracio?destination=comment%2Freply%2F2773%23comment-form">regisztráció</a> és <a href="http://weblabor.hu/tagok/belepes?destination=comment%2Freply%2F2773%23comment-form">belépés</a> szükséges</span></li>
+<li class="forum_topic last"><a href="http://weblabor.hu/forumok/bekuldes">új téma</a></li>
+</ul></div></div></div></div></div></div></div></div><a id="comment-75928"></a>
+<div class="comment clear-block even"><div class="commentnum">32</div><h3 class="subject"><a href="http://weblabor.hu/cikkek/jsadatcsere#comment-75928" class="active">Egyszerű hiba volt</a> </h3>
+<div class="meta"><a href="http://weblabor.hu/tagok/13779" title="Felhasználói profil megtekintése." class="wlavatar" style="background-image: url(/misc/avatar/14.gif)">haho</a> · <span title="A megjelenés ideje: 2011. Ápr. 19. (K), 19.24">2011. Ápr. 19. (K), 19.24</span></div>
+<div class="content"><div class="whateffect">Egy alapvető hiba volt. A példaprogram client.html fájljában található JavaScriptben nem volt rendesen bevezetve két változó:<br>
+20.sor: "itemName" helyett "var itemName" a helyes<br>
+30.sor: "itemList" helyett "var itemList" a helyes<br>
+<br>
+Ilyen alapvető hibákra nem számítottam. Meg egy kicsit fura, hogy a többi böngésző ezt engedi.<br>
+Köszönöm mindenkinek aki hozzászólt a kérdésemhez és köszönöm az F12-es exploreres segítséget!</div></div><div class="links"><ul class="links inline"><li class="retweet first"></li>
+<li class="comment_forbidden"><span>A hozzászóláshoz <a href="http://weblabor.hu/tagok/regisztracio?destination=comment%2Freply%2F2773%23comment-form">regisztráció</a> és <a href="http://weblabor.hu/tagok/belepes?destination=comment%2Freply%2F2773%23comment-form">belépés</a> szükséges</span></li>
+<li class="forum_topic last"><a href="http://weblabor.hu/forumok/bekuldes">új téma</a></li>
+</ul></div></div></div>
+          </div> <!-- /content-content -->
+        </div> <!-- /content -->
+
+      </div></div> <!-- /main-squeeze /main -->
+
+              <div id="sidebar-right" class="column sidebar">
+          <div id="block-blogmark-0" class="block block-blogmark">
+  <h2>Friss blogmarkok</h2>
+
+  <div class="content">
+    <div class="item-list"><ul><li class="first"><a href="http://weblabor.hu/blogmarkok/latogatas/134874" title="http://w3c.hu/archivum/2017/w3cnews.html#pid_20170322b.hun_w3.org">Web Akadálymentesítési Útmutató (WCAG) 2.1 – nyilvános munkaterv</a>&nbsp;–&nbsp;Megjelent a WCAG (Web Akadálymentesítési Útmutató) 2.1 nyilvános munkaterv&nbsp;<a href="http://weblabor.hu/blogmarkok/134874" title="Nincs még hozzászólás" class="comment-count">(0)</a></li>
+<li><a href="http://weblabor.hu/blogmarkok/latogatas/134623" title="https://www.bleepingcomputer.com/news/security/mongodb-apocalypse-is-here-as-ransom-attacks-hit-10-000-servers/">MongoDB Apocalypse Is Here as Ransom Attacks Hit 10,000 Servers</a>&nbsp;–&nbsp;Több tízezer védtelen MongoDB szerverre csaptak le hackerek&nbsp;<a href="http://weblabor.hu/blogmarkok/134623" title="2 hozzászólás" class="comment-count">(2)</a></li>
+<li><a href="http://weblabor.hu/blogmarkok/latogatas/134468" title="https://hackernoon.com/12-signs-youre-working-in-a-feature-factory-44a5b938d6a2#.wvuv8jwmt">12 Signs You’re Working in a Feature Factory</a>&nbsp;–&nbsp;A cél nélküli funkciógyártás néhány tünete&nbsp;<a href="http://weblabor.hu/blogmarkok/134468" title="Nincs még hozzászólás" class="comment-count">(0)</a></li>
+<li><a href="http://weblabor.hu/blogmarkok/latogatas/134221" title="https://medium.com/integral-vision/translatable-custom-dates-in-twig-templates-of-drupal-8-140c91330c2b#.xpo6ozj96">Translatable, custom dates in Twig templates of Drupal 8</a>&nbsp;–&nbsp;Saját dátumok megjelenítése, fordíthatóan a Drupal 8 smink rétegével dolgozva&nbsp;<a href="http://weblabor.hu/blogmarkok/134221" title="Nincs még hozzászólás" class="comment-count">(0)</a></li>
+<li><a href="http://weblabor.hu/blogmarkok/latogatas/134085" title="https://www.nativescript.org/">NativeScript – Cross-Platform Native Development with Javascript</a>&nbsp;–&nbsp;Fejlesszünk natív mobilalkalmazást JavaScripttel&nbsp;<a href="http://weblabor.hu/blogmarkok/134085" title="Nincs még hozzászólás" class="comment-count">(0)</a></li>
+<li><a href="http://weblabor.hu/blogmarkok/latogatas/133855" title="https://github.com/blog/2190-github-security-update-reused-password-attack">GitHub Security Update: Reused password attack</a>&nbsp;–&nbsp;Érdemes bekapcsolni a kétfaktoros azonosítást, ha a GitHub jelszavunkat más oldalakon is újra felhasználtuk&nbsp;<a href="http://weblabor.hu/blogmarkok/133855" title="17 hozzászólás" class="comment-count">(17)</a></li>
+<li><a href="http://weblabor.hu/blogmarkok/latogatas/133778" title="http://uxstudio.hu/ux-konyv/">UX Design könyv</a>&nbsp;–&nbsp;Hogyan tervezz felhasználóbarát és szerethető alkalmazásokat?&nbsp;<a href="http://weblabor.hu/blogmarkok/133778" title="Nincs még hozzászólás" class="comment-count">(0)</a></li>
+<li><a href="http://weblabor.hu/blogmarkok/latogatas/133748" title="https://github.com/blog/2164-introducing-unlimited-private-repositories">Introducing unlimited private repositories</a>&nbsp;–&nbsp;Megváltozik a GitHub díjszabása: minden előfizetéshez korlátlan számú privát repository jár&nbsp;<a href="http://weblabor.hu/blogmarkok/133748" title="Nincs még hozzászólás" class="comment-count">(0)</a></li>
+<li class="last"><a href="http://weblabor.hu/blogmarkok/latogatas/133731" title="https://medium.com/integral-vision/drupal-8-twig-add-custom-css-classes-to-menus-based-on-menu-name-35b50142521a#.e1oepldi1">Drupal 8 Twig: add custom CSS classes to menus (based on menu name)</a>&nbsp;–&nbsp;Saját elképzeléseink szerinti CSS osztályok (automatizált) hozzáadása a Drupal 8 menüihez&nbsp;<a href="http://weblabor.hu/blogmarkok/133731" title="Nincs még hozzászólás" class="comment-count">(0)</a></li>
+</ul></div><div class="more-link"><a href="http://weblabor.hu/blogmarkok">tovább»</a></div>  </div>
+</div><!--/block-blogmark-0-->
+<div id="block-bookreview-0" class="block block-bookreview">
+  <h2>Könyvajánló</h2>
+
+  <div class="content">
+    <div class="attach-file attach-center"><a href="http://weblabor.hu/konyvek/actionscript-a-gyakorlatban"><img src="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/wlbt_actionscript_gyakorlatban.jpg" alt="" title=""></a><p><a href="http://weblabor.hu/konyvek/actionscript-a-gyakorlatban"></a></p></div>  </div>
+</div><!--/block-bookreview-0-->
+<div id="block-wlarticle-0" class="block block-wlarticle">
+  <h2>Cikkajánló</h2>
+
+  <div class="content">
+    <div class="item-list"><ul><li class="first"><img src="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/overtake.png" alt="Aszinkron adatbázis lekérdezések"><br>gerzson:<br><a href="http://weblabor.hu/cikkek/aszinkronadatbazislekerdezesek">Aszinkron adatbázis lekérdezések</a></li>
+<li><img src="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/perl6.jpg" alt="Perl alapjai VI. - Fájlkezelés"><br>Bártházi András:<br><a href="http://weblabor.hu/cikkek/perlalapjai6">Perl alapjai VI. - Fájlkezelés</a></li>
+<li class="last"><img src="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/symfony.jpg" alt="A Symfony keretrendszer telepítése és bemutatása"><br>aston:<br><a href="http://weblabor.hu/cikkek/a-symfony-keretrendszer-telepitese-es-bemutatasa">A Symfony keretrendszer telepítése és bemutatása</a></li>
+</ul></div>  </div>
+</div><!--/block-wlarticle-0-->
+
+<div id="block-wltwitter-0" class="block block-wltwitter">
+  <h2>Friss csiripek</h2>
+
+  <div class="content">
+    <div class="hfeed" id="block-wltwitter-list"><p class="vcard hentry"><a title="Poetro" rel="external" class="url link-external" href="http://twitter.com/Poetro"><img width="24" height="24" class="photo" src="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/rDbBZLGB_mini.jpg" alt="Poetro"></a> <cite><a title="Poetro" rel="external" class="twitter-user fn n author link-external" href="http://twitter.com/Poetro">Poetro</a></cite> <q class="entry-title entry-content">Node 7.6 Brings Default Async/Await Support <a href="https://t.co/64068ETGbI" class="link-external">https://t.co/64068ETGbI</a>  <a href="http://twitter.com/search?q=%23weblabor&amp;src=typd&amp;mode=realtime" class="link-external">#weblabor</a></q> <a class="published link-external" rel="external bookmark" href="http://twitter.com/Poetro/statuses/845275866687062025">137 napja</a></p>
+<p class="vcard hentry"><a title="Poetro" rel="external" class="url link-external" href="http://twitter.com/Poetro"><img width="24" height="24" class="photo" src="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/rDbBZLGB_mini.jpg" alt="Poetro"></a> <cite><a title="Poetro" rel="external" class="twitter-user fn n author link-external" href="http://twitter.com/Poetro">Poetro</a></cite> <q class="entry-title entry-content">Unique Array Values <a href="https://t.co/uWFiM0waDJ" class="link-external">https://t.co/uWFiM0waDJ</a> <a href="http://twitter.com/search?q=%23weblabor&amp;src=typd&amp;mode=realtime" class="link-external">#weblabor</a></q> <a class="published link-external" rel="external bookmark" href="http://twitter.com/Poetro/statuses/845272324433698817">137 napja</a></p>
+<p class="vcard hentry"><a title="Poetro" rel="external" class="url link-external" href="http://twitter.com/Poetro"><img width="24" height="24" class="photo" src="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/rDbBZLGB_mini.jpg" alt="Poetro"></a> <cite><a title="Poetro" rel="external" class="twitter-user fn n author link-external" href="http://twitter.com/Poetro">Poetro</a></cite> <q class="entry-title entry-content">A Front End Developer is Aware <a href="https://t.co/MDzRhxqrOe" class="link-external">https://t.co/MDzRhxqrOe</a> <a href="http://twitter.com/search?q=%23weblabor&amp;src=typd&amp;mode=realtime" class="link-external">#weblabor</a></q> <a class="published link-external" rel="external bookmark" href="http://twitter.com/Poetro/statuses/841700116490784768">146 napja</a></p>
+<p class="vcard hentry"><a title="fpshu" rel="external" class="url link-external" href="http://twitter.com/fpshu"><img width="24" height="24" class="photo" src="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/_pTUprxC_mini.png" alt="fpshu"></a> <cite><a title="fpshu" rel="external" class="twitter-user fn n author link-external" href="http://twitter.com/fpshu">fpshu</a></cite> <q class="entry-title entry-content">Augmented Reality a weben! <a href="https://t.co/imACUrMf83" class="link-external">https://t.co/imACUrMf83</a> <a href="http://twitter.com/search?q=%23augmented&amp;src=typd&amp;mode=realtime" class="link-external">#augmented</a> <a href="http://twitter.com/search?q=%23reality&amp;src=typd&amp;mode=realtime" class="link-external">#reality</a> <a href="http://twitter.com/search?q=%23browser&amp;src=typd&amp;mode=realtime" class="link-external">#browser</a> <a href="http://twitter.com/search?q=%23threejs&amp;src=typd&amp;mode=realtime" class="link-external">#threejs</a> <a href="http://twitter.com/search?q=%23ar&amp;src=typd&amp;mode=realtime" class="link-external">#ar</a> <a href="http://twitter.com/search?q=%23web&amp;src=typd&amp;mode=realtime" class="link-external">#web</a> <a href="http://twitter.com/search?q=%23webdev&amp;src=typd&amp;mode=realtime" class="link-external">#webdev</a> <a href="http://twitter.com/search?q=%23weblabor&amp;src=typd&amp;mode=realtime" class="link-external">#weblabor</a></q> <a class="published link-external" rel="external bookmark" href="http://twitter.com/fpshu/statuses/841545769157038080">147 napja</a></p>
+<p class="vcard hentry"><a title="iamtamasdohany" rel="external" class="url link-external" href="http://twitter.com/iamtamasdohany"><img width="24" height="24" class="photo" src="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/cAQTdk19_mini.jpg" alt="iamtamasdohany"></a> <cite><a title="iamtamasdohany" rel="external" class="twitter-user fn n author link-external" href="http://twitter.com/iamtamasdohany">iamtamasdohany</a></cite> <q class="entry-title entry-content">Table Layout → CSS Zen Garden era (2003) → Bootstrap era (2011) → CSS Grid Layout (2017)
+<a href="https://t.co/e8m4oEtumM#web" class="link-external">https://t.co/e8m4oEtumM
+#web</a> <a href="http://twitter.com/search?q=%23history&amp;src=typd&amp;mode=realtime" class="link-external">#history</a> <a href="http://twitter.com/search?q=%23io&amp;src=typd&amp;mode=realtime" class="link-external">#io</a> <a href="http://twitter.com/search?q=%23weblabor&amp;src=typd&amp;mode=realtime" class="link-external">#weblabor</a></q> <a class="published link-external" rel="external bookmark" href="http://twitter.com/iamtamasdohany/statuses/840290980557385728">150 napja</a></p>
+<p class="vcard hentry"><a title="Poetro" rel="external" class="url link-external" href="http://twitter.com/Poetro"><img width="24" height="24" class="photo" src="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/rDbBZLGB_mini.jpg" alt="Poetro"></a> <cite><a title="Poetro" rel="external" class="twitter-user fn n author link-external" href="http://twitter.com/Poetro">Poetro</a></cite> <q class="entry-title entry-content">Merge Object Properties with the Spread Operator <a href="https://t.co/UpGqlwF0QU" class="link-external">https://t.co/UpGqlwF0QU</a> <a href="http://twitter.com/search?q=%23weblabor&amp;src=typd&amp;mode=realtime" class="link-external">#weblabor</a> <a href="http://twitter.com/search?q=%23javascript&amp;src=typd&amp;mode=realtime" class="link-external">#javascript</a></q> <a class="published link-external" rel="external bookmark" href="http://twitter.com/Poetro/statuses/832933978151723011">171 napja</a></p>
+<p class="vcard hentry"><a title="Poetro" rel="external" class="url link-external" href="http://twitter.com/Poetro"><img width="24" height="24" class="photo" src="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/rDbBZLGB_mini.jpg" alt="Poetro"></a> <cite><a title="Poetro" rel="external" class="twitter-user fn n author link-external" href="http://twitter.com/Poetro">Poetro</a></cite> <q class="entry-title entry-content">Intro to Vue.js: Vuex <a href="https://t.co/TVmY7703Y9" class="link-external">https://t.co/TVmY7703Y9</a> <a href="http://twitter.com/search?q=%23weblabor&amp;src=typd&amp;mode=realtime" class="link-external">#weblabor</a></q> <a class="published link-external" rel="external bookmark" href="http://twitter.com/Poetro/statuses/832933014229368833">171 napja</a></p>
+<p class="vcard hentry"><a title="Poetro" rel="external" class="url link-external" href="http://twitter.com/Poetro"><img width="24" height="24" class="photo" src="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/rDbBZLGB_mini.jpg" alt="Poetro"></a> <cite><a title="Poetro" rel="external" class="twitter-user fn n author link-external" href="http://twitter.com/Poetro">Poetro</a></cite> <q class="entry-title entry-content">Intro to Vue.js: Components, Props, and Slots <a href="https://t.co/1TfA8vpsqx" class="link-external">https://t.co/1TfA8vpsqx</a> <a href="http://twitter.com/search?q=%23weblabor&amp;src=typd&amp;mode=realtime" class="link-external">#weblabor</a></q> <a class="published link-external" rel="external bookmark" href="http://twitter.com/Poetro/statuses/832931579257298944">171 napja</a></p>
+<p class="vcard hentry"><a title="Poetro" rel="external" class="url link-external" href="http://twitter.com/Poetro"><img width="24" height="24" class="photo" src="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/rDbBZLGB_mini.jpg" alt="Poetro"></a> <cite><a title="Poetro" rel="external" class="twitter-user fn n author link-external" href="http://twitter.com/Poetro">Poetro</a></cite> <q class="entry-title entry-content">Ass-Backwards Compatibility
+<a href="https://t.co/OY5SD9yWqh#weblabor" class="link-external">https://t.co/OY5SD9yWqh
+#weblabor</a></q> <a class="published link-external" rel="external bookmark" href="http://twitter.com/Poetro/statuses/832619950640611328">171 napja</a></p>
+<p class="vcard hentry"><a title="fpshu" rel="external" class="url link-external" href="http://twitter.com/fpshu"><img width="24" height="24" class="photo" src="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/_pTUprxC_mini.png" alt="fpshu"></a> <cite><a title="fpshu" rel="external" class="twitter-user fn n author link-external" href="http://twitter.com/fpshu">fpshu</a></cite> <q class="entry-title entry-content">Írjunk játékot! – three.js  <a href="https://t.co/dFiovRlO0b" class="link-external">https://t.co/dFiovRlO0b</a> <a href="http://twitter.com/search?q=%23threejs&amp;src=typd&amp;mode=realtime" class="link-external">#threejs</a> <a href="http://twitter.com/search?q=%23js&amp;src=typd&amp;mode=realtime" class="link-external">#js</a> <a href="http://twitter.com/search?q=%23JavaScript&amp;src=typd&amp;mode=realtime" class="link-external">#JavaScript</a> <a href="http://twitter.com/search?q=%23WebGL&amp;src=typd&amp;mode=realtime" class="link-external">#WebGL</a> <a href="http://twitter.com/search?q=%23game&amp;src=typd&amp;mode=realtime" class="link-external">#game</a> <a href="http://twitter.com/search?q=%23fps&amp;src=typd&amp;mode=realtime" class="link-external">#fps</a> <a href="http://twitter.com/search?q=%23weblabor&amp;src=typd&amp;mode=realtime" class="link-external">#weblabor</a></q> <a class="published link-external" rel="external bookmark" href="http://twitter.com/fpshu/statuses/831168537012101120">175 napja</a></p></div><div class="more-link"><a rel="external" href="https://twitter.com/weblaborhu" class="link-external">további csiripek»</a></div>  </div>
+</div><!--/block-wltwitter-0-->
+<div id="block-forum-0" class="block block-forum">
+  <h2>Aktív fórum témák</h2>
+
+  <div class="content">
+    <div class="item-list"><ul><li class="first"><a href="http://weblabor.hu/forumok/temak/135132" title="107 hozzászólás">A frontend állapota 2017-ben</a></li>
+<li><a href="http://weblabor.hu/forumok/temak/135087" title="27 hozzászólás">ISO boot</a></li>
+<li><a href="http://weblabor.hu/forumok/temak/135073" title="36 hozzászólás">Mennyi idő szükséges a junior front-end fejlesztő szint eléréséhez? </a></li>
+<li><a href="http://weblabor.hu/forumok/temak/135170" title="40 hozzászólás">Egyszerű skálázódás</a></li>
+<li><a href="http://weblabor.hu/forumok/temak/135199" title="7 hozzászólás">MySQL bonyolódás</a></li>
+<li><a href="http://weblabor.hu/forumok/temak/135190" title="3 hozzászólás">E-mailek "átirányítása" eredeti fejlécek (Cc, Bcc, To, From, DKIM, stb.) megtartásával</a></li>
+<li><a href="http://weblabor.hu/forumok/temak/135143" title="17 hozzászólás">A RAID mennyire véd data corruption ellen?</a></li>
+<li class="last"><a href="http://weblabor.hu/forumok/temak/135182" title="2 hozzászólás">PHP szállítási idő megjelenítése</a></li>
+</ul></div><div class="more-link"><a href="http://weblabor.hu/forum" title="A legfrissebb fórum témák olvasása.">tovább</a></div>  </div>
+</div><!--/block-forum-0-->
+<div id="block-forum-1" class="block block-forum">
+  <h2>Új fórum témák</h2>
+
+  <div class="content">
+    <div class="item-list"><ul><li class="first"><a href="http://weblabor.hu/forumok/temak/135199" title="7 hozzászólás">MySQL bonyolódás</a></li>
+<li><a href="http://weblabor.hu/forumok/temak/135190" title="3 hozzászólás">E-mailek "átirányítása" eredeti fejlécek (Cc, Bcc, To, From, DKIM, stb.) megtartásával</a></li>
+<li><a href="http://weblabor.hu/forumok/temak/135182" title="2 hozzászólás">PHP szállítási idő megjelenítése</a></li>
+<li><a href="http://weblabor.hu/forumok/temak/135175" title="4 hozzászólás">Megadott file-ok törlése könyvtárból.</a></li>
+<li><a href="http://weblabor.hu/forumok/temak/135174" title="2 hozzászólás">HTML linkek cseréje dinamikusan</a></li>
+<li><a href="http://weblabor.hu/forumok/temak/135170" title="40 hozzászólás">Egyszerű skálázódás</a></li>
+<li><a href="http://weblabor.hu/forumok/temak/135169" title="19 hozzászólás">SQL HIBA!! Nem értem miért az..</a></li>
+<li class="last"><a href="http://weblabor.hu/forumok/temak/135168">Könyv vásárlás</a></li>
+</ul></div><div class="more-link"><a href="http://weblabor.hu/forum" title="A legfrissebb fórum témák olvasása.">tovább</a></div>  </div>
+</div><!--/block-forum-1-->
+<div id="block-archive-0" class="block block-archive">
+  <h2>Archívum</h2>
+
+  <div class="content">
+    <table class="sticky-header" style="position: fixed; top: 0px; width: 178px; left: 1243px; visibility: hidden;"><thead><tr><th style="width: 2.14063px;">H</th><th style="width: 3.14063px;">K</th><th style="width: 3.14063px;">Sze</th><th style="width: 3.14063px;">Cs</th><th style="width: 4.14063px;">P</th><th style="width: 4.14063px;">Szo</th><th style="width: 4.14063px;">V</th> </tr></thead></table><table class="sticky-enabled sticky-table">
+<caption><a href="http://weblabor.hu/archivum/all/2017/8">augusztus 2017</a></caption>
+ <thead class="tableHeader-processed"><tr><th>H</th><th>K</th><th>Sze</th><th>Cs</th><th>P</th><th>Szo</th><th>V</th> </tr></thead>
+<tbody>
+ <tr class="odd"><td class="out-of-month"><a href="http://weblabor.hu/archivum/all/2017/7/31" title="1 tartalom">31</a></td><td>1</td><td>2</td><td><a href="http://weblabor.hu/archivum/all/2017/8/3" title="1 tartalom">3</a></td><td>4</td><td>5</td><td>6</td> </tr>
+ <tr class="even"><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td> </tr>
+ <tr class="odd"><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td> </tr>
+ <tr class="even"><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td> </tr>
+ <tr class="odd"><td>28</td><td>29</td><td>30</td><td>31</td><td class="out-of-month">1</td><td class="out-of-month">2</td><td class="out-of-month">3</td> </tr>
+</tbody>
+</table>
+  </div>
+</div><!--/block-archive-0-->
+<div id="block-tagadelic-12" class="block block-tagadelic">
+  <h2>Címkék</h2>
+
+  <div class="content">
+    <a href="http://weblabor.hu/cimkek/264" class="tagadelic level4" rel="tag" title="">AJAX</a> 
+<a href="http://weblabor.hu/cimkek/265" class="tagadelic level1" rel="tag" title="">Apache</a> 
+<a href="http://weblabor.hu/cimkek/255" class="tagadelic level3" rel="tag" title="">biztonság</a> 
+<a href="http://weblabor.hu/cimkek/282" class="tagadelic level2" rel="tag" title="">böngésző</a> 
+<a href="http://weblabor.hu/cimkek/244" class="tagadelic level6" rel="tag" title="">CSS</a> 
+<a href="http://weblabor.hu/cimkek/652" class="tagadelic level2" rel="tag" title="">CSS3</a> 
+<a href="http://weblabor.hu/cimkek/325" class="tagadelic level1" rel="tag" title="">design</a> 
+<a href="http://weblabor.hu/cimkek/331" class="tagadelic level2" rel="tag" title="">Django</a> 
+<a href="http://weblabor.hu/cimkek/243" class="tagadelic level2" rel="tag" title="">Drupal</a> 
+<a href="http://weblabor.hu/cimkek/329" class="tagadelic level1" rel="tag" title="">felület</a> 
+<a href="http://weblabor.hu/cimkek/313" class="tagadelic level4" rel="tag" title="">Firefox</a> 
+<a href="http://weblabor.hu/cimkek/279" class="tagadelic level2" rel="tag" title="">Google</a> 
+<a href="http://weblabor.hu/cimkek/318" class="tagadelic level1" rel="tag" title="">HTML</a> 
+<a href="http://weblabor.hu/cimkek/469" class="tagadelic level2" rel="tag" title="">HTML 5</a> 
+<a href="http://weblabor.hu/cimkek/1162" class="tagadelic level1" rel="tag" title="">HTML5</a> 
+<a href="http://weblabor.hu/cimkek/398" class="tagadelic level1" rel="tag" title="">Internet Explorer</a> 
+<a href="http://weblabor.hu/cimkek/262" class="tagadelic level6" rel="tag" title="">JavaScript</a> 
+<a href="http://weblabor.hu/cimkek/390" class="tagadelic level2" rel="tag" title="">jQuery</a> 
+<a href="http://weblabor.hu/cimkek/533" class="tagadelic level1" rel="tag" title="">keretrendszer</a> 
+<a href="http://weblabor.hu/cimkek/341" class="tagadelic level2" rel="tag" title="">konferencia</a> 
+<a href="http://weblabor.hu/cimkek/361" class="tagadelic level4" rel="tag" title="">magyar</a> 
+<a href="http://weblabor.hu/cimkek/340" class="tagadelic level1" rel="tag" title="">mobil</a> 
+<a href="http://weblabor.hu/cimkek/259" class="tagadelic level3" rel="tag" title="">MySQL</a> 
+<a href="http://weblabor.hu/cimkek/366" class="tagadelic level1" rel="tag" title="">PEAR</a> 
+<a href="http://weblabor.hu/cimkek/246" class="tagadelic level4" rel="tag" title="">PHP</a> 
+<a href="http://weblabor.hu/cimkek/275" class="tagadelic level2" rel="tag" title="">PHP 5</a> 
+<a href="http://weblabor.hu/cimkek/370" class="tagadelic level1" rel="tag" title="">Python</a> 
+<a href="http://weblabor.hu/cimkek/406" class="tagadelic level1" rel="tag" title="">rendezvény</a> 
+<a href="http://weblabor.hu/cimkek/333" class="tagadelic level1" rel="tag" title="">WordPress</a> 
+<a href="http://weblabor.hu/cimkek/276" class="tagadelic level1" rel="tag" title="">Zend</a> 
+<div class="more-link"><a href="http://weblabor.hu/cimkek">további címkék</a></div>  </div>
+</div><!--/block-tagadelic-12-->        </div> <!-- /sidebar-right -->
+      
+            
+    </div> <!-- /container -->
+
+    <div id="footer-wrapper">
+      <div id="footer">
+                
+ <div id="licence-issn">
+  (CC) Weblabor, 1999–2017<br>
+  HU ISSN 1785-9573
+ </div>
+ <div id="footercontent">
+  <a href="http://weblabor.hu/weblabor/impresszum">Impresszum</a> ·
+  <a href="http://weblabor.hu/weblabor/joginyilatkozat">Jogi nyilatkozat</a> ·
+  <a href="http://weblabor.hu/weblabor/adatvedelem">Adatvédelem</a> ·
+  <a href="http://weblabor.hu/weblabor/mediaajanlat">Médiaajánlat</a><br>
+  <a href="http://weblabor.hu/weblabor/rolunk">Rólunk</a> ·
+  <a href="http://weblabor.hu/weblabor/terkep">Webhely térkép</a> ·
+  <a href="http://weblabor.hu/weblabor/segitseg">Gyakran Ismételt Kérdések</a>
+ </div>
+</div>
+<div class="only-in-print print-footer">
+ Ennek az oldalnak az eredeti elérhetősége: <strong>http://weblabor.hu%2Fcikkek%2Fjsadatcsere</strong><br>
+ A Weblabor (HU ISSN 1785-9573) lapjain megjelenő tartalmak a Creative Commons
+ Attribution-NonCommercial-ShareAlike 2.0 licenc alatt érhetőek el, és
+ használhatóak fel. A licenc a
+ <strong>http://creativecommons.org/licenses/by-nc-sa/2.0/</strong> címen olvasható.
+      </div> <!-- /footer -->
+    </div> <!-- /footer-wrapper -->
+
+  </div> <!-- /page -->
+
+  <script type="text/javascript" src="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/wltwitter.js.letöltés"></script><script type="text/javascript" src="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/saved_resource"></script><script type="text/javascript">
+  dp.SyntaxHighlighter.ClipboardSwf = '/sites/all/themes/wl/highlight/clipboard.swf';
+  dp.SyntaxHighlighter.HighlightAll('code', true, false);
+ </script>
+ <script src="./Újratöltés nélküli adatcsere böngészőben · Weblabor_files/urchin.js.letöltés" type="text/javascript"></script>
+ <script type="text/javascript"> _uacct = "UA-81958-1"; urchinTracker();</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46427505-1', 'weblabor.hu');
+  ga('send', 'pageview');
+
+</script>
+    
+
+
+</body></html>

@@ -1,0 +1,39 @@
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1
+SQLSTATE[42S22]: Column not found: 1054 Unknown column '' in 'field list'
+SQLSTATE[42S22]: Column not found: 1054 Unknown column '' in 'field list'
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'brit.brit_users' doesn't exist
+SQLSTATE[HY000] [1044] Access denied for user 'relierf1968'@'localhost' to database 'brit'
+SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'cikk_title' cannot be null
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'cikk_titlealias' cannot be null
+SQLSTATE[42S02]: Base table or view not found: 1932 Table 'brit.brit_articles' doesn't exist in engine
+SQLSTATE[42S02]: Base table or view not found: 1932 Table 'brit.brit_post' doesn't exist in engine
+SQLSTATE[42S02]: Base table or view not found: 1932 Table 'brit.brit_articles' doesn't exist in engine
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'post_content' in 'field list'
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'post_content' in 'field list'
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'post_content' in 'field list'
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'post_content' in 'field list'
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'post_content' in 'field list'
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'post_content' in 'field list'
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'post_content' in 'field list'
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'post_content' in 'field list'
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'post_content' in 'field list'
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'post_content' cannot be null
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'post_content' cannot be null
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'post_content' cannot be null
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'post_content' cannot be null
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'post_content' cannot be null
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'post_content' cannot be null
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'post_content' cannot be null
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'post_content' cannot be null
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'post_content' cannot be null
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'post_content' cannot be null
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'post_content' cannot be null
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'cikk_modífydate' in 'field list'
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'cikk_modífydate' in 'field list'
+SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'post_modify_author' cannot be null
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'post_modífy_author' in 'field list'

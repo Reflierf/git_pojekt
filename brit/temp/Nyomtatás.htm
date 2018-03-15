@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><script src="Nyomtat%C3%A1s_elemei/pgstat.htm" type="text/javascript"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-2">
+  <title>Nyomtatás</title>  
+ <link rel="stylesheet" href="Nyomtat%C3%A1s_elemei/munka2.css" type="text/css" media="all">
+ <link rel="stylesheet" href="Nyomtat%C3%A1s_elemei/munka.css" type="text/css" media="all">
+ <link rel="stylesheet" href="Nyomtat%C3%A1s_elemei/nyomtat.css" type="text/css" media="print">
+ <style type="text/css">
+<!--
+.style1 {color: #fff;}
+-->
+ </style>
+ <script language="JavaScript" type="text/JavaScript" src="Nyomtat%C3%A1s_elemei/linkpopup.js"></script><link rel="stylesheet" type="text/css" href="Nyomtat%C3%A1s_elemei/munka2.css">
+ </head>
+
+<body cz-shortcut-listen="true"><a name="teteje"></a>
+   <div id="kep"> <img src="Nyomtat%C3%A1s_elemei/logogdf.gif" alt="logo" width="587" height="74"></div>
+   <div id="focim"><h1>A webszerkesztés alapjai</h1></div>
+
+   <div id="tartalom"> 
+      <div id="kisnavi"> 
+        <a href="http://szaueren.uw.hu/fooldal.html">Főoldal</a> / 
+		<a href="http://szaueren.uw.hu/csslistak.html">Listák formázása</a> /
+		<span class="style1">aktuális</span> /
+		<a href="http://szaueren.uw.hu/public.html">Publikálás</a> /
+	    <a href="http://szaueren.uw.hu/tartj.html">Tartalomjegyzék</a>
+	 </div>
+    	  
+
+      <div class="story">
+    
+	<h2>Nyomtatás</h2> 
+<p>
+Ha weblapunkra nem adunk meg a nyomtatásra vonatkozó utasításokat, az oldalunk minden egyes része 
+nyomtatásba kerül.
+A nyomtatási tulajdonságok beállításával lehetőségünk van arra, hogy a nyomtatás során csak 
+az általunk kiválasztott elemek legyenek kinyomtatva. <br>
+(Az oldalunk nyomtatási képét (elölnézetét) a böngésző Fájl menüjében ellenőrizni tudjuk.)
+</p>    
+
+<h3><a name="stilus"></a>Nyomtatási stíluslap meghatározása</h3>
+<p>
+A megoldás egy nyomtatási stíluslap készítése, melyen egyrészt meg tudjuk határozni, 
+hogy mely elemeket szeretnénk a nyomtatásból kizárni, másrészt, a nyomtatásba kerülő elemek 
+tulajdonságait tudjuk beállítani.
+</p>
+<p>
+Első lépésként a CSS lapunkat mentsük el főmappánkban egy másik néven. (itt: nyomtatas.css)<br>
+Ezután a már meglévő CSS utasításunk után:<br>
+<span class="pretag">&lt;link rel="stylesheet" href="#.css" type="text/css"&gt;,<br>
+</span>
+kapcsoljuk hozzá a dokumentumunkhoz a nyomtatásra vonatkozó CSS lapot:<br>
+
+<span class="pretag">&lt;link rel="stylesheet" href="nyomtatas.css" type="text/css" media="print"&gt;
+</span><br>
+Ha a <span class="pretag">&lt;media="print"&gt;</span> utasítás "media" 
+jellemzőjének "print" értéket adunk, akkor a stíluslapot csak a nyomtatók fogják 
+figyelembe venni, azaz a dokumentumunk elemei csak nyomtatási nézetben veszik fel a stíluslapon lévő 
+formázásokat.<br>
+Ha nem így teszünk, akkor a nyomtatási formázást normál nézetben is átveheti a lapunk, ha közelebb 
+van a dokumentum törzséhez, mint a "normál" CSS lap.  
+</p>
+
+<h3><a name="display"></a>A &lt;display:none&gt; utasítás</h3>
+<p>
+<span class="pretag">&lt;display:none&gt;</span>: Az utasítást az elemek elrejtésére kell használni.<br> 
+Egyes kijelölőket és teljes DIV szakaszokat is láthatatlanná tudunk vele tenni.
+Az alábbi utasítás a "menu" nevű DIV szakaszt rejti el a nyomtató elől.
+</p>
+<pre class="pretag"> #menu{
+ display: none;}
+</pre>
+
+<h3><a name="nyomtat"></a>A nyomtatási stíluslap formázása</h3>
+<p>
+A megmaradt elemeket tovább formázhatjuk.
+</p>
+<ul>
+<li>Betűcsalád:<br>
+A jobb olvashatóság miatt talpas  betűtípust adjunk meg.<br> 
+<span class="pretag">body{Georgia, "Times New Roman", 
+Times, serif}</span>
+</li>
+<li>Szövegbehúzás<br>
+Bekezdéseink első sorának a <span class="pretag">p{text-ident:#}</span> utasítással tudunk behúzást adni.</li>
+<li>Színek és háttér<br>
+Induljunk ki abból, hogy a felhasználók jelentős része nem használ színes nyomtatót és nem nyomtat hátteret.
+Próbáljuk a tartami részt ezt figyelembe véve nyomtatásra optimalizálni.</li>
+<li>Betűméret<br>
+A nyomtatók a pontot (pt) és a hüvelyket (in) ismerik.
+Az elfogadható betűméret a 12pt, a címsoroknak adhatunk nagyobb méretet is.<br>
+<span class="pretag">p{font-size:12pt;}</span></li>
+<li>Margók beálllítása <br>
+Itt használhatjuk a hüvelyket (in).<br> 
+  <span class="pretag">body{margin:0.5in}</span> (12,7mm)
+ </li>
+</ul>
+<h3><a name="oldaltores"></a>Oldaltörések</h3>
+<p>
+Oldaltörést helyezhetünk el, vagy tilthatunk le egy blokk előtt, után, illetve közben, a :<br>
+<span class="pretag">
+ {page-break-before: }<br>
+ {page-break-after: &nbsp;}<br>
+ {page-break-inside: }</span><br>
+ utasítással.<br>
+ A böngészők által elég jól támogatott értékei:</p>
+ <ul>
+   <li><span class="pretag">always</span> - mindig sort tör</li>
+   <li><span class="pretag">avoid</span> - elkerüli a sortörést</li>
+   <li><span class="pretag">auto</span> - nem tiltja és nem írja elő a sortörést</li>
+ </ul>
+<p>
+Az utasítást elhelyezhetjük a nyomtatási CSS lapon, de a normál HTML oldalunkon is, közvetlenül a blokkhoz rendelve. 
+</p>
+<p>
+A böngészők eltérő értelmezése, valamint a nyomtatási értékek felhasználókénti beállítása miatt nehéz 
+böngészőfüggetlen nyomtatási képet alkotni. 
+</p>
+
+
+<p class="kerdes"><a name="kerdes"></a> 
+<a href="http://szaueren.uw.hu/film_kerdes/nyomtatas.htm"><img src="Nyomtat%C3%A1s_elemei/kerdes.gif" alt="tudáspróba" width="200" border="0" height="20"></a>
+</p>
+
+<p class="vezerles"> <img src="Nyomtat%C3%A1s_elemei/vezerles.gif" alt="vezérlés" usemap="#Map" width="190" border="0" height="52">
+    <map name="Map">
+      <area shape="rect" coords="5,10,62,46" href="http://szaueren.uw.hu/csslistak.html" alt="Vissza az előző leckére" title="Vissza az előző leckére">
+      <area shape="rect" coords="74,1,116,51" href="http://szaueren.uw.hu/nyomtatas.html#teteje" alt="A lap tetejére" title="A lap tetejére">
+      <area shape="rect" coords="125,10,186,44" href="http://szaueren.uw.hu/public.html" alt="Következő lecke" title="Következő leckére">
+    </map>
+</p>
+      </div>
+   </div>
+   <div id="Navi">
+     <div id="linkek">
+       <ul>
+         <li> <a href="http://szaueren.uw.hu/hnyelv.html" class="igazit">A HTML nyelv</a> </li>
+         <li><a href="http://szaueren.uw.hu/elso.html">Az első oldalunk</a></li>
+         <li><a href="http://szaueren.uw.hu/szinek.html">Színek megadása</a></li>
+         <li><a href="http://szaueren.uw.hu/szoveg.html">Szöveg megjelenítése</a></li>
+         <li><a href="http://szaueren.uw.hu/betuk.html">Szöveg formázása </a></li>
+         <li><a href="http://szaueren.uw.hu/cimsorok.html">Címsorok</a></li>
+         <li><a href="http://szaueren.uw.hu/table.html">Táblázatok</a></li>
+         <li><a href="http://szaueren.uw.hu/hivatkozas.html">Hivatkozások</a></li>
+         <li><a href="http://szaueren.uw.hu/kepek.html">Képek beszúrása </a></li>
+         <li><a href="http://szaueren.uw.hu/listak.html">Listák</a></li>
+         <li><a href="http://szaueren.uw.hu/urlapok.html">Űrlapok</a></li>
+         <li><a href="http://szaueren.uw.hu/keretek.html">Frameset</a></li>
+         <li> <a href="http://szaueren.uw.hu/cssnyelv.html" class="igazit">A CSS nyelv</a> </li>
+         <li><a href="http://szaueren.uw.hu/doboz.html">Doboz- modell</a></li>
+	     <li><a href="http://szaueren.uw.hu/helyzet.html">Helyzetmegadás</a></li> 
+         <li><a href="http://szaueren.uw.hu/float.htm">Float- Clear </a></li>
+         <li><a href="http://szaueren.uw.hu/cssszoveg.html">Text- tulajdonságok</a></li>
+         <li><a href="http://szaueren.uw.hu/cssbetuk.html">Font- tulajdonságok</a></li>
+         <li><a href="http://szaueren.uw.hu/csshatter.html">Háttér</a></li>
+         <li><a href="http://szaueren.uw.hu/csstablak.html">Táblázatok</a></li>
+         <li><a href="http://szaueren.uw.hu/csslistak.html">Listák formázása</a></li>
+         <li><a href="http://szaueren.uw.hu/nyomtatas.html"><span class="linkszin">Nyomtatás</span></a></li>
+         <li><a href="http://szaueren.uw.hu/public.html">Publikálás</a></li>
+         <li><a href="http://szaueren.uw.hu/egyeb.html">Egyéb lehetőségek</a></li>
+         <li><a href="http://szaueren.uw.hu/Protokoll.html">Fogalomtár</a></li>
+         <li><a href="http://szaueren.uw.hu/map/index.html">Egy oldal elkészítése</a></li>
+         <li><a href="http://szaueren.uw.hu/kerdoiv1.html" class="igazit">Kérdőív</a></li>
+<li style="border-top:1px #ccc solid;">
+<form class="naviform" action="#">
+<input value="A weblap CSS kódja" style="width:165px; " onclick="cssnyit(css,'css_kod','oldalcss.html')" type="button">
+<input value="Nyomtatási oldal kódja" style="width:165px; margin-top:3px; margin-bottom:2px; " onclick="nyomtatnyit(nyomtat,'print_kod','printoldal.html')" type="button"></form>
+</li>
+       
+	   </ul>
+     </div>
+<p>
+<a href="http://validator.w3.org/#validate_by_upload">HTML kód ellenőrző<br>
+<img src="Nyomtat%C3%A1s_elemei/valid-html401.gif" alt="html" width="88" border="0" height="31"></a>
+</p>
+<p>
+<a href="http://jigsaw.w3.org/css-validator/#validate-by-upload">CSS kód ellenőrző<br>
+<img src="Nyomtat%C3%A1s_elemei/valid-css.gif" alt="css" width="88" border="0" height="31"></a>
+</p>
+<p>
+<a href="http://www.delorie.com/web/lynxview">Lynx böngésző<br>
+<img src="Nyomtat%C3%A1s_elemei/lynxpaw.gif" alt="szöveges böngésző" width="84" border="0" height="31"></a>
+</p>
+   </div>
+   <div id="webinfo"><a href="mailto:szaueren@freemail.hu">E-mail: Szauer Endre</a></div>
+
+
+</body></html>

@@ -1,0 +1,53 @@
+
+.arow {
+    background: #fafafa none repeat scroll 0 0;
+    border: 1px solid #aaa;
+    margin: 3px;
+    height: 100px;
+    padding: 3px;
+}
+
+.arow span, .nhead span {
+    display: block;
+    /*text-align: center;*/
+    vertical-align: middle;
+    float: left;
+    font-size: 15pt;
+}
+
+.atitle, .adate, .aauthor, .acont {
+    margin-top: 5px;
+}
+
+.atitle {
+    text-align: center;
+    width: 22%;
+}
+
+.adate {
+    width: 10%;
+    /*margin-top: 30px;*/
+    text-align: center;
+}
+
+.aauthor {
+    width: 15%;
+    /*margin-top: 30px;*/
+    text-align: center;
+}
+
+.acont {
+    width: 25%;
+    /*margin-top: 30px;*/
+    text-align: left;
+}
+
+.edit_article {
+    float: left;
+    background: #bbb none repeat scroll 0 0;
+    border: 1px solid #000;
+    height: 62px;
+    margin: 13px 0 0 40px;
+    padding: 3px;
+    /**/
+}

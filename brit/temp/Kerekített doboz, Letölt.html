@@ -1,0 +1,800 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0052)http://family-team.emszinet.hu/proghutest/06/fgt.php -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Kerekített doboz, Letölt</title>
+<style type="text/css" media="screen">
+html, body{margin:0;border-style:none;padding:0;background-color:#CECECE;
+           font-family:Verdana, sans-serif;font-size:12px;color:#111F10;text-align:center;}
+/* oldal háttér és keret */
+#oldal-hatter{position:fixed;left:0;top:0;width:100%;height:100%;z-index:100;}
+#oldal-keret{position:absolute;left:0;top:0;min-width:1218px;overflow:auto;width:100%;height:100%;
+             z-index:300;background-color:transparent;margin:0;padding:0;border-style:none;}
+#fodiv{
+  background-color: transparent;
+  width: 80%;
+  height: auto;
+  position:relative;
+  margin-left: -40%;
+  left: 50%;
+  // margin-left: 0;
+  // left: 0;
+}
+/* kerekített szerkezet kezdete */
+#head_kozep{
+	background-image: url('images/Alak-13_02.png'); /* font_kozep 1*49px kép */
+	background-position: right bottom;
+	background-repeat: repeat-x;
+	width: auto;
+	height: 49px;
+  width: 80%;
+  margin:0 auto
+}
+#head_bal{
+	background-image: url('images/Alak-13_01.png'); /* font_bal 66*49px kép */
+	background-position: left bottom;
+	background-repeat: no-repeat;
+	width: 66px;
+	height: 49px;
+  float:left;
+  margin-left:-66px;
+}
+#head_jobb{
+	background-image: url('images/Alak-13_03.png'); /* font_jobb 55*49px kép */
+	background-position: left bottom;
+	background-repeat: no-repeat;
+	width: 66px;
+	height: 49px;
+  float:right;
+  margin-right:-66px;
+}
+#kozep_tartalom{
+	background-image: url('images/Alak-13_05.png'); /* kozep_kozep 1*1px kép */
+	background-position: right;
+	background-repeat:repeat;
+	width: auto;
+	height: auto;
+  position:relative;
+  width: 80%;
+  margin:0 auto;
+/*border:1px solid brown;*/
+}
+#kozep_bal{
+	background-image: url('images/Alak-13_04.png'); /* kozep_bal 66*1px kép */
+	background-position: right;
+	background-repeat:repeat-y;
+	width: 66px;
+  height:100%;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:-66px;
+}
+#kozep_jobb{
+	background-image: url('images/Alak-13_06.png'); /* kozep_jobb 55*1px kép */
+	background-position: left;
+	background-repeat:repeat-y;
+	width: 66px;
+  height:100%;
+  position:absolute;
+  top:0;
+  bottom:0;
+  right:-66px;
+}
+#footer_kozep{
+	background-image: url('images/Alak-13_08.png'); /* lent_kozep 1*61px kép */
+	background-position: right top;
+	background-repeat: repeat-x;
+	height: 49px;
+  width: 80%;
+  margin:0 auto;
+}
+#footer_bal{
+	background-image: url('images/Alak-13_07.png'); /* lent_bal 66*61px kép */
+	background-position: right top;
+	background-repeat: no-repeat;
+	width: 66px;
+	height: 49px;
+  float:left;
+  margin-left:-66px;
+}
+#footer_jobb{
+	background-image: url('images/Alak-13_09.png'); /* lent_jobb 55*61px kép */
+	background-position: left top;	
+	width: 66px;
+	height: 49px;
+	background-repeat: no-repeat;
+  float:right;
+  margin-right:-66px;
+}
+/* kerekített szerkezet vége */
+.clear{clear:both;}
+
+/* menü felbukkanó kép */
+ ul{list-style-type:none;}
+ul li a{
+  position:relative;
+  display: block;
+  margin: 0;
+  padding:0;
+  text-align:center;
+  width:100px;
+}
+.bukkan1, .bukkan2, .bukkan3{
+  position:absolute;
+  left:105px;
+  top:0;
+  width:250px; 
+  height:157px; 
+  visibility:hidden;
+  border:1px solid white;
+}
+.bukkan1{background:transparent url('images/kep1.jpg') no-repeat center center;}
+.bukkan2{background:transparent url('images/kep7.jpg') no-repeat  center center;}
+.bukkan3{background:transparent url('images/kep10.jpg') no-repeat  center center;}
+li a:hover .bukkan1, li a:hover .bukkan2, li a:hover .bukkan3{visibility:visible;}
+/* menü felbukkanó kép */
+
+/* div-ek listája */
+.cdivsk{
+  margin:0;padding:0;
+  width: 80px;
+  margin-bottom:5px;
+}
+div#rcsk{
+  -moz-column-width: 80px;
+  -webkit-column-width: 80px;
+  column-width: 80px;
+  -moz-column-rule-width: 5px;
+  -webkit-column-rule-width: 5px;
+  column-rule-width: 5px;
+  -moz-column-gap: 5px;
+  -webkit-column-gap: 5px;
+  column-gap: 5px;
+  height: 100%;
+  overflow: visible;
+  column-fill: balance;
+  background-color:black;
+  margin:0;padding:0;
+}
+/* div-ek listája */
+
+
+
+/* Egyedi Radiobox */
+div.egyedi{
+ width:250px;
+ margin:0 auto;
+ padding:10px;
+ border:1px solid gray;
+}
+#radio_1{
+  position:relative;
+  margin:0;
+  padding:0;
+}
+div#radio_1 p > input{
+	padding: 0;
+	margin: 0;
+	height: 16px;
+	width: 100%;
+	float: left;
+	position: absolute;
+	left: 0;
+	opacity: 0;
+  cursor:pointer;
+}
+div#radio_1 p > label{ 
+	float: left; 
+	line-height: 16px; 
+	color: #ffffff; 
+	padding: 0 0 0 22px;
+  margin: 0;
+	-moz-transition: color 1s ease; 
+	-o-transition: color 1s ease; 
+	-webkit-transition: color 1s ease; 
+	transition: color 1s ease; 
+}
+div#radio_1 p > input:hover + label,
+p > input:focus + label,
+div#radio_1 p > input + label:hover,
+p > input:focus + label{
+  text-shadow:1px 1px 3px red;
+  color: green;
+}
+div#radio_1 p > input + label{
+	background: url('images/gr_custom-inputs.png') no-repeat 0 -1px;
+	height: 16px;
+}
+div#radio_1 p > input[type=radio] + label{ background-position: 0 -161px; }
+/* Radio styles */
+div#radio_1 p > input[type=radio]:checked + label{ background-position: 0 -241px; color:green; }
+div#radio_1 p > input[type=radio]:hover:checked + label,
+div#radio_1 p > input[type=radio]:focus:checked + label,
+div#radio_1 p > input[type=radio]:checked + label:hover,
+div#radio_1 p > input[type=radio]:focus:checked + label{ background-position: 0 -261px; }
+/* Hover & Focus styles */
+div#radio_1 p > input[type=radio]:hover + label,
+div#radio_1 p > input[type=radio]:focus + label,
+div#radio_1 p > input[type=radio] + label:hover{ background-position: 0 -181px; }
+/* Active styles */
+div#radio_1 p > input[type=radio]:active + label,
+div#radio_1 p > input[type=radio] + label:hover:active{ background-position: 0 -201px; }
+div#radio_1 p > input[type=radio]:active:checked + label,
+div#radio_1 p > input[type=radio]:checked + label:hover:active{ background-position: 0 -281px; }
+/* Disabled styles */
+div#radio_1 p > input[type=radio]:disabled + label,
+div#radio_1 p > input[type=radio]:hover:disabled + label,
+div#radio_1 p > input[type=radio]:focus:disabled + label,
+div#radio_1 p > input[type=radio]:disabled + label:hover,
+div#radio_1 p > input[type=radio]:disabled + label:hover:active{ background-position: 0 -221px; }
+div#radio_1 p > input[type=radio]:disabled:checked + label,
+div#radio_1 p > input[type=radio]:hover:disabled:checked + label,
+div#radio_1 p > input[type=radio]:focus:disabled:checked + label,
+div#radio_1 p > input[type=radio]:disabled:checked + label:hover,
+div#radio_1 p > input[type=radio]:disabled:checked + label:hover:active{ background-position: 0 -301px; }
+/* Egyedi Radiobox */
+/* Egyedi Checkbox */
+#checked_1{
+  position:relative;
+  margin:0;
+  padding:0;
+}
+div#checked_1 p > input + label{
+	background: url('images/gr_custom-inputs.png') no-repeat 0 -1px;
+	height: 16px;
+}
+div#checked_1 p > input{
+	padding: 0;
+	margin: 0;
+	height: 16px;
+	width: 100%;
+	float: left;
+	position: absolute;
+	left: 0;
+	opacity: 0;
+  cursor:pointer;
+}
+div#checked_1 p > label{ 
+	float: left; 
+	line-height: 16px; 
+	color: #ffffff; 
+	padding: 0 0 0 22px;
+  margin: 0;
+	-moz-transition: color 1s ease; 
+	-o-transition: color 1s ease; 
+	-webkit-transition: color 1s ease; 
+	transition: color 1s ease; 
+}
+div#checked_1 p > input:checked + label,
+div#checked_1 p > input:hover + label,
+div#checked_1 p > input:focus + label,
+div#checked_1 p > input + label:hover,
+div#checked_1 p > input:focus + label{
+  text-shadow:1px 1px 3px red;
+  color: green;
+}
+div#checked_1 p > input[type=checkbox] + label{ background-position: 0 -1px; } /* alap */
+/* Checked styles */
+div#checked_1 p > input[type=checkbox]:checked + label{ background-position: 0 -81px; color:green; } /* selected +80 */
+div#checked_1 p > input[type=checkbox]:hover:checked + label,
+div#checked_1 p > input[type=checkbox]:focus:checked + label,
+div#checked_1 p > input[type=checkbox]:checked + label:hover,
+div#checked_1 p > input[type=checkbox]:focus:checked + label{ background-position: 0 -101px; } /* +20 */
+/* Hover & Focus styles */
+div#checked_1 p > input[type=checkbox]:hover + label,
+div#checked_1 p > input[type=checkbox]:focus + label,
+div#checked_1 p > input[type=checkbox] + label:hover{ background-position: 0 -21px; } /* -80 */
+/* Active styles */
+div#checked_1 p > input[type=checkbox]:active + label,
+div#checked_1 p > input[type=checkbox] + label:hover:active{ background-position: 0 -41px; } /* +20 */
+div#checked_1 p > input[type=checkbox]:active:checked + label,
+div#checked_1 p > input[type=checkbox]:checked + label:hover:active{ background-position: 0 -121px; } /* +80 */
+/* Disabled styles */
+div#checked_1 p > input[type=checkbox]:disabled + label,
+div#checked_1 p > input[type=checkbox]:hover:disabled + label,
+div#checked_1 p > input[type=checkbox]:focus:disabled + label,
+div#checked_1 p > input[type=checkbox]:disabled + label:hover,
+div#checked_1 p > input[type=checkbox]:disabled + label:hover:active{ background-position: 0 -61px; } /* -60 */
+div#checked_1 p > input[type=checkbox]:disabled:checked + label,
+div#checked_1 p > input[type=checkbox]:hover:disabled:checked + label,
+div#checked_1 p > input[type=checkbox]:focus:disabled:checked + label,
+div#checked_1 p > input[type=checkbox]:disabled:checked + label:hover,
+div#checked_1 p > input[type=checkbox]:disabled:checked + label:hover:active{ background-position: 0 -141px; } /* +80 */
+/* Egyedi Checkbox */
+
+
+
+</style>
+<script type="text/javascript">
+function letolt_ido()
+{
+  var kezd = "1.50220806079E+12";
+  var d = new Date();
+  var veg = d.getTime();  //milliseconds
+  var kulonbseg = veg-kezd;
+  kulonbseg = kulonbseg/1000;
+  document.getElementById('letolt').innerHTML = 'Az oldal <span style="color:red;">"'+kulonbseg.toFixed(3)+'"<\/span> s alatt töltődött le.';
+}
+/* DIV Képek-sorok függőleges léptetés */  //Úsztató Galéria:http://coffeescripter.com/code/ad-gallery/
+var aktual = 0;
+function fol_leptet(sorok_szama)
+{
+ if (aktual < sorok_szama-1)
+ {
+   aktual = aktual+1;
+   document.getElementById('belso').style.top = '-'+(aktual*80)+'px';
+ }
+}
+function le_leptet(sorok_szama)
+{
+ if (aktual > 0)
+ {
+   aktual = aktual-1;
+   document.getElementById('belso').style.top = '-'+(aktual*80)+'px';
+ }
+}
+/* DIV Képek-sorok függőleges léptetés */
+/* Képek horizontális szkrollozása DIV-el */
+var aktual1 = 0;
+function jobb_leptet(kepek_szama)
+{
+ if (aktual1 < ((kepek_szama-1)*70))
+ {
+   aktual1 = aktual1+1;
+   document.getElementById('belso_h').style.left = '-'+(aktual1*1)+'px';
+ }
+}
+function bal_leptet(kepek_szama)
+{
+ if (aktual1 > 0)
+ {
+   aktual1 = aktual1-1;
+   document.getElementById('belso_h').style.left = '-'+(aktual1*1)+'px';
+ }
+}
+var lepes;
+var egy_ciklus = 0;
+function megall()
+{ clearTimeout(lepes); }
+function jobbra(kepek_szama)
+{
+  jobb_leptet(kepek_szama);
+  if (egy_ciklus < 70)
+  {
+    lepes = setTimeout("jobbra("+kepek_szama+");", 10);
+    egy_ciklus = egy_ciklus+1;
+  }
+  if (egy_ciklus == 70)
+  {
+    megall();
+    egy_ciklus = 0;
+  }
+}
+function balra(kepek_szama)
+{
+  bal_leptet(kepek_szama);
+  if (egy_ciklus < 70)
+  {
+    lepes = setTimeout("balra("+kepek_szama+");", 10);
+    egy_ciklus = egy_ciklus+1;
+  }
+  if (egy_ciklus == 70)
+  {
+    megall();
+    egy_ciklus = 0;
+  }
+}
+/* Képek horizontális szkrollozása DIV-el */
+/* Képek horizontális szkrollozása DIV-el -> A "Tovább lépés gomb(Ciril)" kérdése kapcsán... */
+var aktual2 = 0;
+function jobb_leptet2(kepek_szama)
+{
+ if (aktual2 < ((kepek_szama-3)*142))
+ {
+   aktual2 = aktual2+3;
+   document.getElementById('belso_h2').style.left = '-'+(aktual2*1)+'px';
+ }
+}
+function bal_leptet2(kepek_szama)
+{
+ if (aktual2 > 0)
+ {
+   aktual2 = aktual2-3;
+   document.getElementById('belso_h2').style.left = '-'+(aktual2*1)+'px';
+ }
+}
+var lepes2;
+var egy_ciklus2 = 0;
+function megall2()
+{ clearTimeout(lepes2); }
+function jobbra2(kepek_szama)
+{
+  jobb_leptet2(kepek_szama);
+  if (egy_ciklus2 < 142)
+  {
+    lepes2 = setTimeout("jobbra2("+kepek_szama+");", 10);
+    egy_ciklus2 = egy_ciklus2+1;
+  }
+  if (egy_ciklus2 == 142)
+  {
+    megall2();
+    egy_ciklus2 = 0;
+  }
+}
+function balra2(kepek_szama)
+{
+  bal_leptet2(kepek_szama);
+  if (egy_ciklus2 < 142)
+  {
+    lepes2 = setTimeout("balra2("+kepek_szama+");", 10);
+    egy_ciklus2 = egy_ciklus2+1;
+  }
+  if (egy_ciklus2 == 142)
+  {
+    megall2();
+    egy_ciklus2 = 0;
+  }
+}
+/* Képek horizontális szkrollozása DIV-el -> A "Tovább lépés gomb(Ciril)" kérdése kapcsán... */
+</script>
+  <link rel="stylesheet" type="text/css" media="all" href="./Kerekített doboz, Letölt_files/jScrollPane.css">
+	<script type="text/javascript" src="./Kerekített doboz, Letölt_files/jquery-1.2.6.min.js.letöltés"></script>
+	<script type="text/javascript" src="./Kerekített doboz, Letölt_files/jquery.mousewheel.js.letöltés"></script>
+	<script type="text/javascript" src="./Kerekített doboz, Letölt_files/jScrollPane.js.letöltés"></script>
+<script type="text/javascript">
+	$(function()
+	{
+		$('#pane4').jScrollPane({scrollbarWidth:20, scrollbarMargin:10});
+		$('#add-content').bind(
+			'click',
+			function()
+			{ $('#pane4').append($('<p><\/p>').html($('#intro').html())).jScrollPane({scrollbarWidth:20, scrollbarMargin:10}); }
+		);
+		$('#remove-content').bind(
+			'click',
+			function()
+			{ $('#pane4').empty().append($('<p><\/p>').html($('#intro').html())).jScrollPane({scrollbarWidth:20, scrollbarMargin:10}); }
+		);
+	});
+</script>
+<style type="text/css" media="screen">
+.holder {
+  margin:10px;
+}
+/* scroll panel*/
+.scroll-pane {
+	width: 380px;
+	height: 200px;
+	overflow: auto;
+	background: #ccc;
+}
+#pane4 {
+	height: 190px;
+}
+/* scrollsáv háttér */
+.orange-bar .jScrollPaneTrack {
+  background: -moz-linear-gradient(#FF6600, #ffffff);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FF6600), to(#ffffff));
+  background: -webkit-linear-gradient(#FF6600, #ffffff); 
+  background: -o-linear-gradient(#FF6600, #ffffff);
+  -pie-background: linear-gradient(#FF6600, #ffffff);
+  behavior: url('pie.htc');
+}
+/* csúszka */
+.orange-bar .jScrollPaneDrag {
+	background: #933A00 url('scripts/drag_grab_o.gif') no-repeat 50% 50%;
+}
+/* tartalom háttér */
+.orange-bar .scroll-pane {
+	background: #FFDFCA;
+}
+</style>
+<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="../minw_ie.css" media="screen" /><![endif]-->
+</head>
+<body onload="letolt_ido();">
+<!-- Fixed dinamikus háttérkép -->
+<img id="oldal-hatter" src="./Kerekített doboz, Letölt_files/oldal_hatter.jpg" alt="">
+<div id="oldal-keret">
+<!-- Fixed dinamikus háttérkép -->
+ <div id="oldal">
+<!--<div id="example"></div>-->
+  <div id="fodiv">
+    <div id="head_kozep"> 
+      <div id="head_bal"></div>   
+      <div id="head_jobb"></div>
+    </div>
+    <div id="kozep_tartalom">
+      <br class="clear">
+      <div id="kozep_bal"></div>
+      <div id="kozep_jobb"></div>
+      <!-- oldal-tartalom kezdete -->
+      <h2 style="text-align:center;">Az oldal kerete, kerekített doboz DIV-el</h2>
+      <h4 style="text-align:center;">(Megoldás: Head/Content/Footer blokkoknál is "közép" DIV-ben "left/right" DIV háttérképpekkel)</h4>
+      <h5 style="text-align:center;color:white;">(pie.htc IE6-ig nem működik)</h5>
+<hr style="width:85%;">
+      <h2 style="text-align:center;">Checkbox-kiválasztás küldés és vissza olvasás PHP-val</h2>
+      <form name="formom" method="post" action="http://family-team.emszinet.hu/proghutest/06/fgt.php" enctype="multipart/form-data" style="width:100px;margin:0 auto;text-align:left;">
+        Ásványvíz:<input type="checkbox" name="asvanyviz" value="ásványviz"><br>
+        Üdítő:<input type="checkbox" name="udito" value="üdítő"><br>
+        Kávé:<input type="checkbox" name="kave" value="kávé"><br>
+        <button type="submit">Elküld</button>
+      </form>
+      <div style="width:240px;margin:0 auto;">
+      <b>Egyes módszer eredménye:</b><br> -  - <br><b>Kettes módszer eredménye:</b><br>      </div>
+<hr style="width:85%;">
+      <div style="width:640px;margin:0 auto;text-align:center;">
+      <h2>PHP:kép generálása(Lomtároló)</h2>        <!-- ez csak azért, hogy a próbák során ne kelljen mindig frissíteni -->
+        <form action="http://family-team.emszinet.hu/proghutest/06/fgt.php" method="post">
+          Szöveg1 a képre(max. 14 kar.):&nbsp;<input type="text" maxlength="14" name="text1"><br>
+          Szöveg2 a képre(max. 20 kar.):&nbsp;<input type="text" maxlength="20" name="text2"><br>
+          Szöveg3 a képre(max. 10 kar.):&nbsp;<input type="text" maxlength="10" name="text3"><br>
+          <input type="submit">
+        </form>
+      <br><img src="./Kerekített doboz, Letölt_files/2.jpg" alt="Lomtároló GD-alap + szöveg" title="Lomtároló GD-alap + szöveg"><br>      </div>
+<hr style="width:85%;">
+      <h2 style="text-align:center;">IMG időzítve váltás inditás(Zee)</h2>
+            <script type="text/javascript">
+        var repeat;
+        var images = new Array('images/02.jpg', 'images/03.jpg', 'images/04.jpg', 'images/05.jpg', 'images/06.jpg');
+        var index = 0;
+        function indit()
+        { valtogat(index); }
+        function leallit()
+        { 
+          clearTimeout(repeat);
+          index = 0;
+        }
+        function valtogat(index)
+        {
+          $("#slideShow").attr("src", images[index]);
+          ++index;
+          if(index >= images.length)
+          { index = 0; }
+          repeat = setTimeout("valtogat("+index+")",2000);
+        }
+      </script>
+      <div style="width:480px;margin:0 auto;text-align:center;">
+      <img id="slideShow" src="./Kerekített doboz, Letölt_files/02.jpg" border="0" onmouseover="leallit();" onmouseout="indit();" style="cursor:pointer;" title="Leállítva" alt="">        <br><br>
+        <button onclick="indit();">Indít</button>&nbsp;&nbsp;&nbsp;<button onclick="leallit();">Leállít</button>
+      </div>
+<hr style="width:85%;">
+      <h2 style="text-align:center;">Egyedi "Scrollbars(szín átmenettel)"</h2>
+      <div style="width:400px;margin:0 auto;">
+		   <div class="holder orange-bar">
+			  <div class="jScrollPaneContainer" style="height: 190px; width: 380px;"><div id="pane4" class="scroll-pane" style="overflow: visible; height: auto; width: 350px; padding-right: 10px; position: absolute; top: -677px;">
+				 <p>&gt;Lorem ipsum dolor sit amet.&lt;</p>
+				 <p>&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec condimentum pretium nisl. Integer quis tellus nec turpis placerat scelerisque. In semper lacus eu nisi. Praesent dignissim metus sit amet enim. Nam auctor, neque semper congue sagittis, risus mi commodo pede, nec euismod magna libero at sem. In enim magna, vestibulum et, blandit sit amet, tempor vel, ligula. Phasellus ante augue, congue vitae, faucibus quis, gravida sit amet, diam. Nullam congue accumsan magna. Etiam a nunc. Aliquam elit urna, ornare vitae, ultrices et, tempus non, nisl. Duis eros neque, luctus quis, interdum ultricies, auctor eu, urna. Donec nibh. Integer in purus tempus mi venenatis mollis. Cras nunc odio, porttitor at, accumsan ac, adipiscing vitae, ante.</p>
+				 <p>Nam dui enim, fringilla vitae, rhoncus non, pharetra in, nunc. Sed a lectus vel orci bibendum placerat. Aliquam erat volutpat. Integer odio. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis dictum egestas lorem. Donec ultricies volutpat tellus. Phasellus justo arcu, pharetra eget, cursus non, consectetuer ac, nunc. Fusce orci tortor, semper vel, lacinia vitae, accumsan id, quam. Mauris semper molestie lectus. Duis venenatis erat ultrices nisl.</p>
+				 <p>Morbi augue enim, ultricies nec, lobortis sed, iaculis eu, quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Curabitur sollicitudin, elit eu porttitor varius, tellus velit tristique sem, vitae blandit nisi eros id purus. Nunc non lorem. Nunc blandit purus nec nisi. Donec vulputate, urna vel interdum tristique, tellus mauris pretium lacus, quis sodales lectus nunc sit amet turpis. Suspendisse potenti. Fusce accumsan. Maecenas aliquam consectetuer augue. Fusce est neque, condimentum nec, condimentum vitae, consectetuer ac, tortor. Praesent ultricies urna in lectus. Nam erat nunc, venenatis nec, facilisis sed, feugiat ac, pede. Vivamus aliquam aliquet libero. Curabitur dolor nunc, scelerisque at, gravida dignissim, rutrum at, orci. Maecenas vitae libero id eros rutrum hendrerit. Duis lacinia mauris non erat. Nullam et dolor vel leo sollicitudin suscipit. Sed laoreet libero.</p>
+				 <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent turpis. Suspendisse molestie, neque non congue ullamcorper, neque sem consequat nisl, eget pulvinar odio erat et tellus. Nunc luctus convallis dolor. Nullam non mauris. Etiam nisi magna, adipiscing eu, nonummy ac, laoreet nec, est. Pellentesque tristique, est vel condimentum feugiat, nisi justo rhoncus pede, in pulvinar mauris lectus vitae dui. Pellentesque scelerisque. Vestibulum tellus dolor, porta quis, facilisis nec, convallis vitae, quam. Quisque nisi. Nunc vitae nulla vel turpis mollis molestie. Etiam vitae massa.&lt;</p>
+			  </div><div class="jScrollPaneTrack" style="width: 20px;"><div class="jScrollPaneDrag" style="width: 20px; height: 41.6378px; top: 148px;"><div class="jScrollPaneDragTop" style="width: 20px;"></div><div class="jScrollPaneDragBottom" style="width: 20px;"></div></div></div></div>
+		   </div>
+      </div>
+<hr style="width:85%;">
+      <h2 style="text-align:center;">Képek-sorok léptetése DIV-el</h2>
+      <h3>("Peet" kattintásra fix px scrollozás kérdéséhez is)</h3>
+      <div style="width:490px; height:80px; position:relative; overflow:hidden; margin:0 auto; border:1px solid red;">
+        <div id="belso" style="width:490px; position:absolute;left:0px;top:0;">
+          <img src="./Kerekített doboz, Letölt_files/kep1.jpg" width="70" height="80" style="float:left;" alt="">
+          <img src="./Kerekített doboz, Letölt_files/kep2.jpg" width="70" height="80" style="float:left;" alt="">
+          <img src="./Kerekített doboz, Letölt_files/kep3.jpg" width="70" height="80" style="float:left;" alt="">
+          <img src="./Kerekített doboz, Letölt_files/kep4.jpg" width="70" height="80" style="float:left;" alt="">
+          <img src="./Kerekített doboz, Letölt_files/kep5.jpg" width="70" height="80" style="float:left;" alt="">
+          <img src="./Kerekített doboz, Letölt_files/kep6.jpg" width="70" height="80" style="float:left;" alt="">
+          <img src="./Kerekített doboz, Letölt_files/kep7.jpg" width="70" height="80" style="float:left;" alt="">
+          <img src="./Kerekített doboz, Letölt_files/kep8.jpg" width="70" height="80" style="float:left;" alt="">
+          <img src="./Kerekített doboz, Letölt_files/kep9.jpg" width="70" height="80" style="float:left;" alt="">
+          <img src="./Kerekített doboz, Letölt_files/kep10.jpg" width="70" height="80" style="float:left;" alt="">
+          <img src="./Kerekített doboz, Letölt_files/kep11.jpg" width="70" height="80" style="float:left;" alt="">
+          <img src="./Kerekített doboz, Letölt_files/kep12.jpg" width="70" height="80" style="float:left;" alt="">
+          <img src="./Kerekített doboz, Letölt_files/kep13.jpg" width="70" height="80" style="float:left;" alt="">
+          <img src="./Kerekített doboz, Letölt_files/kep14.jpg" width="70" height="80" style="float:left;" alt="">
+          <img src="./Kerekített doboz, Letölt_files/kep15.jpg" width="70" height="80" style="float:left;" alt="">
+          <img src="./Kerekített doboz, Letölt_files/kep16.jpg" width="70" height="80" style="float:left;" alt="">
+          <img src="./Kerekített doboz, Letölt_files/kep17.jpg" width="70" height="80" style="float:left;" alt="">
+          <img src="./Kerekített doboz, Letölt_files/kep18.jpg" width="70" height="80" style="float:left;" alt="">
+        </div>
+      </div>
+      <div style="width:160px;margin:0 auto;">
+        <button onclick="fol_leptet(3)">Léptet föl</button>
+        <button onclick="le_leptet(3)">Léptet le</button>
+      </div>
+<hr style="width:85%;">
+      <h2 style="text-align:center;">Képek horizontális szkrollozása DIV-el</h2>
+      <h3>("formaa" Slideshow kép csúsztatása kérdéséhez is)</h3>
+      <div style="width:70px; height:80px; position:relative; overflow:hidden; margin:0 auto; border:1px solid red;">
+        <div id="belso_h" style="width:1260px;height:80px; position:absolute;left:0;top:0;">
+          <img src="./Kerekített doboz, Letölt_files/kep1.jpg" width="70" height="80" style="float:left;" alt="">
+          <img src="./Kerekített doboz, Letölt_files/kep2.jpg" width="70" height="80" style="float:left;" alt="">
+          <img src="./Kerekített doboz, Letölt_files/kep3.jpg" width="70" height="80" style="float:left;" alt="">
+          <img src="./Kerekített doboz, Letölt_files/kep4.jpg" width="70" height="80" style="float:left;" alt="">
+          <img src="./Kerekített doboz, Letölt_files/kep5.jpg" width="70" height="80" style="float:left;" alt="">
+          <img src="./Kerekített doboz, Letölt_files/kep6.jpg" width="70" height="80" style="float:left;" alt="">
+          <img src="./Kerekített doboz, Letölt_files/kep7.jpg" width="70" height="80" style="float:left;" alt="">
+          <img src="./Kerekített doboz, Letölt_files/kep8.jpg" width="70" height="80" style="float:left;" alt="">
+          <img src="./Kerekített doboz, Letölt_files/kep9.jpg" width="70" height="80" style="float:left;" alt="">
+          <img src="./Kerekített doboz, Letölt_files/kep10.jpg" width="70" height="80" style="float:left;" alt="">
+          <img src="./Kerekített doboz, Letölt_files/kep11.jpg" width="70" height="80" style="float:left;" alt="">
+          <img src="./Kerekített doboz, Letölt_files/kep12.jpg" width="70" height="80" style="float:left;" alt="">
+          <img src="./Kerekített doboz, Letölt_files/kep13.jpg" width="70" height="80" style="float:left;" alt="">
+          <img src="./Kerekített doboz, Letölt_files/kep14.jpg" width="70" height="80" style="float:left;" alt="">
+          <img src="./Kerekített doboz, Letölt_files/kep15.jpg" width="70" height="80" style="float:left;" alt="">
+          <img src="./Kerekített doboz, Letölt_files/kep16.jpg" width="70" height="80" style="float:left;" alt="">
+          <img src="./Kerekített doboz, Letölt_files/kep17.jpg" width="70" height="80" style="float:left;" alt="">
+          <img src="./Kerekített doboz, Letölt_files/kep18.jpg" width="70" height="80" style="float:left;" alt="">
+        </div>
+      </div>
+      <div style="width:240px;margin:0 auto;">
+        <button onclick="jobbra(18);">Léptet jobbra</button>
+        <button onclick="balra(18);">Léptet balra</button>
+      </div>
+<hr style="width:85%;">
+      <h3 style="text-align:center;">A "Tovább lépés gomb(Ciril)" kérdése kapcsán...</h3>
+      <div style="width:426px; height:162px; position:relative; overflow:hidden; margin:0 auto; border:1px solid black;">
+        <div id="belso_h2" style="width:2556px;height:162px; position:absolute;left:0px;top:0px;">
+          <img src="./Kerekített doboz, Letölt_files/kep1.jpg" width="140" height="160" style="float:left;" alt="" border="1" title="Kép1">
+          <img src="./Kerekített doboz, Letölt_files/kep2.jpg" width="140" height="160" style="float:left;" alt="" border="1" title="Kép2">
+          <img src="./Kerekített doboz, Letölt_files/kep3.jpg" width="140" height="160" style="float:left;" alt="" border="1" title="Kép3">
+          <img src="./Kerekített doboz, Letölt_files/kep4.jpg" width="140" height="160" style="float:left;" alt="" border="1" title="Kép4">
+          <img src="./Kerekített doboz, Letölt_files/kep5.jpg" width="140" height="160" style="float:left;" alt="" border="1" title="Kép5">
+          <img src="./Kerekített doboz, Letölt_files/kep6.jpg" width="140" height="160" style="float:left;" alt="" border="1" title="Kép6">
+          <img src="./Kerekített doboz, Letölt_files/kep7.jpg" width="140" height="160" style="float:left;" alt="" border="1" title="Kép7">
+          <img src="./Kerekített doboz, Letölt_files/kep8.jpg" width="140" height="160" style="float:left;" alt="" border="1" title="Kép8">
+          <img src="./Kerekített doboz, Letölt_files/kep9.jpg" width="140" height="160" style="float:left;" alt="" border="1" title="Kép9">
+          <img src="./Kerekített doboz, Letölt_files/kep10.jpg" width="140" height="160" style="float:left;" alt="" border="1" title="Kép10">
+          <img src="./Kerekített doboz, Letölt_files/kep11.jpg" width="140" height="160" style="float:left;" alt="" border="1" title="Kép11">
+          <img src="./Kerekített doboz, Letölt_files/kep12.jpg" width="140" height="160" style="float:left;" alt="" border="1" title="Kép12">
+          <img src="./Kerekített doboz, Letölt_files/kep13.jpg" width="140" height="160" style="float:left;" alt="" border="1" title="Kép13">
+          <img src="./Kerekített doboz, Letölt_files/kep14.jpg" width="140" height="160" style="float:left;" alt="" border="1" title="Kép14">
+          <img src="./Kerekített doboz, Letölt_files/kep15.jpg" width="140" height="160" style="float:left;" alt="" border="1" title="Kép15">
+          <img src="./Kerekített doboz, Letölt_files/kep16.jpg" width="140" height="160" style="float:left;" alt="" border="1" title="Kép16">
+          <img src="./Kerekített doboz, Letölt_files/kep17.jpg" width="140" height="160" style="float:left;" alt="" border="1" title="Kép17">
+          <img src="./Kerekített doboz, Letölt_files/kep18.jpg" width="140" height="160" style="float:left;" alt="" border="1" title="Kép18">
+        </div>
+      </div>
+      <div style="width:300px;margin:0 auto;">
+        <button onclick="jobbra2(18);">Léptet jobbra hármat</button>
+        <button onclick="balra2(18);">Léptet balra hármat</button>
+      </div>
+<hr style="width:85%;">
+      <div style="width:640px;margin:0 auto;text-align:center;">
+      <h2>Rajzolás php-val(vagesz06)</h2><br><img src="./Kerekített doboz, Letölt_files/vagesz06.png" alt="vagesz06 GD-rajza" title="vagesz06 GD-rajza"><br>      </div>
+<hr style="width:85%;">
+      <!--  
+        http://www.w3schools.com/css3/css3_transitions.asp
+        http://www.w3schools.com/css3/css3_pr_transition-timing-function.asp
+      -->
+      <h2 style="text-align:center;">Egyedi Radiobox</h2>
+      <h5 style="text-align:center;color:white;">(IE8-ig nem működik)</h5>
+      <div class="egyedi">
+        <div>
+          <form method="post" action="http://family-team.emszinet.hu/proghutest/06/fgt.php">
+            <div>
+              <div>
+                <label style="font-weight:700;">Csatorna díjak:</label>
+              </div>
+              <div id="radio_1">
+                <p><input type="radio" value="258" id="r1" name="gender"><label>D9835 / 258 USD+ÁFA</label></p>
+                <br style="clear:both;height:0;">
+                <p><input type="radio" value="955" id="r2" name="gender"><label>D9850 / 955 USD+ÁFA</label></p>
+                <br style="clear:both;height:0;">
+                <p><input type="radio" value="1495" id="r3" name="gender"><label>D9850SDI / 1495 USD+ÁFA</label></p>
+                <br style="clear:both;height:0;">
+                <p><input type="radio" value="495" id="r4" name="gender"><label>D985 / 495 USD+ÁFA</label></p>
+                <br style="clear:both;height:0;">
+              </div>
+            </div>
+          </form>
+        </div>
+        <br>
+      </div>
+      <h2 style="text-align:center;">Egyedi Checkbox</h2>
+      <h5 style="text-align:center;color:white;">(IE8-ig nem működik)</h5>
+      <div class="egyedi">
+        <div>
+          <form method="post" action="http://family-team.emszinet.hu/proghutest/06/fgt.php">
+            <div>
+              <div>
+                <label style="font-weight:700;">Csatorna díjak:</label>
+              </div>
+              <div id="checked_1">
+                <p><input type="checkbox" value="258" id="c1" name="gender"><label for="male">D9835 / 258 USD+ÁFA</label></p>
+                <br style="clear:both;height:0;">
+                <p><input type="checkbox" value="955" id="c2" name="gender"><label for="male">D9850 / 955 USD+ÁFA</label></p>
+                <br style="clear:both;height:0;">
+                <p><input type="checkbox" value="14995" id="c3" name="gender"><label for="male">D9850SDI / 1495 USD+ÁFA</label></p>
+                <br style="clear:both;height:0;">
+                <p><input type="checkbox" value="495" id="c4" name="gender"><label for="male">D985 / 495 USD+ÁFA</label></p>
+                <br style="clear:both;height:0;">
+              </div>
+            </div>
+          </form>
+        </div>
+        <br>
+      </div>
+<hr style="width:85%;">
+      <!--  -->
+      <h2 style="text-align:center;">Menü, felbukkanó kép</h2>
+      <div style="width:400px;margin:0 auto;">
+        <ul>
+          <li><a href="http://family-team.emszinet.hu/proghutest/06/fgt.php#">Menüpont1<span class="bukkan1" style="">&nbsp;</span></a></li>
+          <li><a href="http://family-team.emszinet.hu/proghutest/06/fgt.php#">Menüpont2<span class="bukkan2" style="">&nbsp;</span></a></li>
+          <li><a href="http://family-team.emszinet.hu/proghutest/06/fgt.php#">Menüpont3<span class="bukkan3" style="">&nbsp;</span></a></li>
+        </ul>
+      </div>
+      <!--  -->
+<hr style="width:85%;">
+      <h2 style="text-align:center;">80px széles DIV elemek-ek listája</h2>
+      <h5 style="text-align:center;color:white;">(IE8-ig nem működik)</h5>
+      <br>
+      <div id="keret1" style="width:165px;background-color:black;padding:5px;margin:0 auto;">
+        <div id="rcsk">
+          <div class="cdivsk" style="background-color:blue;height:60px;">Szöveg1</div>
+          <div class="cdivsk" style="background-color:brown;height:45px;">Szöveg2</div>
+          <div class="cdivsk" style="background-color:red;height:75px;">Szöveg3</div>
+          <div class="cdivsk" style="background-color:blue;height:20px;">Szöveg4</div>
+          <div class="cdivsk" style="background-color:green;height:60px;">Szöveg5</div>
+          <div class="cdivsk" style="background-color:red;height:40px;">Szöveg6</div>
+          <div class="cdivsk" style="background-color:white;height:30px;">Szöveg7</div>
+          <div class="cdivsk" style="background-color:green;height:25px;">Szöveg8</div>
+          <div class="cdivsk" style="background-color:yellow;height:60px;">Szöveg9</div>
+          <div class="cdivsk" style="background-color:white;height:40px;">Szöveg10</div>
+          <div class="cdivsk" style="background-color:gray;height:30px;">Szöveg11</div>
+          <div class="cdivsk" style="background-color:lightgray;height:20px;">Szöveg12</div>
+        </div>
+      </div>
+      <br>
+<hr style="width:85%;">
+      <br>
+      <div style="width:640px;margin:0 auto;text-align:center;">
+       <h2 style="text-align:center;">Tartalom váltás újratöltés nélkül(Vic)</h2>
+       <h4 style="text-align:center;">(A pontos idő oldal betöltődéskor: 2017-08-08 18:01:00)</h4>       Menüpontok:&nbsp;<a href="javascript:void(0)" onclick="tartalom()">Bemutatkozás</a>&nbsp;&nbsp;
+       <a href="javascript:void(0)" onclick="tartalom(1)">Kapcsolat</a>&nbsp;&nbsp;
+       <a href="javascript:void(0)" onclick="tartalom(2)">Statisztika</a>&nbsp;&nbsp;
+       <a href="javascript:void(0)" onclick="tartalom(3)">Szabályzat</a>&nbsp;&nbsp;
+       <script type="text/javascript">
+         function tartalom(sorszam)
+         {
+           var elem=document.getElementById("valtozo_div");
+           switch (sorszam)
+           {
+             case 1:
+               elem.innerHTML="Kapcsolat...";
+               break;
+             case 2:
+               elem.innerHTML="Oldal statisztika...";
+               break;
+             case 3:
+               elem.innerHTML="Szabályzat...";
+               break;
+             default:
+               elem.innerHTML="<h2>Bemutatkozás<\/h2>Ez a tartalom egy külső *.php fájlban van.<br \/>Pontos idő: 2017-08-08 18:01:00<br \/>Ha összehasonlítod a letöltődés idejével látod, hogy azonos. Nem a menüváltás időpontja!<br \/>";
+           }
+        }
+      </script>
+       <br><br>
+       <div style="width:600px;margin:0 auto;text-align:center;border:1px solid red;" id="valtozo_div">Változó tartalom helye</div>
+       <br>
+      </div>
+<hr style="width:85%;">
+      <h2 style="text-align:center;">PHP/JS letöltődés mérés</h2>
+      <div id="letolt" style="text-align:center;margin:0;padding:0;color:white;font-weight:700;">Az oldal <span style="color:red;">"-1.780"</span> s alatt töltődött le.</div>
+<hr style="width:85%;">
+      <h4 style="text-align:center;">Az oldal <a href="http://family-team.emszinet.hu/proghutest/06/fgt.zip" style="color:black;">forráskódja</a></h4>
+      <h3 style="text-align:center;"><a href="http://family-team.emszinet.hu/proghutest/proghu_teszt.php" style="color:black;">Vissza a TESZTEK-re</a></h3>
+<hr style="width:85%;">
+      <!-- oldal-tartalom vége -->
+      <br class="clear">
+    </div>
+    <div id="footer_kozep">
+      <div id="footer_bal"></div>
+      <div id="footer_jobb"></div>
+      <br class="clear">
+    </div>
+  </div>
+ </div>
+</div>
+
+
+</body></html>

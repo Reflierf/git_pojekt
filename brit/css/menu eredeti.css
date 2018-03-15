@@ -1,0 +1,44 @@
+
+nav {
+    font-size: 12pt;
+    margin-top: 10px;
+}
+
+nav.my_panel {
+    padding: 4px;
+}
+
+nav ul {
+    list-style: none;
+    /*line-height: 1.4;*/
+}
+
+nav ul:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+nav ul li {
+    display: inline-block;
+    /*float: left; Lehet, hogy törölni kell*/
+}
+
+nav ul li a {
+    padding: 3px 30px;
+    /*margin-left: 10px;*/
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+nav ul li a, nav ul li a:link, nav ul li a:visited {
+    color: #4f001d;
+}
+
+nav ul li a:hover {
+    color: #fff;
+    background: #7f002f;
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 2px #777;
+}
