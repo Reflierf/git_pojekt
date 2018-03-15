@@ -2,3 +2,7 @@ Első sor.
 
 git config --global user.email "ref@freemail.hu"
 git config --global user.name "ref"
+
+Hatodik sor
+
+Nyolcadik sor
