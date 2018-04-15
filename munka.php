@@ -18,11 +18,11 @@
     
     //Kivonás
     //-------
-    $x = 31;
-    $y = 17;
-	$z = 77;
-    print"<br />$x-$y = ".$x-$y."<br />";
-	print"Konfliktus lesz.";
+    $x = 15;
+    $y = 59;
+	$z = 370;
+    print"<br />$z-$y-$x = ".$z-$y-$x."<br />";
+	
     
     //Osztás
     //------
