@@ -26,11 +26,15 @@
     
     //Osztás
     //------
-    
+    $egyik = 25;
+	$masik = 5;
+	print"<br />$egyik / $masik = ".$egyik / $masik."<br />";
     
     //Szorzás
     //-------
-    
+    $kicsi = 3;
+	$nagy = 23;
+	print"<br />$kicsi*$nagy = ".$kicsi * $nagy."<br />";
 
 
 	//Itt a vége
