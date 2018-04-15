@@ -21,7 +21,7 @@
     $x = 15;
     $y = 59;
 	$z = 370;
-    print"<br />$z-$y-$x = ".$z-$y-$x."<br />";
+    print"<br />$z-$y-$x = ".$z-$y-$x."<br /><br />";
 	
     
     //Osztás
