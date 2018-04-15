@@ -20,6 +20,7 @@
     //-------
     $x = 31;
     $y = 17;
+	$z = 77;
     print"<br />$x-$y = ".$x-$y."<br />";
 	print"Konfliktus lesz.";
     
