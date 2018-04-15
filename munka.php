@@ -25,7 +25,9 @@
     
     //Osztás
     //------
-    
+    $egyik = 25;
+	$masik = 5;
+	print"<br />$egyik / $masik = ".$egyik / $masik."<br />";
     
     //Szorzás
     //-------
