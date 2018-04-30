@@ -1,0 +1,65 @@
+    BIOS-sípolások
+
+
+Az itt felsoroltak nem 100%-osak, ettol lehetnek eltéroek, de azért adnak némi támpontot.
+
+Az AWARD BIOS jelzései:
+
+    Nincs hangjelzés. Elromlott vagy az alaplaphoz nem megfeleloen van csatlakoztatva a tápegység.
+    Megszakítás nélküli hangjelzés. Rossz a tápegység.
+    1 rövid hangjelzés. Minden rendben.
+    2 rövid hangjelzés. Jelentéktelen problémák adódtak. A BIOS felkínálja a CMOS Setup indítását, mely során kiigazíthatjuk az eltárolt hibás beállításokat. Ellenorizze az adattároló és az alaplap közötti szalagkábel megfelelo csatlakozásait!
+    3 hosszú. A billentyuzet hibája. Indítsa újra a számítógépet!
+    1 hosszú+1 rövid. Probléma van a RAM-mal.
+    1 hosszú+2 rövid. Probléma van a videokártyával. Ez a leggyakrabban eloforduló hiba. Ebben az esetben ajánlatos kivenni a videokártyát a csatlakozójából, majd pedig visszahelyezni. Ellenorizzük a monitor csatlakoztatását.
+    1 hosszú+3 rövid. Hiba történt a billentyuzet inicializálása során. Ellenorizzük a megfelelo csatlakoztatást.
+    1 hosszú+9 rövid. Problémák adódtak a ROM-memóriából történo adatok olvasása során. Indítsa újra a számítógépet!
+    Ismétlodo hosszú hangjelzések. A RAM-memória nem megfeleloen lett csatlakoztatva az alaplaphoz.
+    Ismétlodo rövid hangjelzések. Problémák adódtak a tápegységgel. Tisztítsuk meg azt a portól.
+
+Az AMI BIOS jelzései:
+
+    Nincs hangjelzés. Elromlott vagy az alaplaphoz nem megfeleloen van csatlakoztatva a tápegység.
+    1 rövid. Minden rendben.
+    2 rövid. Probléma van a RAM-memóriával. Indítsa újra a gépet! Ellenorizze a memória moduljait!
+    3 rövid. Hiba van a memória elso 64 Kbájtjában. A teendok ugyanazok, mint az elobbi esetben.
+    4 rövid. Rossz a rendszer-timer.
+    5 rövid. Hiba a központi processzorban.
+    6 rövid. Rossz a billentyuzet kontrollere.
+    7 rövid. Hiba az alaplapban.
+    8 rövid. Hiba a videomemóriában.
+    9 rövid. A BIOS kontrollösszegének (CRC) hibája.
+    10 rövid. Hiba a CMOS-memóriába történo beírás során.
+    11 rövid. Rossz a külso cache memória (az alaplap slot-jain található).
+    1 hosszú+2 rövid. Hiba a videókártyában.
+    1 hosszú+3 rövid. Ugyanaz, mint az elozo esetben.
+    1 hosszú+8 rövid. A videokártya hibája, vagy nincs csatlakoztatva a monitor.
+
+A Phoenix BIOS jelzései:
+
+    1-1-3. Az adatok kezelésének hibája a CMOS-ban.
+    1-1-4. A CRC hibája a BIOS-ban.
+    1-2-1. Rossz az alaplap.
+    1-2-2. Hiba a DMA-kontroller inicializációja során.
+    1-2-3. A DMA-csatorna hibája a muveletek elvégzése során.
+    1-3-1. A RAM regenerációjának (refresh) hibája.
+    1-3-3. Hiba a RAM elso 64 Kbájtjának tesztelése során.
+    1-3-4. Ugyanaz, mint az elobbi.
+    1-4-1. Rossz az alaplap.
+    1-4-2. A RAM tesztelésének hibája.
+    1-4-3. A rendszer-timer hibája.
+    1-4-4. Hiba az I/O portnál.
+    3-1-1. Hiba a DMA második csatornájának inicializációja során.
+    3-1-2. Hiba a DMA elso csatornájának inicializációja során.
+    3-1-4. Rossz az alaplap.
+    3-2-4. A billentyuzet hibája.
+    3-3-4. A videomemória tesztelésének hibája.
+    4-2-1. A timer hibája.
+    4-2-3. Az A20 vonal hibája.
+    4-2-4. Hiba a csökkentett (save) üzemmódban. Lehet, hogy hibás a központi processzor.
+    4-3-1. Hiba a RAM tesztelése során.
+    4-3-4. Hiba a PC órájában.
+    4-4-1. Hiba a soros port tesztelése során.
+    4-4-2. Hiba a párhuzamos port tesztelése során.
+    4-4-3. Hiba a co-processzor tesztelése során.
+
